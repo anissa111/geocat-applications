@@ -26,10 +26,16 @@ def get_diff(context):
     return diff
 
 
-def get_new_modified_notebooks(diff):
-    new_and_modified = [e[1] for e in diff if e[0] in ['A', 'M'] and e[1].endswith('.ipynb')]
+def get_new_modified(diff):
+    new_and_modified = [e[1] for e in diff if e[0] in ['A', 'M']]
 
     return new_and_modified
+
+
+def get_new_modified_notebooks(diff):
+    new_and_modified_nb = [e[1] for e in diff if e[0] in ['A', 'M'] and e[1].endswith('.ipynb')]
+
+    return new_and_modified_nb
 
 
 def get_moved_deleted(diff):
@@ -56,7 +62,7 @@ if __name__ == '__main__':
         github_context = json.load(f)
 
     git_diff = get_diff(github_context)
-    out = get_new_modified_notebooks(git_diff)
+    out = get_new_modified(git_diff)
 
     if args.env:
         print('true' if len(get_changed_env_files(git_diff)) > 0 else 'false')
