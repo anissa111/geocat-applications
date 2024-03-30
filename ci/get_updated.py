@@ -11,7 +11,7 @@ def prev_curr(context):
 
     # get prev and curr commit if event type is pull_request
     elif context['event_name'] == 'pull_request':
-        print(f'{context['event']['pull_request']['base']['sha']} {context['event']['pull_request']['head']['sha']}')
+        print(f"{context['event']['pull_request']['base']['sha']} {context['event']['pull_request']['head']['sha']}")
         return context['event']['pull_request']['base']['sha'], context['event']['pull_request']['head']['sha']
     else:
         raise ValueError('Event type not supported')
