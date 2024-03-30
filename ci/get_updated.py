@@ -72,3 +72,4 @@ if __name__ == '__main__':
         print(get_moved_deleted(git_diff))
     else:
         print(','.join(out) if len(out) > 0 else '')
+
