@@ -11,7 +11,7 @@ def prev_curr(context):
 
     # get prev and curr commit if event type is pull_request
     elif context['event_name'] == 'pull_request':
-        print(f"{context['event']['pull_request']['base']['sha']} {context['event']['pull_request']['head']['sha']}")
+        # print(f"{context['event']['pull_request']['base']['sha']} {context['event']['pull_request']['head']['sha']}")
         return context['event']['pull_request']['base']['sha'], context['event']['pull_request']['head']['sha']
     else:
         raise ValueError('Event type not supported')
@@ -21,7 +21,7 @@ def get_diff(context):
     base, head = prev_curr(context)
 
     # run git git_diff
-    diff = subprocess.run(['git', 'git_diff', base, head, '--name-status'], capture_output=True, text=True).stdout
+    diff = subprocess.run(['git', 'diff', base, head, '--name-status'], capture_output=True, text=True).stdout
     diff = [e.split('\t') for e in diff.split('\n') if len(e) > 0]
 
     return diff
