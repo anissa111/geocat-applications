@@ -1,0 +1,43 @@
+# Workflow to update pre-run notebooks with new data
+
+name: Update notebooks
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+concurrency:
+  group: "Update notebooks"
+  cancel-in-progress: true
+
+jobs:
+  get-changes:
+    runs-on: ubuntu-latest
+    outputs:
+        changed_files: ${{ steps.get_changed_files.outputs.changed_files }}
+        env_changes: ${{ steps.get_changed_files.outputs.env_changes }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: investigate-context
+        run: echo '${{ toJSON(github) }}' > github-context.json
+
+      - name: get_changed_files
+        id: get_changed_files
+        run: |
+          changed_files=$(python ci/get_updated.py github-context.json)
+          echo $changed_files
+          echo "changed_files=$changed_files" >> "$GITHUB_OUTPUT"
+          env_changes=$(python ci/get_updated.py github-context.json --env)
+          echo "env_changes=$env_changes" >> "$GITHUB_OUTPUT"
+          echo $env_changes
+
+      - name: print-output
+        run: |
+          echo ${{ steps.get_changed_files.outputs.changed_files }}
+          echo ${{ steps.get_changed_files.outputs.env_changes }}
