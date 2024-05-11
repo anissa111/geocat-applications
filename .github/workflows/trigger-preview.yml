@@ -30,6 +30,6 @@ jobs:
     needs: get-pr-number
     uses: './.github/workflows/build.yml'
     with:
-      artifact_name: docs-zip-${{ needs.get-pr-number.outputs.PR_NUMBER.number }}
+      artifact_name: docs-zip-${{ needs.get-pr-number.outputs.PR_NUMBER }}
       build_from_code_artifact: true
-      code_artifact_name: code-zip-${{ needs.get-pr-number.outputs.PR_NUMBER.number }}
+      code_artifact_name: code-zip-${{ needs.get-pr-number.outputs.PR_NUMBER }}
