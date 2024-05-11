@@ -21,8 +21,9 @@ jobs:
     - name: Read PR number
       id: get-pr-number
       run: |
-        cat pr_number
-        echo "$(cat pr_number.txt)" >> "$GITHUB_OUTPUT"
+        tree .
+        cat pr_number/pr_number.txt
+        echo "$(cat pr_number/pr_number.txt)" >> "$GITHUB_OUTPUT"
 
 
   build-for-preview:
