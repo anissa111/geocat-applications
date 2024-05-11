@@ -11,9 +11,9 @@ jobs:
     - name: Get PR number
       id: get-pr-number
       run: |
-        echo "$ {{ toJSON(github.event.ref) }}"
-        echo "$ {{ toJSON(github.event.workflow_run.pull_requests.number) }}"
-        echo "PR_NUMBER=${{ github.event.workflow_run.event.pull_requests.number }}" >> $GITHUB_ENV
+        echo "$ {{ github.event.ref }}"
+        echo "$ {{ github.event.workflow_run.pull_requests.number }}"
+        echo "PR_NUMBER=${{ github.event.workflow_run.pull_requests.number }}" >> $GITHUB_ENV
 
 
   build-for-preview:
