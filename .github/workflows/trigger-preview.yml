@@ -14,7 +14,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           sourceRunId: ${{ github.event.workflow_run.id }}
         id: get_pr_number
-        run: echo "PR_NUMBER=${{ github.event.workflow_run.payload.inputs.pr_number }}" >> $GITHUB_OUTPUT
   build-for-preview:
     needs: get-pr-number
     uses: './.github/workflows/build.yml'
