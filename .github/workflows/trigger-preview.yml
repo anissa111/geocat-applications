@@ -8,12 +8,15 @@ jobs:
   get-pr-number:
     runs-on: ubuntu-latest
     steps:
-      - name: Get PR number
-        uses: potiuk/get-workflow-origin@v1_1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          sourceRunId: ${{ github.event.workflow_run.id }}
-        id: get_pr_number
+#      - name: Get PR number
+#        uses: potiuk/get-workflow-origin@v1_1
+#        with:
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#          sourceRunId: ${{ github.event.workflow_run.id }}
+#        id: get_pr_number
+    - name: context
+      run: echo '${{ toJSON(github) }}' > github-context.json
+
   build-for-preview:
     needs: get-pr-number
     uses: './.github/workflows/build.yml'
