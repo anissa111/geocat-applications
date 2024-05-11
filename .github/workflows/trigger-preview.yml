@@ -12,12 +12,12 @@ jobs:
       id: get-pr-number
       run: |
         echo '${{ toJSON(github) }}' > github-context.json
-        echo "PR_NUMBER=${{ github.event.workflow_run.pull_requests.number }}" >> $GITHUB_ENV
+        echo "PR_NUMBER=${{ github.event.workflow_run.pull_requests[0] }}" >> $GITHUB_ENV
 
   build-for-preview:
     needs: get-pr-number
     uses: './.github/workflows/build.yml'
     with:
-      artifact_name: docs-zip-${{ needs.get-pr-number.outputs.PR_NUMBER }}
+      artifact_name: docs-zip-${{ needs.get-pr-number.outputs.PR_NUMBER.number }}
       build_from_code_artifact: true
-      code_artifact_name: code-zip-${{ needs.get-pr-number.outputs.PR_NUMBER }}
+      code_artifact_name: code-zip-${{ needs.get-pr-number.outputs.PR_NUMBER.number }}
