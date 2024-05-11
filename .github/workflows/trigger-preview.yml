@@ -14,7 +14,6 @@ jobs:
         echo '${{ toJSON(github.event.workflow_run) }}'
         echo "PR_NUMBER=${{ github.event.workflow_run.event.pull_requests.number }}" >> $GITHUB_OUTPUTS
 
-
   build-for-preview:
     needs: get-pr-number
     uses: './.github/workflows/build.yml'
