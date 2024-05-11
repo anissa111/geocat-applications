@@ -7,13 +7,15 @@ on:
 jobs:
   get-pr-number:
     runs-on: ubuntu-latest
+    outputs:
+      PR_NUMBER: ${{ steps.get-pr-number.outputs.PR_NUMBER }}
     steps:
     - name: Get PR number
       id: get-pr-number
       run: |
         echo '${{ toJSON(github) }}' > github-context.json
-        echo "PR_NUMBER=${{ github.event.workflow_run.pull_requests[0] }}" >> $GITHUB_ENV
-        echo "$PR_NUMBER"
+        echo "PR_NUMBER=${{ github.event.workflow_run.pull_requests[0] }}" >> $GITHUB_OUTPUT
+        echo ${{ PR_NUMBER }}
 
 
   build-for-preview:
