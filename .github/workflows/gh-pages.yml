@@ -13,10 +13,10 @@ on:
         required: false
         default: false
         type: string
-      cname:
-        description: 'Custom domain name'
+      destination_dir:
+        description: 'Path to publish to on GitHub Pages, relative to site root. We use this to deploy previews in a subdirectory.'
         required: false
-        default: 'None'
+        default: ''
         type: string
 
 jobs:
