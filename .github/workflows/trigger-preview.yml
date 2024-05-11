@@ -21,9 +21,7 @@ jobs:
     - name: Read PR number
       id: get-pr-number
       run: |
-        ls
-        unzip pr_number.zip
-        cat pr_number.txt
+        cat pr_number
         echo "$(cat pr_number.txt)" >> "$GITHUB_OUTPUT"
 
 
