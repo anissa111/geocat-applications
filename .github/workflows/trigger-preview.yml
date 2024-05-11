@@ -10,7 +10,9 @@ jobs:
     steps:
     - name: Get PR number
       id: get-pr-number
-      run: echo "PR_NUMBER=${{ github.event.workflow_run.event.pull_requests.number }}"
+      run: |
+        echo "github.event.workflow_run.event.pull_requests.number=${{ github.event.workflow_run.event.pull_requests.number }}"
+        echo "PR_NUMBER=${{ github.event.workflow_run.event.pull_requests.number }}" >> $GITHUB_ENV
 
   build-for-preview:
     needs: get-pr-number
