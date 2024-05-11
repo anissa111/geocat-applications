@@ -68,7 +68,7 @@ jobs:
           && inputs.cname != 'None')
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: "_build/html"
+          publish_dir: "${{ inputs.destination_dir }}/_build/html"
           enable_jekyll: false
           keep_files: true  # This preserves existing previews from open PRs
           destination_dir: ${{ inputs.destination_dir }}
