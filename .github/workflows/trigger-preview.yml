@@ -32,3 +32,11 @@ jobs:
       artifact_name: docs-zip-${{ needs.get-pr-number.outputs.PR_NUMBER }}
       build_from_code_artifact: true
       code_artifact_name: code-zip-${{ needs.get-pr-number.outputs.PR_NUMBER }}
+
+  deploy-preview:
+    needs: [get-pr-number, build-for-preview]
+    if: github.event.workflow_run.conclusion == 'success'
+    uses: './.github/workflows/gh-pages.yml'
+    with:
+      artifact_name: docs-zip-${{ needs.get-pr-number.outputs.PR_NUMBER }}
+      destination_dir: _preview/${{ needs.get-pr-number.outputs.PR_NUMBER }}  # deploy to subdirectory labeled with PR number
