@@ -9,14 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       PR_NUMBER: ${{ steps.get-pr-number.outputs.PR_NUMBER }}
-    env:
-        PR_PR: ${{ github.event.number }}
     steps:
-    - name: Get PR number
+    - name: Download PR number artifact
+      uses: dawidd6/action-download-artifact@v3.1.4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        workflow: trigger-build
+        run_id: ${{ github.event.workflow_run.id }}
+
+    - name: Read PR number
       id: get-pr-number
       run: |
-        echo $PR_PR > pr_number.txt
-
+        cat pr_number.txt
+        echo "$(cat pr_number.txt)" >> "$GITHUB_OUTPUT"
 
 
   build-for-preview:
