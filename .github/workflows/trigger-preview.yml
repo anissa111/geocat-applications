@@ -15,7 +15,7 @@ jobs:
       run: |
         echo '${{ toJSON(github) }}' > github-context.json
         echo "PR_NUMBER=${{ github.event.workflow_run.pull_requests[0] }}" >> $GITHUB_OUTPUT
-        echo ${{ PR_NUMBER }}
+        echo $GITHUB_OUTPUT
 
   build-for-preview:
     needs: get-pr-number
