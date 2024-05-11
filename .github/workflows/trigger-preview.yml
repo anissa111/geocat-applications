@@ -9,12 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get PR number
+        uses: potiuk/get-workflow-origin@v1_1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          sourceRunId: ${{ github.event.workflow_run.id }}
         id: get_pr_number
         run: echo "PR_NUMBER=${{ github.event.workflow_run.payload.inputs.pr_number }}" >> $GITHUB_OUTPUT
   build-for-preview:
     needs: get-pr-number
     uses: './.github/workflows/build.yml'
     with:
-      artifact_name: docs-zip-${{ needs.get-pr-number.outputs.PR_NUMBER }}
+      artifact_name: docs-zip-${{ needs.get-pr-number.outputs.pullRequestNumber }}
       build_from_code_artifact: true
-      code_artifact_name: code-zip-${{ needs.get-pr-number.outputs.PR_NUMBER }}
+      code_artifact_name: code-zip-${{ needs.get-pr-number.outputs.pullRequestNumber }}
