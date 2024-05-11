@@ -14,7 +14,7 @@ jobs:
 #          token: ${{ secrets.GITHUB_TOKEN }}
 #          sourceRunId: ${{ github.event.workflow_run.id }}
 #        id: get_pr_number
-    - name: context
+    - name: context2
       run: echo '${{ toJSON(github) }}' > github-context.json
 
   build-for-preview:
