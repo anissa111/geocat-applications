@@ -18,6 +18,11 @@ on:
         required: false
         default: ''
         type: string
+      publish_dir:
+        description: 'Publish dir for the peaceiris/actions-gh-pages action'
+        required: false
+        default: '_build/html'
+        type: string
 
 jobs:
   deploy:
@@ -54,7 +59,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: "${{ inputs.destination_dir }}/_build/html"
+          publish_dir: ${{ inputs.publish_dir }}
           enable_jekyll: false
           keep_files: true  # This preserves existing previews from open PRs
           destination_dir: ${{ inputs.destination_dir }}
