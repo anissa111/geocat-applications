@@ -12,4 +12,4 @@ jobs:
 
   deploy:
     needs: build
-    uses: './.github/workflows/deploy.yml'
+    uses: './.github/workflows/gh-pages.yml'
