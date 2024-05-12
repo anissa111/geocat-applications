@@ -38,6 +38,13 @@ jobs:
           comment-author: 'github-actions[bot]'
           body-includes: '${{ env.comment_message }}'
 
+      - name: Debug
+        run: |
+          echo "${{ steps.fc.outputs.comment-id }}"
+          echo "${{ env.comment_message }}"
+          echo "${{ inputs.sha }}"
+          echo "${{ github.event.workflow_run.conclusion }}"
+
       - name: Create preview comment
         if: |
           github.event.workflow_run.conclusion != 'success'
