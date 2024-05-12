@@ -34,7 +34,7 @@ jobs:
         uses: peter-evans/find-comment@v3
         id: fc
         with:
-          issue-number: '${{ inputs.pull_request_number }}'
+          issue-number: '${{ inputs.pr_number }}'
           comment-author: 'github-actions[bot]'
           body-includes: '${{ env.comment_message }}'
 
@@ -44,7 +44,7 @@ jobs:
           && steps.fc.outputs.comment-id == ''
         uses: peter-evans/create-or-update-comment@v4
         with:
-          issue-number: ${{ inputs.pull_request_number }}
+          issue-number: ${{ inputs.pr_number }}
           body: |
             ${{ env.comment_message }}
             🔍 Git commit SHA: ${{ inputs.sha }}
@@ -72,9 +72,9 @@ jobs:
           shopt -s nocasematch
           if [[ ${{ steps.repo-name.outputs.value }} = ${{ github.repository_owner }}.github.io ]]
           then
-            echo "url=https://${{ steps.repo-name.outputs.value }}/_preview/${{ inputs.pull_request_number }}" >> $GITHUB_OUTPUT
+            echo "url=https://${{ steps.repo-name.outputs.value }}/_preview/${{ inputs.pr_number }}" >> $GITHUB_OUTPUT
           else
-            echo "url=https://${{ github.repository_owner }}.github.io/${{ steps.repo-name.outputs.value }}/_preview/${{ inputs.pull_request_number }}" >> $GITHUB_OUTPUT
+            echo "url=https://${{ github.repository_owner }}.github.io/${{ steps.repo-name.outputs.value }}/_preview/${{ inputs.pr_number }}" >> $GITHUB_OUTPUT
           fi
           shopt -u nocasematch
 
