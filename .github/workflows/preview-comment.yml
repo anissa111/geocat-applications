@@ -13,8 +13,16 @@ on:
         required: true
         type: string
 
+      comment_id:
+        description: 'ID of the comment to update'
+        required: false
+        type: string
+        default: ''
+
 jobs:
   comment:
+    outputs:
+      comment_id: ${{ steps.save-comment-id.comment_id }}
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -28,9 +36,10 @@ jobs:
 
       - name: set message
         run: |
-          echo "comment_message=🤖 Beep boop, see your PR preview:" >> $GITHUB_ENV
+          echo "comment_message=Meowdy! See your PR preview:" >> $GITHUB_ENV
 
       - name: Find preview comment
+        if : ${{ inputs.comment_id == ''}}
         uses: peter-evans/find-comment@v3
         id: fc
         with:
@@ -38,17 +47,9 @@ jobs:
           comment-author: 'github-actions[bot]'
           body-includes: '${{ env.comment_message }}'
 
-      - name: Debug
-        run: |
-          echo "${{ steps.fc.outputs.comment-id }}"
-          echo "${{ env.comment_message }}"
-          echo "${{ inputs.sha }}"
-          echo "${{ github.event.workflow_run.conclusion }}"
-
       - name: Create preview comment
-        if: |
-          github.event.workflow_run.conclusion != 'success'
-          && steps.fc.outputs.comment-id == ''
+        if: inputs.comment_id == ''
+        id: create-comment
         uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ inputs.pr_number }}
@@ -57,43 +58,38 @@ jobs:
             🔍 Git commit SHA: ${{ inputs.sha }}
             ✅ Deployment Preview URL: In Progress
 
+      - name: save comment id
+        id: save-comment-id
+        run: |
+            if ${{ inputs.pr_number }} == ''
+            then
+              echo "comment_id=$(echo '${{ steps.create-comment.outputs.comment-id }}')" >> $GITHUB_OUTPUT
+            else
+              echo "comment_id=$(echo '${{ inputs.comment_id }}')" >> $GITHUB_OUTPUT
+            fi
+
       - name: Update preview comment
         if: |
-          github.event.workflow_run.conclusion != 'success'
-          && steps.fc.outputs.comment-id != ''
+          steps.input.comment_id != ''
+          && github.event.workflow_run.conclusion == 'success'
         uses: peter-evans/create-or-update-comment@v4
         with:
-          comment-id: ${{ steps.fc.outputs.comment-id }}
-          edit-mode: replace
-          body: |
-            ${{ env.comment_message }}
-            🔍 Git commit SHA: ${{ inputs.sha }}
-            ✅ Deployment Preview URL: In Progress
-
-      - name: Set preview URL
-        if: |
-          github.event.workflow_run.conclusion == 'success'
-          && steps.fc.outputs.comment-id != ''
-        id: preview-url
-        run: |
-          shopt -s nocasematch
-          if [[ ${{ steps.repo-name.outputs.value }} = ${{ github.repository_owner }}.github.io ]]
-          then
-            echo "url=https://${{ steps.repo-name.outputs.value }}/_preview/${{ inputs.pr_number }}" >> $GITHUB_OUTPUT
-          else
-            echo "url=https://${{ github.repository_owner }}.github.io/${{ steps.repo-name.outputs.value }}/_preview/${{ inputs.pr_number }}" >> $GITHUB_OUTPUT
-          fi
-          shopt -u nocasematch
-
-      - name: Finalize preview comment
-        if: |
-          github.event.workflow_run.conclusion == 'success'
-          && steps.fc.outputs.comment-id != ''
-        uses: peter-evans/create-or-update-comment@v4
-        with:
-          comment-id: ${{ steps.fc.outputs.comment-id }}
+          comment-id: ${{ steps.input.comment_id }}
           edit-mode: replace
           body: |
             ${{ env.comment_message }}
             🔍 Git commit SHA: ${{ inputs.sha }}
             ✅ Deployment Preview URL: ${{ steps.preview-url.outputs.url }}
+
+      - name: Update preview comment
+        if: |
+          steps.input.comment_id != ''
+          && github.event.workflow_run.conclusion != 'success'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ steps.input.comment_id }}
+          edit-mode: replace
+          body: |
+            ${{ env.comment_message }}
+            🔍 Git commit SHA: ${{ inputs.sha }}
+            ❌ Deployment Preview URL: Failed
