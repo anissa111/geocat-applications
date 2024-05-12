@@ -49,4 +49,4 @@ jobs:
     uses: './github/workflows/preview-comment.yml'
     with:
       pr_number: ${{ needs.get-pr-number.outputs.PR_NUMBER }}
-      sha: ${{ job.status }}
+      sha: ${{ needs.get-pr-number.outputs.SHA }}
