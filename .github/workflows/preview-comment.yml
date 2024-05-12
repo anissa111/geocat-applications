@@ -12,12 +12,15 @@ on:
         description: 'SHA of the PR'
         required: true
         type: string
-
       comment_id:
         description: 'ID of the comment to update'
         required: false
         type: string
         default: ''
+    outputs:
+      comment_id:
+        description: 'ID of the comment to update'
+        value: ${{ jobs.comment.outputs.comment_id }}
 
 jobs:
   comment:
