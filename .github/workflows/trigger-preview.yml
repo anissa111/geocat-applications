@@ -2,7 +2,7 @@ name: trigger preview
 on:
   workflow_run:
     workflows: ["trigger build"]
-    types: [requested, completed]
+    types: [completed]
 
 jobs:
   get-pr-number:
