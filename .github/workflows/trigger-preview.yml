@@ -29,6 +29,13 @@ jobs:
         echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_OUTPUT
         echo "SHA=$SHA" >> $GITHUB_OUTPUT
 
+  make-or-find-preview-comment:
+    needs: get-pr-number
+    uses: './.github/workflows/preview-comment.yml'
+    with:
+      pr_number: ${{ needs.get-pr-number.outputs.PR_NUMBER }}
+      sha: ${{ needs.get-pr-number.outputs.SHA }}
+
   build-for-preview:
     needs: get-pr-number
     uses: './.github/workflows/build.yml'
@@ -46,8 +53,9 @@ jobs:
       destination_dir: _preview/${{ needs.get-pr-number.outputs.PR_NUMBER }}  # deploy to subdirectory labeled with PR number
 
   preview-comment:
-    needs: get-pr-number
+    needs: [get-pr-number, deploy-preview, make-or-find-preview-comment]
     uses: './.github/workflows/preview-comment.yml'
     with:
       pr_number: ${{ needs.get-pr-number.outputs.PR_NUMBER }}
       sha: ${{ needs.get-pr-number.outputs.SHA }}
+      comment_id: ${{ needs.make-or-find-preview-comment.outputs.comment_id }}
