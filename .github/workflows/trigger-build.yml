@@ -31,14 +31,16 @@ jobs:
           name: code-zip-${{ github.event.number }}
           path: ./pr_code.zip
 
-      - name: Save the PR number in an artifact
+      - name: Save the PR number and sha in an artifact
         shell: bash
         env:
           PR_NUMBER: ${{ github.event.number }}
+          SHA: ${{ github.sha }}
         run: |
           echo $PR_NUMBER > pr_number.txt
+          echo $SHA >> pr_number.txt
 
-      - name: Upload PR number
+      - name: Upload PR number and sha artifact
         uses: actions/upload-artifact@v4
         with:
           name: pr_number
