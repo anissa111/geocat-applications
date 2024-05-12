@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       PR_NUMBER: ${{ steps.get-pr-number.outputs.PR_NUMBER }}
+      SHA: ${{ steps.get-pr-number.outputs.SHA }}
     steps:
     - name: Download PR number artifact
       uses: dawidd6/action-download-artifact@v3.1.4
@@ -23,7 +24,9 @@ jobs:
       run: |
         tree .
         cat pr_number.txt
-        echo "PR_NUMBER=$(cat pr_number.txt)" >> $GITHUB_OUTPUT
+        { read PR_NUMBER; read SHA; } < pr_number.txt
+        echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_OUTPUT
+        echo "SHA=$SHA" >> $GITHUB_OUTPUT
 
   build-for-preview:
     needs: get-pr-number
@@ -40,3 +43,10 @@ jobs:
     with:
       artifact_name: docs-zip-${{ needs.get-pr-number.outputs.PR_NUMBER }}
       destination_dir: _preview/${{ needs.get-pr-number.outputs.PR_NUMBER }}  # deploy to subdirectory labeled with PR number
+
+  preview-comment:
+    needs: get-pr-number
+    uses: './github/workflows/preview-comment.yml'
+    with:
+      pr_number: ${{ needs.get-pr-number.outputs.PR_NUMBER }}
+      sha: ${{ job.status }}
