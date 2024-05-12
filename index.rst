@@ -22,7 +22,6 @@
 ..   :align: right
 
 
-
 GeoCAT Applications
 ===================
 
