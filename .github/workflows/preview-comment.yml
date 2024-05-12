@@ -28,7 +28,7 @@ jobs:
 
       - name: set message
         run: |
-          "comment_message=🤖 Beep boop, see your PR preview:" >> $GITHUB_ENV
+          echo "comment_message=🤖 Beep boop, see your PR preview:" >> $GITHUB_ENV
 
       - name: Find preview comment
         uses: peter-evans/find-comment@v3
