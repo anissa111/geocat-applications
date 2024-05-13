@@ -42,7 +42,6 @@ jobs:
           echo "comment_message=Meowdy! See your PR preview:" >> $GITHUB_ENV
 
       - name: Find preview comment
-        if : ${{ inputs.comment_id == ''}}
         uses: peter-evans/find-comment@v3
         id: fc
         with:
@@ -51,7 +50,7 @@ jobs:
           body-includes: '${{ env.comment_message }}'
 
       - name: Create preview comment
-        if: inputs.comment_id == ''
+        if: steps.fc.outputs.comment-id == ''
         id: create-comment
         uses: peter-evans/create-or-update-comment@v4
         with:
@@ -60,6 +59,13 @@ jobs:
             ${{ env.comment_message }}
             🔍 Git commit SHA: ${{ inputs.sha }}
             ✅ Deployment Preview URL: In Progress
+
+      - name: Debug
+        run: |
+          echo "${{ inputs.comment_id }}"
+          echo "${{ steps.fc.outputs.comment-id }}"
+          echo "${{ steps.create-comment.outputs.comment-id }}"
+
 
       - name: save comment id
         id: save-comment-id
