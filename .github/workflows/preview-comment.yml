@@ -61,7 +61,7 @@ jobs:
 
       - name: Set preview URL
         if: |
-          input.no_update == 'false'
+          inputs.no_update == 'false'
           && steps.fc.outputs.comment-id != ''
         id: preview-url
         run: |
@@ -81,7 +81,7 @@ jobs:
 
       - name: Update preview comment
         if: |
-          input.no_update == 'false'
+          inputs.no_update == 'false'
           && steps.fc.outputs.comment-id != ''
           && github.event.workflow_run.conclusion != 'failure'
         uses: peter-evans/create-or-update-comment@v4
@@ -95,7 +95,7 @@ jobs:
 
       - name: Update preview comment if something went wrong
         if: |
-          input.no_update == 'false'
+          inputs.no_update == 'false'
           && steps.fc.outputs.comment-id != ''
           && github.event.workflow_run.conclusion == 'failure'
         uses: peter-evans/create-or-update-comment@v4
