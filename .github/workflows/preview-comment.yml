@@ -64,8 +64,7 @@ jobs:
       - name: save comment id
         id: save-comment-id
         run: |
-            if ${{ inputs.pr_number }} == ''
-            then
+            if ['${{ inputs.comment_id }}' == '']; then
               echo "comment_id=$(echo '${{ steps.create-comment.outputs.comment-id }}')" >> $GITHUB_OUTPUT
             else
               echo "comment_id=$(echo '${{ inputs.comment_id }}')" >> $GITHUB_OUTPUT
