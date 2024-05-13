@@ -61,17 +61,15 @@ jobs:
           shopt -s nocasematch
           if [[ ${{ steps.repo-name.outputs.value }} = ${{ github.repository_owner }}.github.io ]]
           then
-            echo "url=https://${{ steps.repo-name.outputs.value }}/_preview/${{ inputs.pull_request_number }}" >> $GITHUB_OUTPUT
+            echo "url=https://${{ steps.repo-name.outputs.value }}/_preview/${{ inputs.pr_number }}" >> $GITHUB_OUTPUT
           else
-            echo "url=https://${{ github.repository_owner }}.github.io/${{ steps.repo-name.outputs.value }}/_preview/${{ inputs.pull_request_number }}" >> $GITHUB_OUTPUT
+            echo "url=https://${{ github.repository_owner }}.github.io/${{ steps.repo-name.outputs.value }}/_preview/${{ inputs.pr_number }}" >> $GITHUB_OUTPUT
           fi
           shopt -u nocasematch
 
       - name: Debug
         run: |
-          echo "${{ inputs.comment_id }}"
           echo "${{ steps.fc.outputs.comment-id }}"
-          echo "${{ steps.create-comment.outputs.comment-id }}"
           echo "${{ steps.preview-url.outputs.url }}"
 
       - name: Update preview comment
@@ -80,7 +78,7 @@ jobs:
           && github.event.workflow_run.conclusion != 'failure'
         uses: peter-evans/create-or-update-comment@v4
         with:
-          comment-id: ${{ steps.input.comment_id }}
+          comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
           body: |
             ${{ env.comment_message }}
@@ -93,7 +91,7 @@ jobs:
           && github.event.workflow_run.conclusion == 'failure'
         uses: peter-evans/create-or-update-comment@v4
         with:
-          comment-id: ${{ steps.input.comment_id }}
+          comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
           body: |
             ${{ env.comment_message }}
