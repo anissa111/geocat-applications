@@ -72,7 +72,7 @@ jobs:
           echo "${{ inputs.comment_id }}"
           echo "${{ steps.fc.outputs.comment-id }}"
           echo "${{ steps.create-comment.outputs.comment-id }}"
-          echp "${{ steps.preview-url.outputs.url }}"
+          echo "${{ steps.preview-url.outputs.url }}"
 
       - name: Update preview comment
         if: |
