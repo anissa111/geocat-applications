@@ -35,6 +35,7 @@ jobs:
     with:
       pr_number: ${{ needs.get-pr-number.outputs.PR_NUMBER }}
       sha: ${{ needs.get-pr-number.outputs.SHA }}
+      no_update: true
 
   build-for-preview:
     needs: get-pr-number
