@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NCL Equivalency Template</title>
+    <title>Computational Notebook Template</title>
   
   
   
@@ -384,7 +384,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>NCL Equivalency Template</h1>
+    <h1>Computational Notebook Template</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -395,6 +395,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content">Content</a></li>
 </ul>
             </nav>
@@ -407,26 +408,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="ncl-equivalency-template">
-<h1>NCL Equivalency Template<a class="headerlink" href="#ncl-equivalency-template" title="Link to this heading">#</a></h1>
-<p>This template is to create notebooks that add on to notebooks created from the computational template to give them context in terms of their application related to corresponding functionality in NCL.
-Like that template, this should be the only use of the top level header (<code class="docutils literal notranslate"><span class="pre">#</span></code>) in the notebook.</p>
+  <section id="computational-notebook-template">
+<h1>Computational Notebook Template<a class="headerlink" href="#computational-notebook-template" title="Link to this heading">#</a></h1>
+<p>This template is designed to be the main page of content for a specific topic added to geocat-applications.</p>
+<p>It should start with a header describing the type of functionality the notebook demonstrates and should be the only use of the top level header (<code class="docutils literal notranslate"><span class="pre">#</span></code>) in the notebook.</p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
 <p>When possible, lead with a short intro paragraph that covers the content and scope of the materials in the notebook</p>
-<ul class="simple">
-<li><p>List and link to the NCL documentation for the functions to be covered in the notebook</p></li>
-</ul>
+</section>
+<section id="grab-and-go">
+<h2>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h2>
+<p>Where possible, provide a code section that can be copied and pasted to use the base-level functionality described in the notebook.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python code</span>
+</pre></div>
+</div>
 </section>
 <section id="content">
 <h2>Content<a class="headerlink" href="#content" title="Link to this heading">#</a></h2>
-<p>In the content sections, provide relevant context to the NCL functions. For example, cover topics like:</p>
+<p>In the content sections, provide sections on topics such as:</p>
 <ul class="simple">
-<li><p>Is there relevant history to the function?</p></li>
-<li><p>Is there a specific use case that the function is designed for?</p></li>
-<li><p>Are the methods used in the original function still relevant or outdated?</p></li>
-<li><p>How closely does python replicate the functionality?</p></li>
-<li><p>What flags or inputs should be used in python to replicate the functionality?</p></li>
+<li><p>working through a geoscience-specific problem</p></li>
+<li><p>explaining the concepts behind the functionality</p></li>
+<li><p>introducing other examples in the python ecosystem that cover similar topics</p></li>
 </ul>
 <p>Then link to the corresponding computational notebook that demonstrates the functionality in python. If one does not exist, create one.</p>
 <p>Include the same summary section of the computational notebook, highlighting if any altercations have been made to match the NCL functionality more closely</p>
@@ -461,6 +464,7 @@ Like that template, this should be the only use of the top level header (<code c
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content">Content</a></li>
 </ul>
   </nav></div>
