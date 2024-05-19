@@ -8,5 +8,3 @@ Plot Types
 .. toctree::
    :maxdepth: 1
    :hidden:
-
-   contour.ipynb
