@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Datetime functions in NCL</title>
+    <title>NCL Equivalency Notebook Template</title>
   
   
   
@@ -18,38 +18,38 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css?v=7691835d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=b6986961" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_overrides.css?v=7691835d" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=b6986961" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'applications/date_time/NCL_datetime';</script>
-    <link rel="icon" href="../../_static/GeoCAT_square.svg"/>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'templates/ncl_template';</script>
+    <link rel="icon" href="../_static/GeoCAT_square.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -81,7 +81,7 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="../../search.html"
+      action="../search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -130,7 +130,7 @@
 
   
 
-<a class="navbar-brand logo" href="../../index.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -141,8 +141,8 @@
       
     
     
-    <img src="../../_static/GeoCAT_nsf.svg" class="logo__image only-light" alt=" - Home"/>
-    <script>document.write(`<img src="../../_static/GeoCAT_nsf.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+    <img src="../_static/GeoCAT_nsf.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/GeoCAT_nsf.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
   
   
 </a></div>
@@ -161,20 +161,20 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../plot_types/plot_types.html">Plot Types</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../applications/plot_types/plot_types.html">Plot Types</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../data_analysis/data_analysis.html">Data Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../applications/data_analysis/data_analysis.html">Data Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="date_time.html">Date and Time</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="datetime.html">Working with Date and Time</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../applications/date_time/date_time.html">Date and Time</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../applications/date_time/datetime.html">Working with Date and Time</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">NCL</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../ncl/ncl_index/ncl_index.html">NCL Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ncl/ncl_index/ncl_index.html">NCL Index</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Support</span></p>
 <ul class="nav bd-sidenav">
@@ -251,7 +251,7 @@
       
       
       
-      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/applications/date_time/NCL_datetime.ipynb" target="_blank"
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/templates/ncl_template.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -268,7 +268,7 @@
       
       
       
-      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Fapplications/date_time/NCL_datetime.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Ftemplates/ncl_template.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -298,7 +298,7 @@
       
       
       
-      <li><a href="../../_sources/applications/date_time/NCL_datetime.ipynb" target="_blank"
+      <li><a href="../_sources/templates/ncl_template.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +382,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Datetime functions in NCL</h1>
+    <h1>NCL Equivalency Notebook Template</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -394,7 +394,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-datetime-in-ncl">Using datetime in NCL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content">Content</a></li>
 </ul>
             </nav>
         </div>
@@ -406,17 +406,40 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="datetime-functions-in-ncl">
-<h1>Datetime functions in NCL<a class="headerlink" href="#datetime-functions-in-ncl" title="Link to this heading">#</a></h1>
+  <section id="ncl-equivalency-notebook-template">
+<h1>NCL Equivalency Notebook Template<a class="headerlink" href="#ncl-equivalency-notebook-template" title="Link to this heading">#</a></h1>
+<p>This template is to create notebooks that add-on to notebooks created from the computational template to give them context in terms of their application related to corresponding functionality in NCL if necessary</p>
+<p>Like that template, this should be the only use of the top level header (<code class="docutils literal notranslate"><span class="pre">#</span></code>) in the notebook.</p>
+<p>This notebook can be aimed at a more advanced audience, as these notebooks assume that the user is seeking information beyond the basic “how to do this in python” that the computational notebook provides.</p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>When possible, lead with a short intro paragraph that covers the content and scope of the materials in the notebook</p>
+<ul class="simple">
+<li><p>Link to the NCL documentation for the functions to be covered in the notebook</p></li>
+<li><p>Link to any resources you found useful when constructing this notebook</p></li>
+<li><p>Link to the computational notebook that corresponds to this notebook</p></li>
+</ul>
 </section>
 <section id="grab-and-go">
 <h2>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h2>
+<p>Where possible, provide a code section that can be copied and pasted to replciate NCL functionality.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python code</span>
+</pre></div>
+</div>
 </section>
 <hr class="docutils" />
-<section id="using-datetime-in-ncl">
-<h2>Using datetime in NCL<a class="headerlink" href="#using-datetime-in-ncl" title="Link to this heading">#</a></h2>
+<section id="content">
+<h2>Content<a class="headerlink" href="#content" title="Link to this heading">#</a></h2>
+<p>In the content sections, provide relevant context to the NCL functions. For example, cover topics like:</p>
+<ul class="simple">
+<li><p>Is there relevant history to the function?</p></li>
+<li><p>Is there a specific use case that the function is designed for?</p></li>
+<li><p>Are the methods used in the original function still relevant or outdated?</p></li>
+<li><p>How closely does python replicate the functionality?</p></li>
+<li><p>What flags or inputs should be used in python to replicate the functionality?</p></li>
+</ul>
+<p>Then link to the corresponding computational notebook that demonstrates the functionality in python. If one does not exist, consider creating one.</p>
+<p>Include the same grab and go section of the computational notebook, highlighting if any altercations have been made to match the NCL functionality more closely</p>
 </section>
 </section>
 
@@ -449,7 +472,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-datetime-in-ncl">Using datetime in NCL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content">Content</a></li>
 </ul>
   </nav></div>
 
@@ -501,8 +524,8 @@ By GeoCAT
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>
