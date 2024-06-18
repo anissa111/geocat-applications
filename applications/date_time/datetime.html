@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Working with Date and Time</title>
+    <title>Working with Dates and Times</title>
   
   
   
@@ -29,7 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css?v=7691835d" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
@@ -43,7 +43,7 @@
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'applications/date_time/datetime';</script>
@@ -51,7 +51,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="NCL Index" href="../../ncl/ncl_index/ncl_index.html" />
-    <link rel="prev" title="Date and Time" href="date_time.html" />
+    <link rel="prev" title="Dates and Times" href="date_time.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -168,13 +168,18 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="date_time.html">Date and Time</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Working with Date and Time</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Working with Dates and Times</a></li>
 </ul>
 </details></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">NCL</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">NCL to Python</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../ncl/ncl_index/ncl_index.html">NCL Index</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ncl/ncl_entries/ncl_entries.html">NCL Applications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ncl/ncl_entries/days_in_month.html">days_in_month</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ncl/ncl_entries/day_of_week.html">day_of_week</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Support</span></p>
 <ul class="nav bd-sidenav">
@@ -209,9 +214,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -369,9 +374,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -382,7 +387,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Working with Date and Time</h1>
+    <h1>Working with Dates and Times</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -392,7 +397,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-datetime-module">The datetime module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-datetime-module">The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strftime"><code class="docutils literal notranslate"><span class="pre">strftime()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cftime">cftime</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specific-use-cases">Specific Use Cases</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-number-of-days-in-a-month">Calculating the number of days in a month</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-day-of-the-week">Calculating the day of the week</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curated-resources">Curated Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -404,10 +420,144 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="working-with-date-and-time">
-<h1>Working with Date and Time<a class="headerlink" href="#working-with-date-and-time" title="Link to this heading">#</a></h1>
+  <section id="working-with-dates-and-times">
+<h1>Working with Dates and Times<a class="headerlink" href="#working-with-dates-and-times" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>Working with dates and times in Python is a common task in geoscience workflows. This notebook will cover:</p>
+<ul class="simple">
+<li><p>Working with the <a class="reference internal" href="#docs.python.org/3/library/datetime.html"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></span></a> module from the Python Standard Library</p></li>
+<li><p><a class="reference internal" href="#unidata.github.io/cftime/index.html"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">cftime</span></code></span></a>, <a class="reference internal" href="#cfconventions.org"><span class="xref myst">CF Conventions</span></a>, and how they are related to working with geoscience data</p></li>
+<li><p>A resource guide to point you to more detailed information depending on your use case</p></li>
+</ul>
+</section>
 <section id="the-datetime-module">
-<h2>The datetime module<a class="headerlink" href="#the-datetime-module" title="Link to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module<a class="headerlink" href="#the-datetime-module" title="Link to this heading">#</a></h2>
+<p>From the <a class="reference external" href="https://docs.python.org/3/library/datetime.html">module’s documentation</a>:</p>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module supplies classes for manipulating dates and times.</p>
+<p>While date and time arithmetic is supported, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;datetime.date.today() -&gt; </span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">today</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;datetime.datetime.now() -&gt; </span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">now</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date.today() -&gt; 	 2024-06-02
+datetime.datetime.now() -&gt; 	 2024-06-02 22:44:37.783255
+</pre></div>
+</div>
+</div>
+</div>
+<section id="strftime">
+<h3><code class="docutils literal notranslate"><span class="pre">strftime()</span></code><a class="headerlink" href="#strftime" title="Link to this heading">#</a></h3>
+<p>You can use <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime.strftime"><code class="docutils literal notranslate"><span class="pre">strftime()</span></code></a> to parse and format these date objects.To see all formatting options, see the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#format-codes">full list of format codes</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print just the year</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;now.strftime(&#39;%Y&#39;)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># print weekday, month, day, year, 12h time, and AM/PM</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;now.strftime(&#39;%A, %B </span><span class="si">%d</span><span class="s2"> %Y %I:%M:%S %p&#39;)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%A, %B </span><span class="si">%d</span><span class="s2"> %Y %I:%M:%S %p&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># use a shorter version to produce &quot;locale appropriate&quot; date and time</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;now.strftime(&#39;</span><span class="si">%c</span><span class="s2">&#39;)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%c</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>now.strftime(&#39;%Y&#39;)
+2024
+
+now.strftime(&#39;%A, %B %d %Y %I:%M:%S %p&#39;)
+Sunday, June 02 2024 10:44:37 PM
+
+now.strftime(&#39;%c&#39;)
+Sun Jun  2 22:44:37 2024
+</pre></div>
+</div>
+</div>
+</div>
+<p>These functions use a <a class="reference external" href="https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar">propeleptic Gregorian</a> calendar, though, which is not always sufficient for working with geoscience data.</p>
+</section>
+</section>
+<section id="cftime">
+<h2>cftime<a class="headerlink" href="#cftime" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://unidata.github.io/cftime/"><code class="docutils literal notranslate"><span class="pre">cftime</span></code></a> is another library for working with dates and times in Python that conforms to the <a class="reference external" href="https://cfconventions.org/cf-conventions/cf-conventions#time-coordinate">Climate and Forecasting (CF) metadata conventions</a>.</p>
+<p>Importantly, <code class="docutils literal notranslate"><span class="pre">cftime</span></code> supports all the calendars defined in the CF conventions, including <code class="docutils literal notranslate"><span class="pre">gregorian</span></code> or <code class="docutils literal notranslate"><span class="pre">standard</span></code>, which is the mixed Gregorian/Julian calendar defined by <a class="reference external" href="https://www.unidata.ucar.edu/software/udunits/">Udunits</a>, <code class="docutils literal notranslate"><span class="pre">proleptic_gregorian</span></code>, <code class="docutils literal notranslate"><span class="pre">noleap</span></code> or <code class="docutils literal notranslate"><span class="pre">365_day</span></code>, <code class="docutils literal notranslate"><span class="pre">all_leap</span></code> or <code class="docutils literal notranslate"><span class="pre">366_day</span></code>, <code class="docutils literal notranslate"><span class="pre">360_day</span></code>, and <code class="docutils literal notranslate"><span class="pre">julian</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cftime</span></code> is often useful for working with geoscience data and can be used with <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.CFTimeIndex.html"><code class="docutils literal notranslate"><span class="pre">xarray</span></code></a>.</p>
+</section>
+<section id="specific-use-cases">
+<h2>Specific Use Cases<a class="headerlink" href="#specific-use-cases" title="Link to this heading">#</a></h2>
+<section id="calculating-the-number-of-days-in-a-month">
+<h3>Calculating the number of days in a month<a class="headerlink" href="#calculating-the-number-of-days-in-a-month" title="Link to this heading">#</a></h3>
+<p>To calculate the number of days in a month, use <a class="reference external" href="https://unidata.github.io/cftime/api.html#cftime.datetime"><code class="docutils literal notranslate"><span class="pre">cftime.datetime().daysinmonth</span></code></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+
+<span class="n">day</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">month</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">2024</span>
+
+<span class="n">date</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s2">&quot;standard&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">daysinmonth</span>
+<span class="n">date</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculating-the-day-of-the-week">
+<h3>Calculating the day of the week<a class="headerlink" href="#calculating-the-day-of-the-week" title="Link to this heading">#</a></h3>
+<p>To calculate the day of the week, use <code class="docutils literal notranslate"><span class="pre">cftime.datetime().strftime(&quot;%A&quot;)</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+
+<span class="n">day</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">month</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">2024</span>
+
+<span class="n">dow</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span>
+    <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;proleptic_gregorian&#39;</span><span class="p">,</span> <span class="n">has_year_zero</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%A&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2"> is a </span><span class="si">{</span><span class="n">dow</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-6-4 is a Tuesday
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="curated-resources">
+<h2>Curated Resources<a class="headerlink" href="#curated-resources" title="Link to this heading">#</a></h2>
+<p>To learn more about working with dates and times in Python, we suggest:</p>
+<ul class="simple">
+<li><p>the Project Pythia Foundations chapter titled <a class="reference external" href="https://foundations.projectpythia.org/core/datetime/datetime.html">Times and Dates in Python</a></p></li>
+<li><p>this Xarray <a class="reference external" href="https://docs.xarray.dev/en/latest/user-guide/time-series.html">documentation page on timeseries data</a></p></li>
+<li><p>the <a class="reference external" href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/09_timeseries.html">“How to handle time series data with ease”</a> tutorial if you’re working with <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p></li>
+</ul>
 </section>
 </section>
 
@@ -428,7 +578,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Date and Time</p>
+        <p class="prev-next-title">Dates and Times</p>
       </div>
     </a>
     <a class="right-next"
@@ -456,7 +606,18 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-datetime-module">The datetime module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-datetime-module">The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strftime"><code class="docutils literal notranslate"><span class="pre">strftime()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cftime">cftime</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specific-use-cases">Specific Use Cases</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-number-of-days-in-a-month">Calculating the number of days in a month</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-day-of-the-week">Calculating the day of the week</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curated-resources">Curated Resources</a></li>
 </ul>
   </nav></div>
 

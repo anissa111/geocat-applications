@@ -14,5 +14,6 @@ Receipts List
 .. This will automatically generates a list of all the files in the ncl/receipts directory.
 .. toctree::
     :glob:
+    :maxdepth: 1
 
     *

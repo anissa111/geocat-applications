@@ -8,6 +8,7 @@ NCL Index
     :file: ../../tmp/ncl-index-table.csv
     :width: 100%
     :header-rows: 1
+    :widths: 20, 35, 35, 10
 
 
 .. note::
