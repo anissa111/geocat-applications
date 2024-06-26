@@ -1,4 +1,59 @@
 {
   "projectName": "geocat-applications",
-  "projectOwner": "<NCAR>"
+  "projectOwner": "NCAR",
+  "repoType": "github",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "anissa111",
+      "name": "Anissa Zacharias",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38434768?v=4",
+      "profile": "https://github.com/anissa111",
+      "contributions": [
+        "infra",
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "cyschneck",
+      "name": "Cora Schneck",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22159116?v=4",
+      "profile": "https://cyschneck.com/",
+      "contributions": [
+        "code",
+        "infra",
+        "ideas"
+      ]
+    },
+    {
+      "login": "kafitzgerald",
+      "name": "Katelyn FitzGerald",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7872563?v=4",
+      "profile": "https://github.com/kafitzgerald",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "jukent",
+      "name": "Julia Kent",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46687291?v=4",
+      "profile": "https://github.com/jukent",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "andy-theia",
+      "name": "Andy McKeen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/170580076?v=4",
+      "profile": "https://github.com/andy-theia",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
 }
