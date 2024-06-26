@@ -3,6 +3,8 @@
   "projectOwner": "NCAR",
   "repoType": "github",
   "commitConvention": "angular",
+  "imageSize": 100,
+  "skipCi": true,
   "contributors": [
     {
       "login": "anissa111",
