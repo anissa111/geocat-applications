@@ -60,6 +60,14 @@ Python Examples
 .. toctree::
     :maxdepth: 2
     :hidden:
+    :caption: Contributing
+
+    Contributor Guide <CONTRIBUTING.md>
+    Code of Conduct <CODE_OF_CONDUCT.md>
+
+.. toctree::
+    :maxdepth: 2
+    :hidden:
     :caption: Getting Support
 
     GitHub Issues <https://github.com/NCAR/geocat-applications/issues>

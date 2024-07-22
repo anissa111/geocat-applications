@@ -184,6 +184,11 @@
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributor Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Support</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://github.com/NCAR/geocat-applications/issues">GitHub Issues</a></li>
@@ -435,13 +440,12 @@ This notebook is part of the process we have for adding entries to the NCL Index
 </section>
 <section id="ncl-code">
 <h2>NCL code<a class="headerlink" href="#ncl-code" title="Link to this heading">#</a></h2>
-<!---
-Edit the below cell to link to the ncl code included for comparison in this notebook. 
-
-It may not be visible in your IDE or local editor, but it will be visible in generated documentation (locally, on PR previews, and the live webpage).
---><div class="cell docutils container">
+<p>Edit the below cell to link to the ncl code included for comparison in this notebook.</p>
+<p>It may not be visible in your IDE or local editor, but it will be visible in generated documentation (locally, on PR previews, and the live webpage).</p>
+<p>Store NCL script in <code class="docutils literal notranslate"><span class="pre">ncl/ncl_raw</span></code> to generate within NCL Code. In the next cell, replace <code class="docutils literal notranslate"><span class="pre">./ncl.ncl</span></code> with <code class="docutils literal notranslate"><span class="pre">../ncl_raw/script_name.ncl</span></code></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geocat.datafiles</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geocat.datafiles</span>
 
 <span class="n">ncl_output</span> <span class="o">=</span> <span class="n">geocat</span><span class="o">.</span><span class="n">datafiles</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
     <span class="s2">&quot;applications_files/ncl_outputs/spec_1_output.nc&quot;</span>
@@ -453,16 +457,13 @@ It may not be visible in your IDE or local editor, but it will be visible in gen
 </section>
 <section id="python-functionality">
 <h2>Python Functionality<a class="headerlink" href="#python-functionality" title="Link to this heading">#</a></h2>
-<!---
-Show the python code that replicates the NCL functionality. Don't worry about providing narrative, just provide enough explanation that somebody with the knowledge level of another developer could follow along.
---></section>
+<p>Show the Python code that replicates the NCL functionality. Don’t worry about providing narrative, just provide enough explanation that somebody with the knowledge level of another developer could follow along.</p>
+</section>
 <section id="comparison">
 <h2>Comparison<a class="headerlink" href="#comparison" title="Link to this heading">#</a></h2>
-<!---
-Directly compare the outputs, numerically, visually, or however is most appropriate.
-
-If possible and reasonable, include assert statements to validate the output.
---></section>
+<p>Directly compare the outputs, numerically, visually, or however is most appropriate.</p>
+<p>If possible and reasonable, include assert statements to validate the output.</p>
+</section>
 </section>
 
 

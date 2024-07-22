@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Contributor Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/theme_overrides.css?v=7691835d" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/style.css?v=b6986961" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'CONTRIBUTING';</script>
+    <link rel="icon" href="_static/GeoCAT_square.svg"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Code of Conduct" href="CODE_OF_CONDUCT.html" />
+    <link rel="prev" title="Trigonometric Functions" href="ncl/ncl_entries/trigonometric_functions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/GeoCAT_nsf.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="_static/GeoCAT_nsf.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="applications/plot_types/plot_types.html">Plot Types</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="applications/data_analysis/data_analysis.html">Data Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="applications/date_time/date_time.html">Date and Time</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="applications/date_time/datetime.html">Working with Dates and Times</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">NCL to Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ncl/ncl_index/ncl_index.html">NCL Index</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ncl/ncl_entries/ncl_entries.html">NCL Applications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ncl/ncl_entries/days_in_month.html">days_in_month</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ncl/ncl_entries/day_of_week.html">day_of_week</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ncl/ncl_entries/trigonometric_functions.html">Trigonometric Functions</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Contributor Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://github.com/NCAR/geocat-applications/issues">GitHub Issues</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.gle/6DTo3ELLri4DAGfG8">Feature Request Form</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/CONTRIBUTING.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2FCONTRIBUTING.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/CONTRIBUTING.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Contributor Guide</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-contribute">How to Contribute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-workflow-overview">Development Workflow Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-repo-and-local-development-environment">Setting up Repo and Local Development Environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-github-and-repo">Setup Github and Repo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-the-environment">Setup the Environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-pre-commit-hooks">Install Pre-Commit Hooks</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-your-changes">Making Your Changes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-repository">Understanding the Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-geocat-applications-pages">Types of <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> pages</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python-entry">Python Entry</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ncl-entry">NCL Entry</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#receipts">Receipts</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-documentation-locally">Generate the Documentation Locally</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contribute-the-code">Contribute the Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-files-changed">Check Files Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-a-new-pull-request">Open a New Pull Request</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#address-feedback">Address Feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-branch">Delete Branch</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="contributor-guide">
+<h1>Contributor Guide<a class="headerlink" href="#contributor-guide" title="Link to this heading">#</a></h1>
+<p>Welcome to <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code>! Thank you for your interest in contributing to this project! This guide
+describes how to contribute to <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> and help us expand this reference for others.</p>
+<p>If you have any questions, you can also reach us by email at <a class="reference internal" href="#geocat&#64;ucar.edu"><span class="xref myst">geocat&#64;ucar.edu</span></a></p>
+<section id="how-to-contribute">
+<h2>How to Contribute<a class="headerlink" href="#how-to-contribute" title="Link to this heading">#</a></h2>
+<p>There are many ways to contribute:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/NCAR/geocat-applications/issues/new/choose">Proofreading and reporting bugs</a> 🐞</p></li>
+<li><p><a class="reference external" href="https://github.com/NCAR/geocat-applications/issues/new/choose">Requesting new features</a> 💡</p></li>
+<li><p>Contributing a new <a class="reference internal" href="#ncl-entry"><span class="std std-ref">NCL to Python</span></a> page</p></li>
+<li><p>Contributing a new <a class="reference internal" href="#python-entry"><span class="std std-ref">Python Entry</span></a> page</p></li>
+</ul>
+</section>
+<section id="development-workflow-overview">
+<h2>Development Workflow Overview<a class="headerlink" href="#development-workflow-overview" title="Link to this heading">#</a></h2>
+<p>This is the general development workflow to create a new page, edit, or
+expand on an existing page:</p>
+<p><strong>Setting up Repo and Local Development Environment</strong></p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#setup-github-and-repo"><span class="std std-ref">Setup GitHub and Repo</span></a></p></li>
+<li><p><a class="reference internal" href="#setup-the-environment"><span class="std std-ref">Setup the Environment</span></a></p></li>
+<li><p><a class="reference internal" href="#install-pre-commit-hooks"><span class="std std-ref">Install Pre-Commit Hooks</span></a></p></li>
+</ol>
+<p><strong>Making Your Changes</strong></p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#understanding-the-repository"><span class="std std-ref">Understanding the Repository</span></a></p></li>
+<li><p><a class="reference internal" href="#types-of-geocat-applications-pages"><span class="std std-ref">Types of geocat-applications Pages</span></a></p></li>
+<li><p><a class="reference internal" href="#generate-the-documentation-locally"><span class="std std-ref">Generate the Documentation Locally</span></a></p></li>
+</ol>
+<p><strong>Contribute Code and Review</strong></p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#check-files-changed"><span class="std std-ref">Check Files Changed</span></a></p></li>
+<li><p><a class="reference internal" href="#open-a-new-pull-request"><span class="std std-ref">Open a New Pull Request</span></a></p></li>
+<li><p><a class="reference internal" href="#address-feedback"><span class="std std-ref">Address Feedback</span></a></p></li>
+<li><p><a class="reference internal" href="#delete-branch"><span class="std std-ref">Delete Branch</span></a></p></li>
+</ol>
+</section>
+<section id="setting-up-repo-and-local-development-environment">
+<h2>Setting up Repo and Local Development Environment<a class="headerlink" href="#setting-up-repo-and-local-development-environment" title="Link to this heading">#</a></h2>
+<section id="setup-github-and-repo">
+<h3>Setup Github and Repo<a class="headerlink" href="#setup-github-and-repo" title="Link to this heading">#</a></h3>
+<p>To get started working with <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code>, you’ll need to setup a GitHub
+account and a local copy of <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> to work from.</p>
+<p><a class="reference external" href="https://foundations.projectpythia.org/foundations/github/what-is-github.html">Project Pythia includes detailed tutorials for working with and understanding GitHub</a>.
+This will be useful to reference if you are unfamiliar with any terminology referenced here like
+<a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-pull-request.html">submitting a Pull Request</a>,
+<a class="reference external" href="https://foundations.projectpythia.org/foundations/github/basic-git.html">working with git</a>,
+or <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html">maintaining a forked repository</a></p>
+<ul class="simple">
+<li><p>If you do not have one yet, <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/what-is-github.html#register-for-a-free-github-account">new contributors will need a free GitHub account</a></p>
+<ul>
+<li><p>New users should also <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-setup-advanced.html">configure their GitHub accounts</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html#forking-a-repository">Fork and clone the <code class="docutils literal notranslate"><span class="pre">NCAR/geocat-applications</span></code> repository</a></p></li>
+<li><p>We recommend <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/git-branches.html#creating-a-new-branch">creating a new branch on your fork reposisitory for the new feature or bug fix</a></p></li>
+</ul>
+</section>
+<section id="setup-the-environment">
+<h3>Setup the Environment<a class="headerlink" href="#setup-the-environment" title="Link to this heading">#</a></h3>
+<p>To run <a class="reference external" href="https://foundations.projectpythia.org/foundations/jupyter.html">Jupyter notebooks</a>
+locally and make changes to <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code>, you will need to
+create a local development environment. We recommend installing and using
+<a class="reference external" href="https://foundations.projectpythia.org/foundations/conda.html"><code class="docutils literal notranslate"><span class="pre">conda</span></code></a>. Conda is the command
+line interface for Miniconda and is a useful tool to manage environments and dependencies. A conda
+environment is created from the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> that contains a list of required dependencies.</p>
+<p>You can use the following commands to create a new conda environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new conda environment with required dependencies</span>
+<span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+
+<span class="c1"># Activate your new environment</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">geocat</span><span class="o">-</span><span class="n">applications</span>
+</pre></div>
+</div>
+</section>
+<section id="install-pre-commit-hooks">
+<h3>Install Pre-Commit Hooks<a class="headerlink" href="#install-pre-commit-hooks" title="Link to this heading">#</a></h3>
+<p>Pre-commit hooks are scripts that are set to automatically run when <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> is called in
+the <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> conda environment. The hooks can be used for a number of helpful
+things. Hooks will reformat the code before it is added to the repo and check for spelling
+mistakes. All pre-commit hooks need to pass before code can be fully committed into the repo.
+Any changes made by the pre-commit hooks will need to be re-added (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>) and then committed again.</p>
+<p><code class="docutils literal notranslate"><span class="pre">codespell</span></code> will fail if a word appears to be misspelled. If the spelling mistake
+is a false positive or jagon specific term, the word can be added to <code class="docutils literal notranslate"><span class="pre">ignore-words-list</span></code> in
+<code class="docutils literal notranslate"><span class="pre">.codespellrc</span></code> to be ignored. Any words added to the <code class="docutils literal notranslate"><span class="pre">ignore-words-list</span></code> should be lowercase.</p>
+<p>For more information about pre-commit hooks, <a class="reference external" href="https://pre-commit.com/">see the pre-commit documentation</a></p>
+</section>
+</section>
+<section id="making-your-changes">
+<h2>Making Your Changes<a class="headerlink" href="#making-your-changes" title="Link to this heading">#</a></h2>
+<section id="understanding-the-repository">
+<h3>Understanding the Repository<a class="headerlink" href="#understanding-the-repository" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> directory is organized as:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applications</span></code>: Python applications organized by category</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ncl</span></code>: NCL to Python</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ncl_entries</span></code>: NCL to Python notebooks for <a class="reference external" href="https://ncar.github.io/geocat-applications/ncl/ncl_entries/ncl_entries.html">NCL Applications</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ncl_index</span></code>: includes <code class="docutils literal notranslate"><span class="pre">ncl-index-table.csv</span></code> used to populate the <a class="reference external" href="https://ncar.github.io/geocat-applications/ncl/ncl_index/ncl_index.html">NCL index</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ncl_raw</span></code>: raw NCL code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">receipts</span></code>: NCL receipts</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templates</span></code>: example templates for working with computational, NCL, visualization, or receipt pages</p></li>
+</ul>
+</section>
+<section id="types-of-geocat-applications-pages">
+<h3>Types of <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> pages<a class="headerlink" href="#types-of-geocat-applications-pages" title="Link to this heading">#</a></h3>
+<p>There are different types of content available in <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code></p>
+<section id="python-entry">
+<h4>Python Entry<a class="headerlink" href="#python-entry" title="Link to this heading">#</a></h4>
+<p>Python entries are the content on the main page of the website. These entries
+are Python-first content that do not require any knowledge of or references to NCL.</p>
+<p>In general, we should lean towards providing links to external resources where
+possible and aim to only directly host content that is not readily available
+elsewhere, content that contextualizes Python functionality in a way that is
+unique to geoscience applications, or content that creates a curated list of
+external resources.</p>
+<p><em>These pages should not be added to the NCL Index, as they should not have any
+NCL-specific content.</em></p>
+<ol class="arabic simple">
+<li><p>If the content is primarily visualization, create a new file in the
+appropriate directory in <code class="docutils literal notranslate"><span class="pre">applications/</span></code> based off of
+the <code class="docutils literal notranslate"><span class="pre">templates/viz_template.ipynb</span></code></p></li>
+<li><p>If the content is primarily computational (even if it includes
+visualization), create a new file in the appropriate directory
+in <code class="docutils literal notranslate"><span class="pre">applications/</span></code> based off of the <code class="docutils literal notranslate"><span class="pre">templates/computational_template.ipynb</span></code></p></li>
+<li><p>If relevant, link to corresponding NCL content at the bottom of the file</p></li>
+<li><p>Add the new file to the <code class="docutils literal notranslate"><span class="pre">.rst</span></code> file in the same directory in <code class="docutils literal notranslate"><span class="pre">applications/</span></code>
+as your new file to add it to the webpage’s table of contents</p></li>
+<li><p>Add the new file to the <code class="docutils literal notranslate"><span class="pre">applications/applications.rst</span></code> file to add it to
+the cards on the main page of the website</p></li>
+<li><p>Make sure to clear and run all outputs before asking for a review</p></li>
+</ol>
+<p><a class="reference external" href="https://ncar.github.io/geocat-applications/applications/date_time/datetime.html">Example of a Python Entry</a></p>
+</section>
+<section id="ncl-entry">
+<h4>NCL Entry<a class="headerlink" href="#ncl-entry" title="Link to this heading">#</a></h4>
+<p>NCL entries are pages that explain specifically how to achieve something that
+was possible in NCL in Python, including any algorithmic differences, guidance
+regarding replication under different conditions or circumstances, and any other
+relevant comparisons between the NCL and Python functionality.</p>
+<p>These pages assume that the user has a working knowledge of NCL and are looking
+for transitional resources for specific functions. They also are not intended to
+be a comprehensive explanation of the Python recommendations, but rather a guide
+for users who are already familiar with the NCL function and are looking for
+“equivalent” Python code. Any content that is designed to explain the NCL should
+be linked instead of included directly, whether that content is in the form of a
+<strong>Python Entry</strong> on geocat-applications or external resources.</p>
+<ol class="arabic simple">
+<li><p>Create a new file in <code class="docutils literal notranslate"><span class="pre">ncl/ncl_entries/</span></code> based off of the
+<code class="docutils literal notranslate"><span class="pre">templates/ncl_template.ipynb</span></code> template.</p></li>
+<li><p>Add the file to the <code class="docutils literal notranslate"><span class="pre">ncl/ncl_entries/ncl_entries.rst</span></code> file</p></li>
+<li><p>See below for adding the covered functions to the NCL Index</p></li>
+<li><p>Make sure to clear and run all outputs before asking for a review</p></li>
+</ol>
+<p><a class="reference external" href="https://ncar.github.io/geocat-applications/ncl/ncl_entries/days_in_month.html">Example of a NCL Entry</a></p>
+</section>
+<section id="receipts">
+<h4>Receipts<a class="headerlink" href="#receipts" title="Link to this heading">#</a></h4>
+<p>Receipt files are small files with little to no narrative content that are for
+the purpose of adding an entry to the NCL Index without the need for a full
+<strong>NCL Entry</strong>. These files are accessible from the geocat-applications webpage,
+but are not listed on TOCs or intended to be read as standalone or
+comprehensive guides. They are intended to provide more extensive testing than is useful
+in an NCL entry. Receipts are intended to be the minimal amount of documentation necessary to
+add an entry to the NCL Index in cases where a full <strong>NCL Entry</strong> is not
+necessary or where providing an initial entry to the NCL Index is more important
+than waiting for a full <strong>NCL Entry</strong> to be completed.</p>
+<ol class="arabic simple">
+<li><p>Create a new file in <code class="docutils literal notranslate"><span class="pre">ncl/ncl_receipts/</span></code> based off of the
+<code class="docutils literal notranslate"><span class="pre">templates/receipt_template.ipynb</span></code> template.</p></li>
+<li><p>Create a raw <code class="docutils literal notranslate"><span class="pre">.ncl</span></code> script within <code class="docutils literal notranslate"><span class="pre">ncl/ncl_raw/</span></code> to store <code class="docutils literal notranslate"><span class="pre">NCL</span> <span class="pre">Code</span></code> section</p></li>
+<li><p>Remove placeholder and descriptive text below <code class="docutils literal notranslate"><span class="pre">NCL</span> <span class="pre">Code</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Functionality</span></code>, <code class="docutils literal notranslate"><span class="pre">Comparison</span></code></p></li>
+<li><p>Make sure to clear and run all outputs before asking for a review</p></li>
+<li><p>Add a new line to the <code class="docutils literal notranslate"><span class="pre">ncl/ncl_index/ncl-index-table.csv</span></code> file</p></li>
+</ol>
+<p><a class="reference external" href="https://ncar.github.io/geocat-applications/ncl/receipts/days_in_month.html">Example of a NCL Receipt</a></p>
+</section>
+</section>
+<section id="generate-the-documentation-locally">
+<h3>Generate the Documentation Locally<a class="headerlink" href="#generate-the-documentation-locally" title="Link to this heading">#</a></h3>
+<p>From the <code class="docutils literal notranslate"><span class="pre">geocat-applications/</span></code> directory, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">clean</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>This will build the documentation locally so you can view your changes.</p>
+<p>New documentation can be viewed by opening <code class="docutils literal notranslate"><span class="pre">index.html</span></code> generated under
+<code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> on a local browser:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># on macOS</span>
+<span class="nb">open</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+
+<span class="c1"># Otherwise, open with a specific browser, like Firefox</span>
+<span class="n">firefox</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>Running these commands from the terminal will open a new browser tab with the
+changes you have made to the repository. The webpage runs on your local host,
+but all the pages are linked together and act as they will on the
+<code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> website. You can browse your changes, navigate with links,
+and view images as you would on the official website.</p>
+</section>
+</section>
+<section id="contribute-the-code">
+<h2>Contribute the Code<a class="headerlink" href="#contribute-the-code" title="Link to this heading">#</a></h2>
+<p>Once you have made your changes on notebooks and they are ready for review
+by the GeoCAT team, you can open a new pull request. This section describes how
+to open a pull request and what to expect after you open it.</p>
+<section id="check-files-changed">
+<h3>Check Files Changed<a class="headerlink" href="#check-files-changed" title="Link to this heading">#</a></h3>
+<p>For a Python Entry, the files changed should include:</p>
+<ul class="simple">
+<li><p>New Python page under relevant <code class="docutils literal notranslate"><span class="pre">applications</span></code> folder</p></li>
+<li><p>Link to notebook in <code class="docutils literal notranslate"><span class="pre">.rst</span></code> file in the same directory as <code class="docutils literal notranslate"><span class="pre">applications/</span></code> (for
+example: if new notebook is part of <code class="docutils literal notranslate"><span class="pre">data_analysis</span></code>, add link to
+<code class="docutils literal notranslate"><span class="pre">applications/data_analysis/data_analysis.rst</span></code>)</p></li>
+<li><p>Link new notebook in <code class="docutils literal notranslate"><span class="pre">applications/applications.rst</span></code> file</p></li>
+</ul>
+<p>For a NCL to Python entry, the files changes should include:</p>
+<ul class="simple">
+<li><p>New NCL to Python notebook under <code class="docutils literal notranslate"><span class="pre">ncl/ncl_entries</span></code></p></li>
+<li><p>Link to new <code class="docutils literal notranslate"><span class="pre">ncl_entries</span></code> notebook in <code class="docutils literal notranslate"><span class="pre">ncl/ncl_index/ncl_entries.rst</span></code></p></li>
+<li><p>A new row in <code class="docutils literal notranslate"><span class="pre">ncl/ncl_index/ncl-index-table.csv</span></code> for each NCL function</p></li>
+<li><p>A new receipts entry under <code class="docutils literal notranslate"><span class="pre">ncl/receipts/</span></code></p></li>
+<li><p>A new raw <code class="docutils literal notranslate"><span class="pre">.ncl</span></code> script to store <code class="docutils literal notranslate"><span class="pre">NCL</span> <span class="pre">Code</span></code> for receipt within <code class="docutils literal notranslate"><span class="pre">ncl/ncl_raw/</span></code></p></li>
+</ul>
+</section>
+<section id="open-a-new-pull-request">
+<h3>Open a New Pull Request<a class="headerlink" href="#open-a-new-pull-request" title="Link to this heading">#</a></h3>
+<p>A pull request is a request to merge code from your fork of <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code>
+on GitHub to the main repository. Project Pythia has extensive
+<a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-pull-request.html">pull request guides and documentation</a>
+if you’d like more information</p>
+<p>When opening a pull request, if you want to open a pull request but are not ready for it
+to be reviewed, you can open the pull request as a draft. This is also a good way to get
+feedback on your work that might not be ready to contribute yet.</p>
+<p>When a new pull request is created a deployment preview will be generated and added as a
+comment.</p>
+<p><img alt="deploy_preview" src="https://github.com/NCAR/geocat-applications/assets/22159116/b42ace34-96d6-47b2-8c85-f0c20fa71927" /></p>
+<p>Follow the link to view and confirm your changes are being generated as expected. The preview
+can take a few minutes to update, but any new changes made to the branch will be automatically
+added to the pull request. The deployment preview link will also be update to display the most
+recent preview on a draft <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> website.</p>
+<p>Follow the deployment preview link to view and confirm your changes are being generated as expected.
+The preview can take a few minutes to generate, and will update to include the most recent changes
+on the PR.</p>
+</section>
+<section id="address-feedback">
+<h3>Address Feedback<a class="headerlink" href="#address-feedback" title="Link to this heading">#</a></h3>
+<p>After you open your pull request, the GeoCAT team will review it and may provide feedback like asking
+for changes or suggesting improvements. You can address this feedback by making changes to your
+branch and pushing them to your fork. The pull request and deployment preview comment will
+automatically update with your changes.</p>
+<p>The GeoCAT team appreciates your contributions and will do our best to review your pull request in
+a timely manner. It is totally normal to have to make several rounds of changes to your pull request
+before it is ready to be merged, especially if you are new to the project.</p>
+<p>Once your pull request is approved by a core maintainer and passes the relevant checks, it will be merged into the
+main repository!</p>
+</section>
+<section id="delete-branch">
+<h3>Delete Branch<a class="headerlink" href="#delete-branch" title="Link to this heading">#</a></h3>
+<p>Once the pull request is closed and merged you can <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/git-branches.html#deleting-branches">delete your working branch</a>.
+This will help keep your fork of <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> clean, but is not required.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ncl/ncl_entries/trigonometric_functions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Trigonometric Functions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="CODE_OF_CONDUCT.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Code of Conduct</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-contribute">How to Contribute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-workflow-overview">Development Workflow Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-repo-and-local-development-environment">Setting up Repo and Local Development Environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-github-and-repo">Setup Github and Repo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-the-environment">Setup the Environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-pre-commit-hooks">Install Pre-Commit Hooks</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-your-changes">Making Your Changes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-repository">Understanding the Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-geocat-applications-pages">Types of <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> pages</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python-entry">Python Entry</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ncl-entry">NCL Entry</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#receipts">Receipts</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-documentation-locally">Generate the Documentation Locally</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contribute-the-code">Contribute the Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-files-changed">Check Files Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-a-new-pull-request">Open a New Pull Request</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#address-feedback">Address Feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-branch">Delete Branch</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GeoCAT
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, University Corporation for Atmospheric Research.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <em>The National Center for Atmospheric Research is sponsored by the National Science Foundation. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.</em>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
