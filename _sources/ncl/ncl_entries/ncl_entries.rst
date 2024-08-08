@@ -3,6 +3,12 @@
 NCL Applications
 ================
 
+Data Analysis
+---------------
+.. toctree::
+    :maxdepth: 1
+
+    trigonometric_functions.ipynb
 
 Dates and Times
 ---------------
@@ -11,4 +17,3 @@ Dates and Times
 
     days_in_month.ipynb
     day_of_week.ipynb
-    trigonometric_functions.ipynb
