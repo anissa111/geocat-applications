@@ -46,6 +46,19 @@
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ncl/ncl_index/ncl_index';</script>
     <link rel="icon" href="../../_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -161,12 +174,17 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../GETTING_STARTED.html">Getting Started</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../applications/plot_types/plot_types.html">Plot Types</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../applications/data_analysis/data_analysis.html">Data Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../applications/data_analysis/general_applied_math.html">General Applied Math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../applications/data_analysis/climatology.html">Calculating Climatologies</a></li>
 </ul>
 </details></li>
@@ -180,6 +198,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">NCL Index</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ncl_entries/ncl_entries.html">NCL Applications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ncl_entries/trigonometric_functions.html">Trigonometric Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/general_applied_math.html">General Applied Math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ncl_entries/days_in_month.html">days_in_month</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ncl_entries/day_of_week.html">day_of_week</a></li>
 </ul>
@@ -445,6 +464,16 @@ document.write(`
 <td><p><code class="docutils literal notranslate"><span class="pre">math.atan2()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.arctan2()</span></code></p></td>
 <td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#atan2"><span class="std std-ref">example notebook</span></a></p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/avg.shtml">avg</a></p></td>
+<td><p>Computes the average of a variable regardless of dimensionality</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">numpy.average()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.mean()</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#avg"><span class="std std-ref">example notebook</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/abs.shtml">abs</a></p></td>
+<td><p>Returns the absolute value of numeric data</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">abs()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.abs()</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#abs"><span class="std std-ref">example notebook</span></a></p></td>
+</tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cos.shtml">cos</a></p></td>
 <td><p>Computes the cosine of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.cos()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.cos()</span></code></p></td>
@@ -455,25 +484,75 @@ document.write(`
 <td><p><code class="docutils literal notranslate"><span class="pre">math.cosh()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.cosh()</span></code></p></td>
 <td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#cosh"><span class="std std-ref">example notebook</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/days_in_month.shtml">days_in_month</a></p></td>
-<td><p>Calculates the number of days in a month given month and year</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">cftime.datetime().daysinmonth</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/days_in_month.html"><span class="doc">details</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cumsum.shtml">cumsum</a></p></td>
+<td><p>Calculates the cumulative sum</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">numpy.cumsum()</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#cumsum"><span class="std std-ref">example notebook</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/day_of_week.shtml">day_of_week</a></p></td>
 <td><p>Calculates the day of the week given month, day, and year</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">cftime.datetime().dayofwk</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/day_of_week.html"><span class="doc">details</span></a></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/day_of_week.html"><span class="doc">example notebook</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sin.shtml">sin</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/decimalPlaces.shtml">decimalPlaces</a></p></td>
+<td><p>Truncates or rounds to the number of decimal places specified</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">round()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.round()</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#decimalplaces"><span class="std std-ref">example notebook</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/days_in_month.shtml">days_in_month</a></p></td>
+<td><p>Calculates the number of days in a month given month and year</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cftime.datetime().daysinmonth</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/days_in_month.html"><span class="doc">example notebook</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/get_d2r.shtml">get_d2r</a></p></td>
+<td><p>Return a constant that converts degrees to radians</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">math.pi</span> <span class="pre">/</span> <span class="pre">180</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#get-d2r"><span class="std std-ref">example notebook</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/get_pi.shtml">get_pi</a></p></td>
+<td><p>Return pi as a type float or double</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">math.pi</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#get-pi"><span class="std std-ref">example notebook</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/get_r2d.shtml">get_r2d</a></p></td>
+<td><p>Return a constant that converts radians to degrees</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">180</span> <span class="pre">/</span> <span class="pre">math.pi</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#get-r2d"><span class="std std-ref">example notebook</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/log10.shtml">log10</a></p></td>
+<td><p>Computes the log base 10 of a numeric type</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">math.log10()</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#log10"><span class="std std-ref">example notebook</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/log.shtml">log</a></p></td>
+<td><p>Computes the natural log of a numeric type</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">math.log()</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#log"><span class="std std-ref">example notebook</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/mod.shtml">mod</a></p></td>
+<td><p>Remainder function which emulates the Fortran ‘mod’ intrinsic function</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">%</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.mod()</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#mod"><span class="std std-ref">example notebook</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/product.shtml">product</a></p></td>
+<td><p>Computes the product of the input</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">math.prod()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.prod()</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#product"><span class="std std-ref">example notebook</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sin.shtml">sin</a></p></td>
 <td><p>Computes the sine of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.sin()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.sin()</span></code></p></td>
 <td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#sin"><span class="std std-ref">example notebook</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sinh.shtml">sinh</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sinh.shtml">sinh</a></p></td>
 <td><p>Computes the hyperbolic sine of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.sinh()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.sinh()</span></code></p></td>
 <td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#sinh"><span class="std std-ref">example notebook</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sum.shtml">sum</a></p></td>
+<td><p>Sums the input</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sum()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.sum()</span></code></p></td>
+<td><p><a class="reference internal" href="../ncl_entries/general_applied_math.html#sum"><span class="std std-ref">example notebook</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/tan.shtml">tan</a></p></td>
 <td><p>Computes the tangent of numeric types</p></td>

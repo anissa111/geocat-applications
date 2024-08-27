@@ -9,6 +9,7 @@ Data Analysis
     :maxdepth: 1
 
     trigonometric_functions.ipynb
+    general_applied_math.ipynb
 
 Dates and Times
 ---------------
