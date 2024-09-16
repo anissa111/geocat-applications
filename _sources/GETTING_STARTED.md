@@ -3,7 +3,6 @@
 ## What is GeoCAT Applications?
 
 ```{include} README.md
-:language: md
 :start-after: <!-- readme_start -->
 :end-before: <!-- readme_end -->
 ```
@@ -41,4 +40,4 @@ the [Contributor Guide](https://ncar.github.io/geocat-applications/CONTRIBUTING.
 
 If you have any questions, please leave us a message on [GeoCAT Applications Issues](https://github.com/NCAR/geocat-applications/issues)
 or in [GeoCAT Applications Discussions](https://github.com/NCAR/geocat-applications/discussions). You can also reach us by email at
-[geocat@ucar.edu](geocat@ucar.edu).
+[geocat@ucar.edu](mailto:geocat@ucar.edu).

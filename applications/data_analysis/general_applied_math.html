@@ -459,6 +459,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-log10-and-log2"><code class="docutils literal notranslate"><span class="pre">log</span></code>, <code class="docutils literal notranslate"><span class="pre">log10</span></code>, and <code class="docutils literal notranslate"><span class="pre">log2</span></code></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting">Sorting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-in-python-and-numpy">Sorting in Python and Numpy</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curated-resources">Curated Resources</a></li>
 </ul>
             </nav>
@@ -484,6 +488,7 @@ document.write(`
 <li><p>Degrees and Radians</p></li>
 <li><p>Rounding</p></li>
 <li><p>Exponents and Logarithms</p></li>
+<li><p>Sorting</p></li>
 </ul>
 </section>
 <section id="math-vs-numpy">
@@ -632,7 +637,7 @@ Multiple Value Input (array/list)
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:14: SyntaxWarning: invalid escape sequence &#39;\M&#39;
 &lt;&gt;:14: SyntaxWarning: invalid escape sequence &#39;\M&#39;
-/tmp/ipykernel_2972/1093943048.py:14: SyntaxWarning: invalid escape sequence &#39;\M&#39;
+/tmp/ipykernel_3130/1093943048.py:14: SyntaxWarning: invalid escape sequence &#39;\M&#39;
   print(&quot;\Multiple Value Input (array/list)&quot;)
 </pre></div>
 </div>
@@ -1138,6 +1143,69 @@ Multiple Value Input (array/list)
 </div>
 </section>
 </section>
+<section id="sorting">
+<h2>Sorting<a class="headerlink" href="#sorting" title="Link to this heading">#</a></h2>
+<p>Python includes functions to organize and sort lists of numbers or strings</p>
+<p>Functions to sort lists and arrays are part of the standard Python library as well as <code class="docutils literal notranslate"><span class="pre">numpy</span></code></p>
+<section id="sorting-in-python-and-numpy">
+<h3>Sorting in Python and Numpy<a class="headerlink" href="#sorting-in-python-and-numpy" title="Link to this heading">#</a></h3>
+<p>Python has two similar sorting functions: <a class="reference external" href="https://docs.python.org/3/howto/sorting.html"><code class="docutils literal notranslate"><span class="pre">list.sort()</span></code> and <code class="docutils literal notranslate"><span class="pre">sorted()</span></code></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">list.sort()</span></code> reorganizes a numerical or string list in-place, but returns <code class="docutils literal notranslate"><span class="pre">None</span></code>, while <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> creates a new copy of the list with the sorted elements.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">())</span>
+<span class="o">&gt;&gt;</span> <span class="kc">None</span>
+
+<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">new_sorted_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_sorted_list</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">numpy.sort()</span></code> function works like the <code class="docutils literal notranslate"><span class="pre">sorted</span></code> function, which creates and returns a sorted array of the original list</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">new_sorted_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_sorted_list</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;mango&quot;</span><span class="p">,</span> <span class="s2">&quot;egg&quot;</span><span class="p">,</span> <span class="s2">&quot;taco&quot;</span><span class="p">,</span> <span class="s2">&quot;tea&quot;</span><span class="p">,</span> <span class="s2">&quot;milkshake&quot;</span><span class="p">,</span> <span class="s2">&quot;cheese&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;List of Strings&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">(standard library) = </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">input_values</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">(numpy)            = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">input_values</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">List of Numbers&quot;</span><span class="p">)</span>
+<span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.14</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">49</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">(standard library) = </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">input_values</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">(numpy)            = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">input_values</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>List of Strings
+	(standard library) = [&#39;cheese&#39;, &#39;egg&#39;, &#39;mango&#39;, &#39;milkshake&#39;, &#39;taco&#39;, &#39;tea&#39;]
+	(numpy)            = [&#39;cheese&#39; &#39;egg&#39; &#39;mango&#39; &#39;milkshake&#39; &#39;taco&#39; &#39;tea&#39;]
+
+List of Numbers
+	(standard library) = [-1.2, 0.2, 3.14, 10, 49, 100]
+	(numpy)            = [ -1.2    0.2    3.14  10.    49.   100.  ]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 <section id="curated-resources">
 <h2>Curated Resources<a class="headerlink" href="#curated-resources" title="Link to this heading">#</a></h2>
 <p>To learn more about working with math in Python, we suggest:</p>
@@ -1145,7 +1213,8 @@ Multiple Value Input (array/list)
 <li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html">Built-in Python Functions</a></p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/library/math.html">Standard Built-In Python <code class="docutils literal notranslate"><span class="pre">math</span></code> module</a></p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/library/cmath.html">Python <code class="docutils literal notranslate"><span class="pre">cmath</span></code> when working with complex mathematics</a></p></li>
-<li><p>Additional <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.math.html">mathematical <code class="docutils literal notranslate"><span class="pre">numpy</span></code> functions</a></p></li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/routines.math.html">Additional mathematical <code class="docutils literal notranslate"><span class="pre">numpy</span></code> functions</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/howto/sorting.html">Python Sorting Techniques</a></p></li>
 </ul>
 </section>
 </section>
@@ -1227,6 +1296,10 @@ Multiple Value Input (array/list)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exponents-and-logarithms">Exponents and Logarithms</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exp"><code class="docutils literal notranslate"><span class="pre">exp</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-log10-and-log2"><code class="docutils literal notranslate"><span class="pre">log</span></code>, <code class="docutils literal notranslate"><span class="pre">log10</span></code>, and <code class="docutils literal notranslate"><span class="pre">log2</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting">Sorting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-in-python-and-numpy">Sorting in Python and Numpy</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curated-resources">Curated Resources</a></li>
