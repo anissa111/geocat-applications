@@ -1,0 +1,846 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Trigonometric Functions</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css?v=7691835d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=f313c041" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ncl/receipts/trigonometric_functions';</script>
+    <link rel="icon" href="../../_static/GeoCAT_square.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/GeoCAT_nsf.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../../_static/GeoCAT_nsf.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../GETTING_STARTED.html">Getting Started</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../applications/plot_types/plot_types.html">Plot Types</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../applications/data_analysis/data_analysis.html">Data Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../applications/data_analysis/general_applied_math.html">General Applied Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../applications/data_analysis/climatology.html">Calculating Climatologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../applications/data_analysis/spectral_analysis.html">Spectral Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../applications/data_analysis/humid_heat_metrics.html">Humid Heat Metrics</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../applications/date_time/date_time.html">Date and Time</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../applications/date_time/datetime.html">Working with Dates and Times</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">NCL to Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ncl_index/ncl_index.html">NCL Index</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ncl_entries/ncl_entries.html">NCL Applications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/climatology_functions.html">Climatology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/trigonometric_functions.html">Trigonometric Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/general_applied_math.html">General Applied Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/meteorology.html">Meteorology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/specx_specxy_anal.html">specx_specxy_anal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/days_in_month.html">days_in_month</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/day_of_week.html">day_of_week</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributor Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://github.com/NCAR/geocat-applications/issues">GitHub Issues</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.gle/6DTo3ELLri4DAGfG8">Feature Request Form</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/ncl/receipts/trigonometric_functions.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Fncl/receipts/trigonometric_functions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/ncl/receipts/trigonometric_functions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Trigonometric Functions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-covered">Functions covered</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ncl-code">NCL code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-functionality">Python Functionality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison">Comparison</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differences">Differences</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="trigonometric-functions">
+<h1>Trigonometric Functions<a class="headerlink" href="#trigonometric-functions" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is not meant to be a standalone notebook.
+This notebook is part of the process we have for adding entries to the NCL Index and is not meant to be used as tutorial or example code.</p>
+</div>
+<section id="functions-covered">
+<h2>Functions covered<a class="headerlink" href="#functions-covered" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sin.shtml">sin</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cos.shtml">cos</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/tan.shtml">tan</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/asin.shtml">asin</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/acos.shtml">acos</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/atan.shtml">atan</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/atan2.shtml">atan2</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cosh.shtml">cosh</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sinh.shtml">sinh</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/tanh.shtml">tanh</a></p></li>
+</ul>
+</section>
+<section id="ncl-code">
+<h2>NCL code<a class="headerlink" href="#ncl-code" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">sin</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">sin</span><span class="o">.</span><span class="n">shtml</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">sin_f</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>  <span class="p">;</span> <span class="n">sin_f</span> <span class="o">=</span> <span class="mf">0.4794255</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sin_f</span><span class="p">)</span>
+
+<span class="p">;</span> <span class="n">cos</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">cos</span><span class="o">.</span><span class="n">shtml</span>
+<span class="n">f</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+<span class="n">cos_f</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>  <span class="p">;</span> <span class="n">cos_f</span> <span class="o">=</span> <span class="mf">0.5403023</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cos_f</span><span class="p">)</span>
+
+<span class="p">;</span> <span class="n">tan</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">tan</span><span class="o">.</span><span class="n">shtml</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">5.6</span>
+<span class="n">tan_f</span> <span class="o">=</span> <span class="n">tan</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>  <span class="p">;</span> <span class="n">tan_f</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.8139434</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tan_f</span><span class="p">)</span>
+
+<span class="p">;</span> <span class="n">asin</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">asin</span><span class="o">.</span><span class="n">shtml</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">asin_f</span> <span class="o">=</span> <span class="n">asin</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">;</span> <span class="n">asin_f</span> <span class="o">=</span> <span class="mf">0.5235988</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">asin_f</span><span class="p">)</span>
+
+<span class="p">;</span> <span class="n">acos</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">acos</span><span class="o">.</span><span class="n">shtml</span>
+<span class="n">f</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+<span class="n">acos_f</span> <span class="o">=</span> <span class="n">acos</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">;</span> <span class="n">acos_f</span> <span class="o">=</span> <span class="mf">3.141593</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">acos_f</span><span class="p">)</span>
+
+<span class="p">;</span> <span class="n">atan</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">atan</span><span class="o">.</span><span class="n">shtml</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">2.7</span>
+<span class="n">atan_f</span> <span class="o">=</span> <span class="n">atan</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">;</span> <span class="n">atan_f</span> <span class="o">=</span> <span class="mf">1.216091</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">atan_f</span><span class="p">)</span>
+
+<span class="p">;</span> <span class="n">atan2</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">atan2</span><span class="o">.</span><span class="n">shtml</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">atan2_f</span> <span class="o">=</span> <span class="n">atan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="p">;</span> <span class="n">atan2_f</span> <span class="o">=</span> <span class="mf">0.4636476</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">atan2_f</span><span class="p">)</span>
+
+<span class="p">;</span> <span class="n">cosh</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">cosh</span><span class="o">.</span><span class="n">shtml</span>
+<span class="n">f</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.2</span>
+<span class="n">cosh_f</span> <span class="o">=</span> <span class="n">cosh</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">;</span> <span class="n">cosh_f</span> <span class="o">=</span> <span class="mf">12.28665</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cosh_f</span><span class="p">)</span>
+
+<span class="p">;</span> <span class="n">sinh</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">sinh</span><span class="o">.</span><span class="n">shtml</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">1.4</span>
+<span class="n">sinh_f</span> <span class="o">=</span> <span class="n">sinh</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">;</span> <span class="n">sinh_f</span> <span class="o">=</span> <span class="mf">1.904301</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sinh_f</span><span class="p">)</span>
+
+<span class="p">;</span> <span class="n">tanh</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">tanh</span><span class="o">.</span><span class="n">shtml</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">0.67</span>
+<span class="n">tanh_f</span> <span class="o">=</span> <span class="n">tanh</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">;</span> <span class="n">tanh_f</span> <span class="o">=</span> <span class="mf">0.5849799</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tanh_f</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="python-functionality">
+<h2>Python Functionality<a class="headerlink" href="#python-functionality" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">results_math</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">results_np</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># sin</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">sin_math_f</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">sin_np_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">results_math</span><span class="p">[</span><span class="s2">&quot;sin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sin_math_f</span>
+<span class="n">results_np</span><span class="p">[</span><span class="s2">&quot;sin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sin_np_f</span>
+
+<span class="c1"># cos</span>
+<span class="n">f</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+<span class="n">cos_math_f</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">cos_np_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">results_math</span><span class="p">[</span><span class="s2">&quot;cos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cos_math_f</span>
+<span class="n">results_np</span><span class="p">[</span><span class="s2">&quot;cos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cos_np_f</span>
+
+<span class="c1"># tan</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">5.6</span>
+<span class="n">tan_math_f</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">tan_np_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">results_math</span><span class="p">[</span><span class="s2">&quot;tan&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tan_math_f</span>
+<span class="n">results_np</span><span class="p">[</span><span class="s2">&quot;tan&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tan_np_f</span>
+
+<span class="c1"># asin</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">asin_math_f</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">asin</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">asin_np_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">results_math</span><span class="p">[</span><span class="s2">&quot;asin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">asin_math_f</span>
+<span class="n">results_np</span><span class="p">[</span><span class="s2">&quot;asin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">asin_np_f</span>
+
+<span class="c1"># acos</span>
+<span class="n">f</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+<span class="n">acos_math_f</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">acos</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">acos_np_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">results_math</span><span class="p">[</span><span class="s2">&quot;acos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">acos_math_f</span>
+<span class="n">results_np</span><span class="p">[</span><span class="s2">&quot;acos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">acos_np_f</span>
+
+<span class="c1"># atan</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">2.7</span>
+<span class="n">atan_math_f</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">atan</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">atan_np_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">results_math</span><span class="p">[</span><span class="s2">&quot;atan&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">atan_math_f</span>
+<span class="n">results_np</span><span class="p">[</span><span class="s2">&quot;atan&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">atan_np_f</span>
+
+<span class="c1"># atan2</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">atan2_math_f</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">atan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">atan2_np_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">results_math</span><span class="p">[</span><span class="s2">&quot;atan2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">atan2_math_f</span>
+<span class="n">results_np</span><span class="p">[</span><span class="s2">&quot;atan2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">atan2_np_f</span>
+
+<span class="c1"># cosh</span>
+<span class="n">f</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.2</span>
+<span class="n">cosh_math_f</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">cosh</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">cosh_np_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cosh</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">results_math</span><span class="p">[</span><span class="s2">&quot;cosh&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cosh_math_f</span>
+<span class="n">results_np</span><span class="p">[</span><span class="s2">&quot;cosh&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cosh_np_f</span>
+
+<span class="c1"># sinh</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">1.4</span>
+<span class="n">sinh_math_f</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sinh</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">sinh_np_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sinh</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">results_math</span><span class="p">[</span><span class="s2">&quot;sinh&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sinh_math_f</span>
+<span class="n">results_np</span><span class="p">[</span><span class="s2">&quot;sinh&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sinh_np_f</span>
+
+<span class="c1"># tanh</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">0.67</span>
+<span class="n">tanh_math_f</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">tanh_np_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">results_math</span><span class="p">[</span><span class="s2">&quot;tanh&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tanh_math_f</span>
+<span class="n">results_np</span><span class="p">[</span><span class="s2">&quot;tanh&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tanh_np_f</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="comparison">
+<h2>Comparison<a class="headerlink" href="#comparison" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dictionary of trig functions results</span>
+<span class="n">ncl_results</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;sin&quot;</span><span class="p">:</span> <span class="mf">0.4794255</span><span class="p">,</span>
+    <span class="s2">&quot;cos&quot;</span><span class="p">:</span> <span class="mf">0.5403023</span><span class="p">,</span>
+    <span class="s2">&quot;tan&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.8139434</span><span class="p">,</span>
+    <span class="s2">&quot;asin&quot;</span><span class="p">:</span> <span class="mf">0.5235988</span><span class="p">,</span>
+    <span class="s2">&quot;acos&quot;</span><span class="p">:</span> <span class="mf">3.141593</span><span class="p">,</span>
+    <span class="s2">&quot;atan&quot;</span><span class="p">:</span> <span class="mf">1.216091</span><span class="p">,</span>
+    <span class="s2">&quot;atan2&quot;</span><span class="p">:</span> <span class="mf">0.4636476</span><span class="p">,</span>
+    <span class="s2">&quot;cosh&quot;</span><span class="p">:</span> <span class="mf">12.28665</span><span class="p">,</span>
+    <span class="s2">&quot;sinh&quot;</span><span class="p">:</span> <span class="mf">1.904301</span><span class="p">,</span>
+    <span class="s2">&quot;tanh&quot;</span><span class="p">:</span> <span class="mf">0.5849799</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">ncl_results</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="o">&amp;</span> <span class="n">results_math</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="o">&amp;</span> <span class="n">results_np</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">: </span><span class="se">\n\t</span><span class="s2">python (math):</span><span class="se">\t</span><span class="si">{</span><span class="n">results_math</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="si">}</span><span class="se">\n\t</span><span class="s2">python (numpy):</span><span class="se">\t</span><span class="si">{</span><span class="n">results_np</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="si">}</span><span class="se">\n\t</span><span class="s2">ncl:</span><span class="se">\t\t</span><span class="si">{</span><span class="n">ncl_results</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+    <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span>
+        <span class="n">results_np</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="n">results_math</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-15</span>
+    <span class="p">)</span>  <span class="c1"># within 15 decimal points</span>
+    <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span>
+        <span class="n">ncl_results</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="n">results_math</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-06</span>
+    <span class="p">)</span>  <span class="c1"># within 6 decimal points</span>
+    <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span>
+        <span class="n">ncl_results</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="n">results_np</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-06</span>
+    <span class="p">)</span>  <span class="c1"># within 6 decimal points</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tan: 
+	python (math):	-0.8139432836897027
+	python (numpy):	-0.8139432836897027
+	ncl:		-0.8139434
+
+acos: 
+	python (math):	3.141592653589793
+	python (numpy):	3.141592653589793
+	ncl:		3.141593
+
+sinh: 
+	python (math):	1.9043015014515339
+	python (numpy):	1.9043015014515339
+	ncl:		1.904301
+
+cos: 
+	python (math):	0.5403023058681398
+	python (numpy):	0.5403023058681398
+	ncl:		0.5403023
+
+cosh: 
+	python (math):	12.28664620054386
+	python (numpy):	12.28664620054386
+	ncl:		12.28665
+
+atan: 
+	python (math):	1.2160906747839564
+	python (numpy):	1.2160906747839564
+	ncl:		1.216091
+
+tanh: 
+	python (math):	0.5849798828807289
+	python (numpy):	0.5849798828807288
+	ncl:		0.5849799
+
+asin: 
+	python (math):	0.5235987755982989
+	python (numpy):	0.5235987755982989
+	ncl:		0.5235988
+
+atan2: 
+	python (math):	0.4636476090008061
+	python (numpy):	0.4636476090008061
+	ncl:		0.4636476
+
+sin: 
+	python (math):	0.479425538604203
+	python (numpy):	0.479425538604203
+	ncl:		0.4794255
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="differences">
+<h2>Differences<a class="headerlink" href="#differences" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">ncl_results</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="o">&amp;</span> <span class="n">results_math</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="o">&amp;</span> <span class="n">results_np</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="si">{</span><span class="n">results_math</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ncl_results</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="si">{</span><span class="n">results_np</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ncl_results</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tan:
+	1.1631029728231823e-07
+	1.1631029728231823e-07
+acos:
+	-3.4641020674186507e-07
+	-3.4641020674186507e-07
+sinh:
+	5.014515338519487e-07
+	5.014515338519487e-07
+cos:
+	5.868139751896706e-09
+	5.868139751896706e-09
+cosh:
+	-3.7994561399301574e-06
+	-3.7994561399301574e-06
+atan:
+	-3.252160436506557e-07
+	-3.252160436506557e-07
+tanh:
+	-1.7119271111809553e-08
+	-1.7119271222831856e-08
+asin:
+	-2.440170110418194e-08
+	-2.440170110418194e-08
+atan2:
+	9.000806100445402e-09
+	9.000806100445402e-09
+sin:
+	3.8604203000947024e-08
+	3.8604203000947024e-08
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-covered">Functions covered</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ncl-code">NCL code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-functionality">Python Functionality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison">Comparison</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differences">Differences</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GeoCAT
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, University Corporation for Atmospheric Research.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <em>The National Center for Atmospheric Research is sponsored by the National Science Foundation. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.</em>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
