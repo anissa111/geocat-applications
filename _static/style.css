@@ -25,3 +25,8 @@
 .caption-text {
     color: #012169;
 }
+
+/* mathjax */
+div.math, span.math {
+    align-items: baseline;
+}

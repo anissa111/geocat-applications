@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css?v=7691835d" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=b6986961" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=f313c041" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -41,7 +41,7 @@
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
@@ -186,6 +186,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../data_analysis/data_analysis.html">Data Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../data_analysis/general_applied_math.html">General Applied Math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data_analysis/climatology.html">Calculating Climatologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/spectral_analysis.html">Spectral Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/humid_heat_metrics.html">Humid Heat Metrics</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="date_time.html">Date and Time</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -197,8 +199,11 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../ncl/ncl_index/ncl_index.html">NCL Index</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../ncl/ncl_entries/ncl_entries.html">NCL Applications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ncl/ncl_entries/climatology_functions.html">Climatology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ncl/ncl_entries/trigonometric_functions.html">Trigonometric Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ncl/ncl_entries/general_applied_math.html">General Applied Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ncl/ncl_entries/meteorology.html">Meteorology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ncl/ncl_entries/specx_specxy_anal.html">specx_specxy_anal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ncl/ncl_entries/days_in_month.html">days_in_month</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ncl/ncl_entries/day_of_week.html">day_of_week</a></li>
 </ul>
@@ -478,8 +483,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date.today() -&gt; 	 2024-09-16
-datetime.datetime.now() -&gt; 	 2024-09-16 17:43:32.533511
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date.today() -&gt; 	 2024-10-18
+datetime.datetime.now() -&gt; 	 2024-10-18 19:28:03.000071
 </pre></div>
 </div>
 </div>
@@ -510,10 +515,10 @@ datetime.datetime.now() -&gt; 	 2024-09-16 17:43:32.533511
 2024
 
 now.strftime(&#39;%A, %B %d %Y %I:%M:%S %p&#39;)
-Monday, September 16 2024 05:43:32 PM
+Friday, October 18 2024 07:28:03 PM
 
 now.strftime(&#39;%c&#39;)
-Mon Sep 16 17:43:32 2024
+Fri Oct 18 19:28:03 2024
 </pre></div>
 </div>
 </div>
