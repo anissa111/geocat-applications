@@ -10,7 +10,7 @@
 
             .. card:: Dates and Times
 
-                - `Working with Date and Time <applications/date_time/datetime.ipynb>`_
+                - :ref:`Working with Date and Time <applications/date_time/datetime.ipynb>`_
 
             .. card:: Plot Types
 
@@ -22,10 +22,10 @@
 
             .. card:: Data Analysis
 
-                - `General Applied Math <applications/data_analysis/general_applied_math.ipynb>`_
-                - `Calculating Climatologies <applications/data_analysis/climatology.ipynb>`_
-                - `Spectral Analysis <applications/data_analysis/spectral_analysis.ipynb>`_
-                - `Humid Heat Metrics <applications/data_analysis/humid_heat_metrics.ipynb>`_
+                - :ref:`General Applied Math <applications/data_analysis/general_applied_math.ipynb>`_
+                - :ref:`Calculating Climatologies <applications/data_analysis/climatology.ipynb>`_
+                - :ref:`Spectral Analysis <applications/data_analysis/spectral_analysis.ipynb>`_
+                - :ref:`Humid Heat Metrics <applications/data_analysis/humid_heat_metrics.ipynb>`_
 
     .. grid-item::
 
