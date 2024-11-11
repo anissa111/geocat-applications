@@ -1,5 +1,10 @@
 .. _applications:
 
+Python Applications
+===================
+
+Python resources by category with relevant context and links to additional resources and references.
+
 .. grid:: 3
     :gutter: 2
 
@@ -8,28 +13,26 @@
         .. grid:: 1
             :gutter: 1
 
-            .. card:: Dates and Times
+            .. card:: Time
 
-                - :ref:`Working with Date and Time <applications/date_time/datetime.ipynb>`_
-
-            .. card:: Plot Types
-
+                - `Dates and times <applications/datetime.ipynb>`_
 
     .. grid-item::
 
         .. grid:: 1
             :gutter: 1
 
-            .. card:: Data Analysis
+            .. card:: Math
 
-                - :ref:`General Applied Math <applications/data_analysis/general_applied_math.ipynb>`_
-                - :ref:`Calculating Climatologies <applications/data_analysis/climatology.ipynb>`_
-                - :ref:`Spectral Analysis <applications/data_analysis/spectral_analysis.ipynb>`_
-                - :ref:`Humid Heat Metrics <applications/data_analysis/humid_heat_metrics.ipynb>`_
+                - `General applied math <applications/general_applied_math.ipynb>`_
+                - `Spectral analysis <applications/spectral_analysis.ipynb>`_
 
     .. grid-item::
 
         .. grid:: 1
             :gutter: 1
 
-            .. card:: Regridding
+            .. card:: Geoscience
+
+                - `Climatology <applications/climatology.ipynb>`_
+                - `Humid heat metrics <applications/humid_heat_metrics.ipynb>`_

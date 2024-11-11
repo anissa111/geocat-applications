@@ -16,29 +16,31 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css?v=7691835d" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=f313c041" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=61b3970e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
@@ -46,27 +48,15 @@
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-EQMBXF1D2V');
-            </script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-EQMBXF1D2V');
-            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ncl/ncl_index/ncl_index';</script>
     <link rel="icon" href="../../_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="NCL Applications" href="../ncl_entries/ncl_entries.html" />
-    <link rel="prev" title="Working with Dates and Times" href="../../applications/date_time/datetime.html" />
+    <link rel="next" title="NCL to Python Applications" href="../ncl_entries/ncl_entries.html" />
+    <link rel="prev" title="Python Applications" href="../../applications/applications.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -82,19 +72,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -102,7 +81,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -110,8 +88,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -127,7 +105,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,68 +135,42 @@
       
     
     
-    <img src="../../_static/GeoCAT_nsf.svg" class="logo__image only-light" alt=" - Home"/>
-    <script>document.write(`<img src="../../_static/GeoCAT_nsf.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+    <img src="../../_static/NSF_NCAR_light.svg" class="logo__image only-light" alt=" - Home"/>
+    <img src="../../_static/NSF_NCAR_dark.svg" class="logo__image only-dark pst-js-only" alt=" - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../GETTING_STARTED.html">Getting Started</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../applications/plot_types/plot_types.html">Plot Types</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../applications/data_analysis/data_analysis.html">Data Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../applications/data_analysis/general_applied_math.html">General Applied Math</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../applications/data_analysis/climatology.html">Calculating Climatologies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../applications/data_analysis/spectral_analysis.html">Spectral Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../applications/data_analysis/humid_heat_metrics.html">Humid Heat Metrics</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../applications/date_time/date_time.html">Date and Time</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../applications/date_time/datetime.html">Working with Dates and Times</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../applications/applications.html">Applications</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">NCL to Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">NCL Index</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ncl_entries/ncl_entries.html">NCL Applications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/climatology_functions.html">Climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/trigonometric_functions.html">Trigonometric Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/general_applied_math.html">General Applied Math</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/meteorology.html">Meteorology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/specx_specxy_anal.html">specx_specxy_anal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/days_in_month.html">days_in_month</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ncl_entries/day_of_week.html">day_of_week</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ncl_entries/ncl_entries.html">Applications</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contributing</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributor Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributor Guide</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Support</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://github.com/NCAR/geocat-applications/issues">GitHub Issues</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://forms.gle/6DTo3ELLri4DAGfG8">Feature Request Form</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.gle/6DTo3ELLri4DAGfG8">Suggestion Box</a></li>
 </ul>
 
     </div>
@@ -259,70 +212,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/ncl/ncl_index/ncl_index.rst" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Fncl/ncl_index/ncl_index.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -389,24 +278,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -452,22 +333,22 @@ document.write(`
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/asin.shtml">asin</a></p></td>
 <td><p>Computes the inverse sine of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.asin()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.arcsin()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#asin"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/trigonometric_functions.ipynb#asin">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/acos.shtml">acos</a></p></td>
 <td><p>Computes the inverse cosine of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.acos()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.arccos()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#acos"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/trigonometric_functions.ipynb#acos">example notebook</a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/atan.shtml">atan</a></p></td>
 <td><p>Computes the inverse cosine of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.atan()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.arctan()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#atan"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/trigonometric_functions.ipynb#atan">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/atan2.shtml">atan2</a></p></td>
 <td><p>Computes the inverse tangent of (y/x) for numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.atan2()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.arctan2()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#atan2"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/trigonometric_functions.ipynb#atan2">example notebook</a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/avg.shtml">avg</a></p></td>
 <td><p>Computes the average of a variable regardless of dimensionality</p></td>
@@ -482,7 +363,7 @@ document.write(`
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cos.shtml">cos</a></p></td>
 <td><p>Computes the cosine of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.cos()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.cos()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#cos"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/trigonometric_functions.ipynb#cos">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/ceil.shtml">ceil</a></p></td>
 <td><p>Returns the smallest integral value greater than or equal to each input value</p></td>
@@ -492,7 +373,7 @@ document.write(`
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cosh.shtml">cosh</a></p></td>
 <td><p>Computes the hyperbolic cosine of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.cosh()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.cosh()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#cosh"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/trigonometric_functions.ipynb#cosh">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cumsum.shtml">cumsum</a></p></td>
 <td><p>Calculates the cumulative sum</p></td>
@@ -502,22 +383,22 @@ document.write(`
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/calcDayAnomTLL.shtml">calcDayAnomTLL</a></p></td>
 <td><p>Calculates daily anomalies from a daily data climatology</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">xarray.DataArray.groupby()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/climatology_functions.html#calcdayanomtll"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/climatology_functions.ipynb#calcdayanomtll">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/calcMonAnomTLL.shtml">calcMonAnomTLL</a></p></td>
 <td><p>Calculates monthly anomalies by subtracting the long-term mean from each point</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">xarray.DataArray.groupby()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/climatology_functions.html#calcmonanomtll"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/climatology_functions.ipynb#calcmonanomtll">example notebook</a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/clmDayTLL.shtml">clmDayTLL</a></p></td>
 <td><p>Calculates long-term daily means (daily climatology) from daily data</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">xarray.DataArray.groupby()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/climatology_functions.html#clmdaytll"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/climatology_functions.ipynb#clmdaytll">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/clmMonTLL.shtml">clmMonTLL</a></p></td>
 <td><p>Calculates long-term monthly means (monthly climatology) from monthly data</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">xarray.DataArray.groupby()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/climatology_functions.html#clmmontll"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/climatology_functions.ipynb#clmmontll">example notebook</a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/decimalPlaces.shtml">decimalPlaces</a></p></td>
 <td><p>Truncates or rounds to the number of decimal places specified</p></td>
@@ -537,12 +418,12 @@ document.write(`
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/day_of_week.shtml">day_of_week</a></p></td>
 <td><p>Calculates the day of the week given month, day, and year</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">cftime.datetime()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/day_of_week.html"><span class="doc">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/day_of_week.ipynb">example notebook</a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/days_in_month.shtml">days_in_month</a></p></td>
 <td><p>Calculates the number of days in a month given month and year</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">cftime.datetime()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/days_in_month.html"><span class="doc">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/days_in_month.ipynb">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/exp.shtml">exp</a></p></td>
 <td><p>Computes the value of e (the base of natural logarithms) raised to the power of the input</p></td>
@@ -602,7 +483,7 @@ document.write(`
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/month_to_season.shtml">month_to_season</a></p></td>
 <td><p>Computes a user-specified three-month seasonal mean</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">geocat.comp.month_to_season()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/climatology_functions.html#month-to-season"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/climatology_functions.ipynb#month-to-season">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/product.shtml">product</a></p></td>
 <td><p>Computes the product of the input</p></td>
@@ -622,7 +503,7 @@ document.write(`
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/rmMonAnnCycTLL.shtml">rmMonAnnCycTLL</a></p></td>
 <td><p>Removes the annual cycle from monthly data</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">xarray.DataArray.groupby()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/climatology_functions.html#rmmonanncyctll"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/climatology_functions.ipynb#rmmonanncyctll">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sqrt.shtml">sqrt</a></p></td>
 <td><p>Computes the square root of its input</p></td>
@@ -642,7 +523,7 @@ document.write(`
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/specx_anal.shtml">specx_anal</a></p></td>
 <td><p>Calculates the spectra of a series.</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">scipy.signal.periodogram()</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy.signal.convolve()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/specx_specxy_anal.html"><span class="doc">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/specx_specxy_anal.ipynb">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sum.shtml">sum</a></p></td>
 <td><p>Sums the input</p></td>
@@ -652,32 +533,32 @@ document.write(`
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sinh.shtml">sinh</a></p></td>
 <td><p>Computes the hyperbolic sine of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.sinh()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.sinh()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#sinh"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/trigonometric_functions.ipynb#sinh">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/stdMonTLL.shtml">stdMonTLL</a></p></td>
 <td><p>Calculates standard deviations of monthly means</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">xarray.DataArray.groupby()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/climatology_functions.html#stdmontll"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/climatology_functions.ipynb#stdmontll">example notebook</a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/specxy_anal.shtml">specxy_anal</a></p></td>
 <td><p>Calculates the cross-spectra quantities of a series.</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">scipy.signal.periodogram()</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy.signal.convolve()</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy.signal.csd()</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy.signal.coherence()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/specx_specxy_anal.html"><span class="doc">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/specx_specxy_anal.ipynb">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sin.shtml">sin</a></p></td>
 <td><p>Computes the sine of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.sin()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.sin()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#sin"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/trigonometric_functions.ipynb#sin">example notebook</a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/tan.shtml">tan</a></p></td>
 <td><p>Computes the tangent of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.tan()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.tan()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#tan"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/trigonometric_functions.ipynb#tan">example notebook</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/tanh.shtml">tanh</a></p></td>
 <td><p>Computes the hyperbolic tangent of numeric types</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">math.tanh()</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.tanh()</span></code></p></td>
-<td><p><a class="reference internal" href="../ncl_entries/trigonometric_functions.html#tanh"><span class="std std-ref">example notebook</span></a></p></td>
+<td><p><a class="reference external" href="../ncl_entries/trigonometric_functions.ipynb#tanh">example notebook</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -700,12 +581,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../applications/date_time/datetime.html"
+       href="../../applications/applications.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Working with Dates and Times</p>
+        <p class="prev-next-title">Python Applications</p>
       </div>
     </a>
     <a class="right-next"
@@ -713,7 +594,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">NCL Applications</p>
+        <p class="prev-next-title">NCL to Python Applications</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -756,9 +637,6 @@ By GeoCAT
   
   <div class="footer-item">
     
-<div class="extra_footer">
-  <em>The National Center for Atmospheric Research is sponsored by the National Science Foundation. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.</em>
-</div>
   </div>
   
 </div>
@@ -770,8 +648,8 @@ By GeoCAT
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

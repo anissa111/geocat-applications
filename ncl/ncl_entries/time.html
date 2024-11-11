@@ -1,0 +1,696 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Time</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=61b3970e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ncl/ncl_entries/time';</script>
+    <link rel="icon" href="../../_static/GeoCAT_square.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/NSF_NCAR_light.svg" class="logo__image only-light" alt=" - Home"/>
+    <img src="../../_static/NSF_NCAR_dark.svg" class="logo__image only-dark pst-js-only" alt=" - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../GETTING_STARTED.html">Getting Started</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../applications/applications.html">Applications</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">NCL to Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ncl_index/ncl_index.html">NCL Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ncl_entries.html">Applications</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributor Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://github.com/NCAR/geocat-applications/issues">GitHub Issues</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.gle/6DTo3ELLri4DAGfG8">Suggestion Box</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/ncl/ncl_entries/time.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Time</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-of-week">day_of_week</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-datetime-module">Using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-cftime">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-day-of-week">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calendars">Calendars</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#input-type">Input Type</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#year-0">Year 0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#days-in-month">days_in_month</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-calendar-module">Using the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> module</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-days-in-month">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Calendars</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-differences">Numerical Differences</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Input type</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-resources">Python Resources</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="time">
+<h1>Time<a class="headerlink" href="#time" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>This section covers NCL functions relating to dates and times:</p>
+</section>
+<section id="day-of-week">
+<h2>day_of_week<a class="headerlink" href="#day-of-week" title="Link to this heading">#</a></h2>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/day_of_week.shtml"><code class="docutils literal notranslate"><span class="pre">day_of_week</span></code></a> calculates the day of the week given month, day, and year.</p>
+<section id="grab-and-go">
+<h3>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+
+<span class="n">day</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">month</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">2024</span>
+
+<span class="n">dow</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span>
+    <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;proleptic_gregorian&#39;</span><span class="p">,</span> <span class="n">has_year_zero</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%w&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dow</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="using-the-datetime-module">
+<h3>Using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module<a class="headerlink" href="#using-the-datetime-module" title="Link to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://docs.python.org/3/library/datetime.html"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a> module is part of the Python Standard Library and could be sufficient to calculate the day of the week.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">day</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">month</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">2024</span>
+
+<span class="n">dow</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%A&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2"> is a </span><span class="si">{</span><span class="n">dow</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-6-4 is a Tuesday
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module does not support year 0. If you need to work with year 0, we suggest using <code class="docutils literal notranslate"><span class="pre">cftime</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module also only uses the proleptic Gregorian calendar. If you need to work with other calendars, we suggest using <code class="docutils literal notranslate"><span class="pre">cftime</span></code>.</p>
+</section>
+<section id="using-cftime">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code><a class="headerlink" href="#using-cftime" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://unidata.github.io/cftime/index.html"><code class="docutils literal notranslate"><span class="pre">cftime</span></code></a> offers a solution to these potential issues by supporting year 0 and all of the <a class="reference external" href="https://cfconventions.org/cf-conventions/cf-conventions#calendar">CF Convention calendars</a>. Here is how you can use <code class="docutils literal notranslate"><span class="pre">cftime</span></code> to calculate the day of the week.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+
+<span class="n">day</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">month</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">2024</span>
+
+<span class="n">dow</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span>
+    <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;proleptic_gregorian&#39;</span><span class="p">,</span> <span class="n">has_year_zero</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%A&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Proleptic Gregorian calendar: </span><span class="se">\t\t</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2"> is a </span><span class="si">{</span><span class="n">dow</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">dow</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span>
+    <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">,</span> <span class="n">has_year_zero</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%A&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Standard calendar: </span><span class="se">\t\t\t</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2"> is a </span><span class="si">{</span><span class="n">dow</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">dow</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;julian&#39;</span><span class="p">,</span> <span class="n">has_year_zero</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span>
+    <span class="s1">&#39;%A&#39;</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Julian calendar: </span><span class="se">\t\t\t</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2"> is a </span><span class="si">{</span><span class="n">dow</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">dow</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span>
+    <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;360_day&#39;</span><span class="p">,</span> <span class="n">has_year_zero</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%A&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;360 day calendar: </span><span class="se">\t\t\t</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2"> is a </span><span class="si">{</span><span class="n">dow</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Proleptic Gregorian calendar: 		2024-6-4 is a Tuesday
+Standard calendar: 			2024-6-4 is a Tuesday
+Julian calendar: 			2024-6-4 is a Monday
+360 day calendar: 			2024-6-4 is a Wednesday
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior"><code class="docutils literal notranslate"><span class="pre">strftime()</span></code></a> method allows you to format the output of <code class="docutils literal notranslate"><span class="pre">cftime.datetime</span></code>. If you desire an output equivalent to that of NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code>, we suggest using <code class="docutils literal notranslate"><span class="pre">.strftime('%w')</span></code>.</p>
+</section>
+<section id="differences-between-cftime-and-ncl-s-day-of-week">
+<h3>Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code><a class="headerlink" href="#differences-between-cftime-and-ncl-s-day-of-week" title="Link to this heading">#</a></h3>
+<section id="calendars">
+<h4>Calendars<a class="headerlink" href="#calendars" title="Link to this heading">#</a></h4>
+<p>NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code> only supports the proleptic Gregorian calendar, while the <code class="docutils literal notranslate"><span class="pre">cftime</span></code> module supports all CF conventions calendars, including the <code class="docutils literal notranslate"><span class="pre">proleptic_gregorian</span></code> calendar.</p>
+</section>
+<section id="input-type">
+<h4>Input Type<a class="headerlink" href="#input-type" title="Link to this heading">#</a></h4>
+<p>Notably, using <code class="docutils literal notranslate"><span class="pre">cftime</span></code> to calculate the day of the week works by getting a <code class="docutils literal notranslate"><span class="pre">strftime()</span></code> value from a <code class="docutils literal notranslate"><span class="pre">cftime.datetime</span></code> object, which means that the calculations for the day of the week have to be collected through each date individually, while NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code> can take in multidimensional integer arrays, given that the <code class="docutils literal notranslate"><span class="pre">year</span></code> and <code class="docutils literal notranslate"><span class="pre">month</span></code> arrays have the same dimensions.</p>
+</section>
+<section id="year-0">
+<h4>Year 0<a class="headerlink" href="#year-0" title="Link to this heading">#</a></h4>
+<p>There is a slight difference in the way that NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code> and the <code class="docutils literal notranslate"><span class="pre">cftime</span></code> module handle the year 0.</p>
+<ul class="simple">
+<li><p>NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code> supports all positive years and year 0 by default.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">cftime</span></code> module supports all years, but handling for year 0 is dependent upon the calendar and/or the <code class="docutils literal notranslate"><span class="pre">has_year_zero</span></code> keyword argument.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="days-in-month">
+<h2>days_in_month<a class="headerlink" href="#days-in-month" title="Link to this heading">#</a></h2>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/days_in_month.shtml"><code class="docutils literal notranslate"><span class="pre">days_in_month</span></code></a> calculates the number of days in a month given a month and year.</p>
+<section id="id1">
+<h3>Grab and Go<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+
+<span class="n">day</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">month</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">2024</span>
+
+<span class="n">days</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">daysinmonth</span>
+
+<span class="n">days</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>29
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-the-calendar-module">
+<h3>Using the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> module<a class="headerlink" href="#using-the-calendar-module" title="Link to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://docs.python.org/3/library/calendar.html"><code class="docutils literal notranslate"><span class="pre">calendar</span></code></a> module is part of the Python Standard Library and could be sufficient to calculate the number of days in a month.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">calendar</span> <span class="kn">import</span> <span class="n">monthrange</span>
+
+<span class="n">month</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">1500</span>
+<span class="n">first_day</span><span class="p">,</span> <span class="n">num_days</span> <span class="o">=</span> <span class="n">monthrange</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Month </span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">num_days</span><span class="si">}</span><span class="s2"> days&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Month 2 in 1500 has 28 days
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> only uses a proleptic Gregorian calendar. If you need to work with other calendars, the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> module will not be sufficient.</p>
+</section>
+<section id="id2">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://unidata.github.io/cftime/index.html"><code class="docutils literal notranslate"><span class="pre">cftime</span></code></a> supports all of the <a class="reference external" href="https://cfconventions.org/cf-conventions/cf-conventions#calendar">CF Convention calendars</a>. Here’s how you can use <code class="docutils literal notranslate"><span class="pre">cftime</span></code> to calculate the number of days in a month.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+
+<span class="n">day</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">month</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">1500</span>
+
+<span class="n">days</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">daysinmonth</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;standard calendar: </span><span class="se">\t\t\t\t</span><span class="s2"> month </span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">days</span><span class="si">}</span><span class="s2"> days&quot;</span><span class="p">)</span>
+
+<span class="n">days</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;proleptic_gregorian&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">daysinmonth</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;proleptic Gregorian calendar: </span><span class="se">\t</span><span class="s2"> month </span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">days</span><span class="si">}</span><span class="s2"> days&quot;</span><span class="p">)</span>
+
+<span class="n">days</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;julian&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">daysinmonth</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Julian calendar: </span><span class="se">\t\t\t\t</span><span class="s2"> month </span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">days</span><span class="si">}</span><span class="s2"> days&quot;</span><span class="p">)</span>
+
+<span class="n">days</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;360_day&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">daysinmonth</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;360 day calendar: </span><span class="se">\t\t\t\t</span><span class="s2"> month </span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">days</span><span class="si">}</span><span class="s2"> days&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>standard calendar: 				 month 2 in 1500 has 29 days
+proleptic Gregorian calendar: 	 month 2 in 1500 has 28 days
+Julian calendar: 				 month 2 in 1500 has 29 days
+360 day calendar: 				 month 2 in 1500 has 30 days
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="differences-between-cftime-and-ncl-s-days-in-month">
+<h3>Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code><a class="headerlink" href="#differences-between-cftime-and-ncl-s-days-in-month" title="Link to this heading">#</a></h3>
+<section id="id3">
+<h4>Calendars<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<p>The calendars available in <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code>, while both based on the CF Conventions calendars, are slightly different.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cftime</span></code> does support using <code class="docutils literal notranslate"><span class="pre">&quot;none&quot;</span></code> as a calendar type, but not for this particular function.</p></li>
+<li><p>NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code> does not support the <code class="docutils literal notranslate"><span class="pre">proleptic_gregorian</span></code> calendar.</p></li>
+</ul>
+</section>
+<section id="numerical-differences">
+<h4>Numerical Differences<a class="headerlink" href="#numerical-differences" title="Link to this heading">#</a></h4>
+<p>Additionally, the <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;gregorian&quot;</span></code> calendars seem to disagree for some historical dates.</p>
+</section>
+<section id="id4">
+<h4>Input type<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<p>Notably, using <code class="docutils literal notranslate"><span class="pre">cftime</span></code> to calculate the number of days in a month works by getting a <code class="docutils literal notranslate"><span class="pre">daysinmonth</span></code> value from a <code class="docutils literal notranslate"><span class="pre">cftime.datetime</span></code> object, which means that the calculations for days in a month have to be collected through each date individually, while NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code> can take in multidimensional integer arrays, given that the <code class="docutils literal notranslate"><span class="pre">year</span></code> and <code class="docutils literal notranslate"><span class="pre">month</span></code> arrays have the same dimensions.</p>
+</section>
+</section>
+</section>
+<section id="python-resources">
+<h2>Python Resources<a class="headerlink" href="#python-resources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module <a class="reference external" href="https://docs.python.org/3/library/datetime.html">documentation</a></p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">cftime.datetime</span></code> <a class="reference external" href="https://unidata.github.io/cftime/api.html#cftime.datetime">documentation</a></p></li>
+<li><p>The <a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/time-series.html">time series data</a> section of the Xarray documentation for working with time series data in Xarray</p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/geocat-applications/applications/date_time/datetime.html">Working with Dates and Times</a> GeoCAT Applications notebook</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-of-week">day_of_week</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-datetime-module">Using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-cftime">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-day-of-week">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calendars">Calendars</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#input-type">Input Type</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#year-0">Year 0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#days-in-month">days_in_month</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-calendar-module">Using the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> module</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-days-in-month">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Calendars</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-differences">Numerical Differences</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Input type</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-resources">Python Resources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GeoCAT
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, University Corporation for Atmospheric Research.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

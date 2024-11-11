@@ -1,23 +1,40 @@
 .. _ncl_applications:
 
-NCL Applications
-================
+NCL to Python Applications
+==========================
 
-Data Analysis
----------------
-.. toctree::
-    :maxdepth: 1
+NCL to Python resources by category with relevant context
+and links to additional resources and references.
 
-    climatology_functions.ipynb
-    trigonometric_functions.ipynb
-    general_applied_math.ipynb
-    meteorology.ipynb
-    specx_specxy_anal.ipynb
+.. grid:: 3
+    :gutter: 2
 
-Dates and Times
----------------
-.. toctree::
-    :maxdepth: 1
+    .. grid-item::
 
-    days_in_month.ipynb
-    day_of_week.ipynb
+        .. grid:: 1
+            :gutter: 1
+
+            .. card:: Time
+
+                - `Dates and times <time.ipynb>`_
+
+    .. grid-item::
+
+        .. grid:: 1
+            :gutter: 1
+
+            .. card:: Math
+
+                - `Trigonometry <trigonometry.ipynb>`_
+                - `General applied math <general_applied_math.ipynb>`_
+                - `Spectral analysis <spectral_analysis.ipynb>`_
+
+    .. grid-item::
+
+        .. grid:: 1
+            :gutter: 1
+
+            .. card:: Geoscience
+
+                - `Climatology <climatology.ipynb>`_
+                - `Meteorology <meteorology.ipynb>`_

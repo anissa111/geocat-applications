@@ -1,11 +1,11 @@
-.. geocat-applications documentation master file
+.. geocat-applications documentation main file
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 .. module:: geocat.applications
 
 .. meta::
-   :description: GeoCAT-applications
+   :description: geocat-applications
    :keywords: geocat, geocat-applications,
               geocat applications,
               wrf, python, wrf-python, weather research and forecasting,
@@ -17,9 +17,6 @@
               pynio, pyngl, interpolation
 
 
-.. .. image:: _static/images/nsf.png
-..    :scale: 100%
-..   :align: right
 
 
 
@@ -27,16 +24,17 @@ GeoCAT Applications
 ===================
 
 GeoCAT Applications is a community resource managed by the GeoCAT team. Inspired by the
-`NCL Applications <https://www.ncl.ucar.edu/Applications/>`_ page, this is designed to be a quick reference
-demonstrating capabilities within the Scientific Python Ecosystem that may be relevant to your geoscience workflows.
+`NCL Applications <https://www.ncl.ucar.edu/Applications/>`_ page, GeoCAT Applications is
+designed to be a quick reference guide demonstrating capabilities within the scientific
+Python ecosystem that may be relevant to your geoscience workflows.
 
 New to Python or GeoCAT Applications? Check out the `Getting Started <GETTING_STARTED.md>`_ guide!
 
-Python Examples
----------------
+Python Applications
+-------------------
 
 .. include:: applications/applications.rst
-
+    :start-line: 5
 
 .. TIP::
     If you're looking for NCL to Python examples, please visit :ref:`ncl_applications`.
@@ -52,11 +50,9 @@ Python Examples
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: Applications
+    :caption: Python
 
-    Plot Types <applications/plot_types/plot_types>
-    Data Analysis <applications/data_analysis/data_analysis>
-    Date and Time <applications/date_time/date_time>
+    Applications <applications/applications>
 
 .. toctree::
     :maxdepth: 2
@@ -64,20 +60,20 @@ Python Examples
     :caption: NCL to Python
 
     NCL Index <ncl/ncl_index/ncl_index>
-    NCL Applications <ncl/ncl_entries/ncl_entries>
+    Applications <ncl/ncl_entries/ncl_entries>
 
 .. toctree::
     :maxdepth: 2
     :hidden:
     :caption: Contributing
 
-    Contributor Guide <CONTRIBUTING.md>
     Code of Conduct <CODE_OF_CONDUCT.md>
+    Contributor Guide <CONTRIBUTING.md>
 
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: Getting Support
+    :caption: Support
 
     GitHub Issues <https://github.com/NCAR/geocat-applications/issues>
-    Feature Request Form <https://forms.gle/6DTo3ELLri4DAGfG8>
+    Suggestion Box <https://forms.gle/6DTo3ELLri4DAGfG8>
