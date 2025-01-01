@@ -467,17 +467,13 @@ Show the python code that replicates the NCL functionality. Don't worry about pr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>julian: 
-	python:	[29, 28, 31, 29]
-	ncl:	[29, 28, 31, 29]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>360_day: 
+	python:	[30, 30, 30, 30]
+	ncl:	[30, 30, 30, 30]
 
 standard: 
 	python:	[29, 28, 31, 29]
 	ncl:	[29, 28, 31, 28]
-
-360_day: 
-	python:	[30, 30, 30, 30]
-	ncl:	[30, 30, 30, 30]
 
 noleap: 
 	python:	[28, 28, 31, 28]
@@ -487,6 +483,10 @@ gregorian:
 	python:	[29, 28, 31, 29]
 	ncl:	[29, 28, 31, 28]
 
+366_day: 
+	python:	[29, 29, 31, 29]
+	ncl:	[29, 29, 31, 29]
+
 365_day: 
 	python:	[28, 28, 31, 28]
 	ncl:	[28, 28, 31, 28]
@@ -495,9 +495,9 @@ all_leap:
 	python:	[29, 29, 31, 29]
 	ncl:	[29, 29, 31, 29]
 
-366_day: 
-	python:	[29, 29, 31, 29]
-	ncl:	[29, 29, 31, 29]
+julian: 
+	python:	[29, 28, 31, 29]
+	ncl:	[29, 28, 31, 29]
 
 none: 
 	ncl:	[29, 28, 31, 28]
@@ -524,9 +524,9 @@ proleptic_gregorian:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>standard: [29, 28, 31, 29] != [29, 28, 31, 28]
-none: calendar not available in python
 proleptic_gregorian: calendar not available in ncl
 gregorian: [29, 28, 31, 29] != [29, 28, 31, 28]
+none: calendar not available in python
 </pre></div>
 </div>
 </div>
@@ -594,7 +594,7 @@ By GeoCAT
 
   <p class="copyright">
     
-      © Copyright 2024, University Corporation for Atmospheric Research.
+      © Copyright 2025, University Corporation for Atmospheric Research.
       <br/>
     
   </p>
