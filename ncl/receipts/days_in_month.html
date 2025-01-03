@@ -467,11 +467,7 @@ Show the python code that replicates the NCL functionality. Don't worry about pr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>julian: 
-	python:	[29, 28, 31, 29]
-	ncl:	[29, 28, 31, 29]
-
-noleap: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>noleap: 
 	python:	[28, 28, 31, 28]
 	ncl:	[28, 28, 31, 28]
 
@@ -483,21 +479,25 @@ gregorian:
 	python:	[29, 28, 31, 29]
 	ncl:	[29, 28, 31, 28]
 
-360_day: 
-	python:	[30, 30, 30, 30]
-	ncl:	[30, 30, 30, 30]
-
 365_day: 
 	python:	[28, 28, 31, 28]
 	ncl:	[28, 28, 31, 28]
+
+standard: 
+	python:	[29, 28, 31, 29]
+	ncl:	[29, 28, 31, 28]
 
 all_leap: 
 	python:	[29, 29, 31, 29]
 	ncl:	[29, 29, 31, 29]
 
-standard: 
+360_day: 
+	python:	[30, 30, 30, 30]
+	ncl:	[30, 30, 30, 30]
+
+julian: 
 	python:	[29, 28, 31, 29]
-	ncl:	[29, 28, 31, 28]
+	ncl:	[29, 28, 31, 29]
 
 none: 
 	ncl:	[29, 28, 31, 28]
@@ -523,10 +523,10 @@ proleptic_gregorian:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>none: calendar not available in python
-proleptic_gregorian: calendar not available in ncl
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>proleptic_gregorian: calendar not available in ncl
 gregorian: [29, 28, 31, 29] != [29, 28, 31, 28]
 standard: [29, 28, 31, 29] != [29, 28, 31, 28]
+none: calendar not available in python
 </pre></div>
 </div>
 </div>
