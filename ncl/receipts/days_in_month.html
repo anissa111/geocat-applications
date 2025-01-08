@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -345,7 +345,7 @@ This notebook is part of the process we have for adding entries to the NCL Index
 </section>
 <section id="ncl-code">
 <h2>NCL code<a class="headerlink" href="#ncl-code" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">days_in_month</span><span class="o">.</span><span class="n">shtml</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">days_in_month</span><span class="o">.</span><span class="n">shtml</span>
 
 <span class="n">year</span>  <span class="o">=</span> <span class="p">(</span><span class="o">/</span><span class="mi">1996</span><span class="p">,</span> <span class="mi">1997</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1500</span><span class="o">/</span><span class="p">)</span>
 <span class="n">month</span> <span class="o">=</span> <span class="p">(</span><span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="p">)</span>
@@ -416,8 +416,8 @@ This notebook is part of the process we have for adding entries to the NCL Index
 Show the python code that replicates the NCL functionality. Don't worry about providing narrative, just provide enough explanation that somebody with the knowledge level of another developer could follow along.
 --><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
-<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cftime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">pprint</span>
 
 <span class="n">day</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">cals</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">ncl_results</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
@@ -467,19 +467,7 @@ Show the python code that replicates the NCL functionality. Don't worry about pr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>366_day: 
-	python:	[29, 29, 31, 29]
-	ncl:	[29, 29, 31, 29]
-
-365_day: 
-	python:	[28, 28, 31, 28]
-	ncl:	[28, 28, 31, 28]
-
-all_leap: 
-	python:	[29, 29, 31, 29]
-	ncl:	[29, 29, 31, 29]
-
-julian: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>julian: 
 	python:	[29, 28, 31, 29]
 	ncl:	[29, 28, 31, 29]
 
@@ -491,6 +479,10 @@ gregorian:
 	python:	[29, 28, 31, 29]
 	ncl:	[29, 28, 31, 28]
 
+all_leap: 
+	python:	[29, 29, 31, 29]
+	ncl:	[29, 29, 31, 29]
+
 standard: 
 	python:	[29, 28, 31, 29]
 	ncl:	[29, 28, 31, 28]
@@ -498,6 +490,14 @@ standard:
 noleap: 
 	python:	[28, 28, 31, 28]
 	ncl:	[28, 28, 31, 28]
+
+365_day: 
+	python:	[28, 28, 31, 28]
+	ncl:	[28, 28, 31, 28]
+
+366_day: 
+	python:	[29, 29, 31, 29]
+	ncl:	[29, 29, 31, 29]
 
 none: 
 	ncl:	[29, 28, 31, 28]
@@ -524,9 +524,9 @@ proleptic_gregorian:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>proleptic_gregorian: calendar not available in ncl
-none: calendar not available in python
 gregorian: [29, 28, 31, 29] != [29, 28, 31, 28]
 standard: [29, 28, 31, 29] != [29, 28, 31, 28]
+none: calendar not available in python
 </pre></div>
 </div>
 </div>

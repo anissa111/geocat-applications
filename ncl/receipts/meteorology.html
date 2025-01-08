@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -350,7 +350,7 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <section id="ncl-code">
 <h2>NCL code<a class="headerlink" href="#ncl-code" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">dewtemp_trh</span>
-<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">dewtemp_trh</span><span class="o">.</span><span class="n">shtml</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">dewtemp_trh</span><span class="o">.</span><span class="n">shtml</span>
 
 <span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">dewtemp_trh</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">dewtemp_trh_output</span><span class="o">.</span><span class="n">txt</span>
 
@@ -366,7 +366,7 @@ This notebook is part of the process we have for adding entries to the NCL Index
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">daylight_fao56</span>
-<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Crop</span><span class="o">/</span><span class="n">daylight_fao56</span><span class="o">.</span><span class="n">shtml</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Crop</span><span class="o">/</span><span class="n">daylight_fao56</span><span class="o">.</span><span class="n">shtml</span>
 
 <span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">daylight_fao56</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">daylight_fao56_output</span><span class="o">.</span><span class="n">txt</span>
 
@@ -389,8 +389,8 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for dewtemp_trh from geocat-datafiles</span>
-<span class="kn">import</span> <span class="nn">geocat.datafiles</span> <span class="k">as</span> <span class="nn">gdf</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">dewtemp_data</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;applications_files/ncl_outputs/dewtemp_trh_output.txt&#39;</span><span class="p">)</span>
 <span class="n">dewtemp_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">dewtemp_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
@@ -423,7 +423,7 @@ This notebook is part of the process we have for adding entries to the NCL Index
         <span class="n">tk_rh</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">tk</span><span class="p">,</span> <span class="n">rh</span><span class="p">))</span>
 
 <span class="c1">### Calculate GeoCAT-Comp `dewtemp` value and tk/rh</span>
-<span class="kn">from</span> <span class="nn">geocat.comp</span> <span class="kn">import</span> <span class="n">dewtemp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">dewtemp</span>
 
 <span class="n">geocat_dewtemp</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -440,8 +440,8 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for daylight_fao56 from geocat-datafiles</span>
-<span class="kn">import</span> <span class="nn">geocat.datafiles</span> <span class="k">as</span> <span class="nn">gdf</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">daylight_data</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;applications_files/ncl_outputs/daylight_fao56_output.txt&#39;</span><span class="p">)</span>
 <span class="n">daylight_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">daylight_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
@@ -474,7 +474,7 @@ This notebook is part of the process we have for adding entries to the NCL Index
         <span class="n">doy_lat</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">doy</span><span class="p">,</span> <span class="n">lat</span><span class="p">))</span>
 
 <span class="c1">### Calculate GeoCAT-Comp `daylight_fao56` value and doy/lat</span>
-<span class="kn">from</span> <span class="nn">geocat.comp</span> <span class="kn">import</span> <span class="n">max_daylight</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">max_daylight</span>
 
 <span class="n">geocat_daylight</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -497,7 +497,7 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <h2>Comparison<a class="headerlink" href="#comparison" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 
 <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">ncl_dewtemp</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>

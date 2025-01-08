@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -354,7 +354,7 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">Note</span> <span class="n">the</span> <span class="n">use</span> <span class="n">of</span> <span class="n">the</span> <span class="n">calendar</span> <span class="n">attribute</span> <span class="n">to</span> <span class="n">assign</span> <span class="n">calendar</span> <span class="n">information</span>
 
 <span class="p">;</span> <span class="n">calcDayAnomTLL</span>
-<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">calcDayanomTLL</span><span class="o">.</span><span class="n">shtml</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">calcDayanomTLL</span><span class="o">.</span><span class="n">shtml</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">addfile</span><span class="p">(</span><span class="s2">&quot;CMIP6_sea_ice_daily_subset.nc&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
 <span class="n">time</span> <span class="o">=</span> <span class="n">f</span><span class="o">-&gt;</span><span class="n">time</span>
 <span class="n">time</span><span class="nd">@calendar</span> <span class="o">=</span> <span class="s2">&quot;noleap&quot;</span>
@@ -372,7 +372,7 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <span class="nb">print</span><span class="p">(</span><span class="n">aiceDayAnom</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
 <span class="p">;</span> <span class="n">calcMonAnomTLL</span>
-<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">calcMonAnomTLL</span><span class="o">.</span><span class="n">shtml</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">calcMonAnomTLL</span><span class="o">.</span><span class="n">shtml</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">addfile</span><span class="p">(</span><span class="s2">&quot;CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
 <span class="n">aice</span> <span class="o">=</span> <span class="n">f</span><span class="o">-&gt;</span><span class="n">aice</span>
 <span class="n">aiceClmMon</span> <span class="o">=</span> <span class="n">clmMonTLL</span><span class="p">(</span><span class="n">aice</span><span class="p">)</span>
@@ -380,7 +380,7 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <span class="nb">print</span><span class="p">(</span><span class="n">aiceMonAnom</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
 <span class="p">;</span> <span class="n">clmDayTLL</span>
-<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">clmDayTLL</span><span class="o">.</span><span class="n">shtml</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">clmDayTLL</span><span class="o">.</span><span class="n">shtml</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">addfile</span><span class="p">(</span><span class="s2">&quot;CMIP6_sea_ice_daily_subset.nc&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
 <span class="n">time</span> <span class="o">=</span> <span class="n">f</span><span class="o">-&gt;</span><span class="n">time</span>
 <span class="n">time</span><span class="nd">@calendar</span> <span class="o">=</span> <span class="s2">&quot;noleap&quot;</span>
@@ -397,28 +397,28 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <span class="nb">print</span><span class="p">(</span><span class="n">aiceClmDay</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
 <span class="p">;</span> <span class="n">clmMonTLL</span>
-<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">clmMonTLL</span><span class="o">.</span><span class="n">shtml</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">clmMonTLL</span><span class="o">.</span><span class="n">shtml</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">addfile</span><span class="p">(</span><span class="s2">&quot;CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
 <span class="n">aice</span> <span class="o">=</span> <span class="n">f</span><span class="o">-&gt;</span><span class="n">aice</span>
 <span class="n">aiceClmMon</span> <span class="o">=</span> <span class="n">clmMonTLL</span><span class="p">(</span><span class="n">aice</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">aiceClmMon</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
 <span class="p">;</span> <span class="n">month_to_season</span>
-<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">calcDayAnomTLL</span><span class="o">.</span><span class="n">shtml</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">calcDayAnomTLL</span><span class="o">.</span><span class="n">shtml</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">addfile</span><span class="p">(</span><span class="s2">&quot;CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
 <span class="n">aice</span> <span class="o">=</span> <span class="n">f</span><span class="o">-&gt;</span><span class="n">aice</span>
 <span class="n">aiceSeason</span> <span class="o">=</span> <span class="n">month_to_season</span><span class="p">(</span><span class="n">aice</span><span class="p">,</span> <span class="s2">&quot;ASO&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">aiceSeason</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
 <span class="p">;</span> <span class="n">rmMonAnnCycTLL</span>
-<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">month_to_season</span><span class="o">.</span><span class="n">shtml</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">month_to_season</span><span class="o">.</span><span class="n">shtml</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">addfile</span><span class="p">(</span><span class="s2">&quot;CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
 <span class="n">aice</span> <span class="o">=</span> <span class="n">f</span><span class="o">-&gt;</span><span class="n">aice</span>
 <span class="n">aiceRmMonAnnCyc</span> <span class="o">=</span> <span class="n">rmMonAnnCycTLL</span><span class="p">(</span><span class="n">aice</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">aiceRmMonAnnCyc</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
 <span class="p">;</span> <span class="n">stdMonTLL</span>
-<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span> <span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">stdMonTLL</span><span class="o">.</span><span class="n">shtml</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">www.ncl.ucar.edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">stdMonTLL</span><span class="o">.</span><span class="n">shtml</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">addfile</span><span class="p">(</span><span class="s2">&quot;CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
 <span class="n">aice</span> <span class="o">=</span> <span class="n">f</span><span class="o">-&gt;</span><span class="n">aice</span>
 <span class="n">aiceStdMon</span> <span class="o">=</span> <span class="n">stdMonTLL</span><span class="p">(</span><span class="n">aice</span><span class="p">)</span>
@@ -430,10 +430,10 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <h2>Python Functionality<a class="headerlink" href="#python-functionality" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="kn">import</span> <span class="nn">geocat.datafiles</span> <span class="k">as</span> <span class="nn">gdf</span>
-<span class="kn">from</span> <span class="nn">geocat.comp</span> <span class="kn">import</span> <span class="n">month_to_season</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">month_to_season</span>
 
 <span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -514,33 +514,33 @@ This notebook is part of the process we have for adding entries to the NCL Index
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>calcMonAnomTLL: 
-	python:		0.0033192038536071777
-	ncl:		0.003319263
-
-clmMonTLL: 
-	python:		0.8063018918037415
-	ncl:		0.8063018
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>clmDayTLL: 
+	python:		0.7408185005187988
+	ncl:		0.7408184
 
 stdMonTLL: 
 	python:		0.07392024993896484
 	ncl:		0.07392025
 
-rmMonAnnCycTLL: 
-	python:		0.0033192038536071777
-	ncl:		0.003319263
+clmMonTLL: 
+	python:		0.8063018918037415
+	ncl:		0.8063018
 
 calcDayAnomTLL: 
 	python:		-0.02774369716644287
 	ncl:		-0.02774364
 
+rmMonAnnCycTLL: 
+	python:		0.0033192038536071777
+	ncl:		0.003319263
+
 month_to_season: 
 	python:		0.9931214451789856
 	ncl:		0.9931215
 
-clmDayTLL: 
-	python:		0.7408185005187988
-	ncl:		0.7408184
+calcMonAnomTLL: 
+	python:		0.0033192038536071777
+	ncl:		0.003319263
 </pre></div>
 </div>
 </div>
@@ -557,20 +557,20 @@ clmDayTLL:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>calcMonAnomTLL:
-	-5.9146392822079924e-08
-clmMonTLL:
-	9.180374149764248e-08
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>clmDayTLL:
+	1.0051879884009907e-07
 stdMonTLL:
 	-6.103516303479495e-11
-rmMonAnnCycTLL:
-	-5.9146392822079924e-08
+clmMonTLL:
+	9.180374149764248e-08
 calcDayAnomTLL:
 	-5.7166442871126044e-08
+rmMonAnnCycTLL:
+	-5.9146392822079924e-08
 month_to_season:
 	-5.482101439469034e-08
-clmDayTLL:
-	1.0051879884009907e-07
+calcMonAnomTLL:
+	-5.9146392822079924e-08
 </pre></div>
 </div>
 </div>

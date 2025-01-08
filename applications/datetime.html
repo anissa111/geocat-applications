@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -359,7 +359,7 @@
 </div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 
 <span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;datetime.date.today() -&gt; </span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">today</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -369,8 +369,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date.today() -&gt; 	 2025-01-07
-datetime.datetime.now() -&gt; 	 2025-01-07 00:02:25.182414
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date.today() -&gt; 	 2025-01-08
+datetime.datetime.now() -&gt; 	 2025-01-08 00:02:18.474073
 </pre></div>
 </div>
 </div>
@@ -401,10 +401,10 @@ datetime.datetime.now() -&gt; 	 2025-01-07 00:02:25.182414
 2025
 
 now.strftime(&#39;%A, %B %d %Y %I:%M:%S %p&#39;)
-Tuesday, January 07 2025 12:02:25 AM
+Wednesday, January 08 2025 12:02:18 AM
 
 now.strftime(&#39;%c&#39;)
-Tue Jan  7 00:02:25 2025
+Wed Jan  8 00:02:18 2025
 </pre></div>
 </div>
 </div>
@@ -425,7 +425,7 @@ Tue Jan  7 00:02:25 2025
 <p>To calculate the number of days in a month, use <a class="reference external" href="https://unidata.github.io/cftime/api.html#cftime.datetime"><code class="docutils literal notranslate"><span class="pre">cftime.datetime().daysinmonth</span></code></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cftime</span>
 
 <span class="n">day</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">month</span> <span class="o">=</span> <span class="mi">6</span>
@@ -448,7 +448,7 @@ Tue Jan  7 00:02:25 2025
 <p>To calculate the day of the week, use <code class="docutils literal notranslate"><span class="pre">cftime.datetime().strftime(&quot;%A&quot;)</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cftime</span>
 
 <span class="n">day</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">month</span> <span class="o">=</span> <span class="mi">6</span>

@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -366,7 +366,7 @@
 <h3>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cftime</span>
 
 <span class="n">day</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">month</span> <span class="o">=</span> <span class="mi">6</span>
@@ -392,7 +392,7 @@
 <p>The <a class="reference external" href="https://docs.python.org/3/library/datetime.html"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a> module is part of the Python Standard Library and could be sufficient to calculate the day of the week.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 
 <span class="n">day</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">month</span> <span class="o">=</span> <span class="mi">6</span>
@@ -417,7 +417,7 @@
 <p><a class="reference external" href="https://unidata.github.io/cftime/index.html"><code class="docutils literal notranslate"><span class="pre">cftime</span></code></a> offers a solution to these potential issues by supporting year 0 and all of the <a class="reference external" href="https://cfconventions.org/cf-conventions/cf-conventions#calendar">CF Convention calendars</a>. Here is how you can use <code class="docutils literal notranslate"><span class="pre">cftime</span></code> to calculate the day of the week.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cftime</span>
 
 <span class="n">day</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">month</span> <span class="o">=</span> <span class="mi">6</span>
@@ -483,7 +483,7 @@ Julian calendar: 			2024-6-4 is a Monday
 <h3>Grab and Go<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cftime</span>
 
 <span class="n">day</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">month</span> <span class="o">=</span> <span class="mi">2</span>
@@ -507,7 +507,7 @@ Julian calendar: 			2024-6-4 is a Monday
 <p>The <a class="reference external" href="https://docs.python.org/3/library/calendar.html"><code class="docutils literal notranslate"><span class="pre">calendar</span></code></a> module is part of the Python Standard Library and could be sufficient to calculate the number of days in a month.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">calendar</span> <span class="kn">import</span> <span class="n">monthrange</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">calendar</span><span class="w"> </span><span class="kn">import</span> <span class="n">monthrange</span>
 
 <span class="n">month</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">year</span> <span class="o">=</span> <span class="mi">1500</span>
@@ -529,7 +529,7 @@ Julian calendar: 			2024-6-4 is a Monday
 <p><a class="reference external" href="https://unidata.github.io/cftime/index.html"><code class="docutils literal notranslate"><span class="pre">cftime</span></code></a> supports all of the <a class="reference external" href="https://cfconventions.org/cf-conventions/cf-conventions#calendar">CF Convention calendars</a>. Here’s how you can use <code class="docutils literal notranslate"><span class="pre">cftime</span></code> to calculate the number of days in a month.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cftime</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cftime</span>
 
 <span class="n">day</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">month</span> <span class="o">=</span> <span class="mi">2</span>
