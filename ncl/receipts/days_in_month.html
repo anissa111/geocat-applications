@@ -475,11 +475,11 @@ noleap:
 	python:	[28, 28, 31, 28]
 	ncl:	[28, 28, 31, 28]
 
-standard: 
+julian: 
 	python:	[29, 28, 31, 29]
-	ncl:	[29, 28, 31, 28]
+	ncl:	[29, 28, 31, 29]
 
-gregorian: 
+standard: 
 	python:	[29, 28, 31, 29]
 	ncl:	[29, 28, 31, 28]
 
@@ -491,9 +491,9 @@ all_leap:
 	python:	[29, 29, 31, 29]
 	ncl:	[29, 29, 31, 29]
 
-julian: 
+gregorian: 
 	python:	[29, 28, 31, 29]
-	ncl:	[29, 28, 31, 29]
+	ncl:	[29, 28, 31, 28]
 
 366_day: 
 	python:	[29, 29, 31, 29]
@@ -523,9 +523,9 @@ proleptic_gregorian:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>none: calendar not available in python
-standard: [29, 28, 31, 29] != [29, 28, 31, 28]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>standard: [29, 28, 31, 29] != [29, 28, 31, 28]
 gregorian: [29, 28, 31, 29] != [29, 28, 31, 28]
+none: calendar not available in python
 proleptic_gregorian: calendar not available in ncl
 </pre></div>
 </div>
