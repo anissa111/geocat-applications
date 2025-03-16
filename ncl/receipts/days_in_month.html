@@ -481,31 +481,31 @@ Show the python code that replicates the NCL functionality. Don't worry about pr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>noleap: 
-	python:	[28, 28, 31, 28]
-	ncl:	[28, 28, 31, 28]
-
-360_day: 
-	python:	[30, 30, 30, 30]
-	ncl:	[30, 30, 30, 30]
-
-all_leap: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>366_day: 
 	python:	[29, 29, 31, 29]
 	ncl:	[29, 29, 31, 29]
-
-standard: 
-	python:	[29, 28, 31, 29]
-	ncl:	[29, 28, 31, 28]
 
 gregorian: 
 	python:	[29, 28, 31, 29]
 	ncl:	[29, 28, 31, 28]
 
-366_day: 
+standard: 
+	python:	[29, 28, 31, 29]
+	ncl:	[29, 28, 31, 28]
+
+360_day: 
+	python:	[30, 30, 30, 30]
+	ncl:	[30, 30, 30, 30]
+
+365_day: 
+	python:	[28, 28, 31, 28]
+	ncl:	[28, 28, 31, 28]
+
+all_leap: 
 	python:	[29, 29, 31, 29]
 	ncl:	[29, 29, 31, 29]
 
-365_day: 
+noleap: 
 	python:	[28, 28, 31, 28]
 	ncl:	[28, 28, 31, 28]
 
@@ -538,8 +538,8 @@ proleptic_gregorian:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>none: calendar not available in python
-standard: [29, 28, 31, 29] != [29, 28, 31, 28]
 gregorian: [29, 28, 31, 29] != [29, 28, 31, 28]
+standard: [29, 28, 31, 29] != [29, 28, 31, 28]
 proleptic_gregorian: calendar not available in ncl
 </pre></div>
 </div>
