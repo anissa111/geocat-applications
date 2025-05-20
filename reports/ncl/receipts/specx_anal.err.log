@@ -1,0 +1,90 @@
+Traceback (most recent call last):
+  File "/home/runner/micromamba/envs/geocat-applications/lib/python3.13/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/runner/micromamba/envs/geocat-applications/lib/python3.13/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/runner/micromamba/envs/geocat-applications/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/runner/micromamba/envs/geocat-applications/lib/python3.13/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/runner/micromamba/envs/geocat-applications/lib/python3.13/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/home/runner/micromamba/envs/geocat-applications/lib/python3.13/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/micromamba/envs/geocat-applications/lib/python3.13/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+ncl = xr.open_dataset(gcd.get('applications_files/ncl_outputs/spec_1_output.nc')).spec
+
+frq = ncl.frq
+spcx = ncl.spcx
+------------------
+
+----- stderr -----
+Downloading file 'applications_files/ncl_outputs/spec_1_output.nc' from 'https://github.com/NCAR/GeoCAT-datafiles/raw/main/applications_files/ncl_outputs/spec_1_output.nc' to '/home/runner/.cache/geocat'.
+------------------
+
+[31m---------------------------------------------------------------------------[39m
+[31mHTTPError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[11][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m ncl = xr.open_dataset([43mgcd[49m[43m.[49m[43mget[49m[43m([49m[33;43m'[39;49m[33;43mapplications_files/ncl_outputs/spec_1_output.nc[39;49m[33;43m'[39;49m[43m)[49m).spec
+[32m      3[39m frq = ncl.frq
+[32m      4[39m spcx = ncl.spcx
+
+[36mFile [39m[32m~/micromamba/envs/geocat-applications/lib/python3.13/site-packages/geocat/datafiles/__init__.py:31[39m, in [36mget[39m[34m(fname)[39m
+[32m     30[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mget[39m(fname):
+[32m---> [39m[32m31[39m     [38;5;28;01mreturn[39;00m [43mPOOCH[49m[43m.[49m[43mfetch[49m[43m([49m[43mfname[49m[43m)[49m
+
+[36mFile [39m[32m~/micromamba/envs/geocat-applications/lib/python3.13/site-packages/pooch/core.py:589[39m, in [36mPooch.fetch[39m[34m(self, fname, processor, downloader, progressbar)[39m
+[32m    586[39m     [38;5;28;01mif[39;00m downloader [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[32m    587[39m         downloader = choose_downloader(url, progressbar=progressbar)
+[32m--> [39m[32m589[39m     [43mstream_download[49m[43m([49m
+[32m    590[39m [43m        [49m[43murl[49m[43m,[49m
+[32m    591[39m [43m        [49m[43mfull_path[49m[43m,[49m
+[32m    592[39m [43m        [49m[43mknown_hash[49m[43m,[49m
+[32m    593[39m [43m        [49m[43mdownloader[49m[43m,[49m
+[32m    594[39m [43m        [49m[43mpooch[49m[43m=[49m[38;5;28;43mself[39;49m[43m,[49m
+[32m    595[39m [43m        [49m[43mretry_if_failed[49m[43m=[49m[38;5;28;43mself[39;49m[43m.[49m[43mretry_if_failed[49m[43m,[49m
+[32m    596[39m [43m    [49m[43m)[49m
+[32m    598[39m [38;5;28;01mif[39;00m processor [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[32m    599[39m     [38;5;28;01mreturn[39;00m processor([38;5;28mstr[39m(full_path), action, [38;5;28mself[39m)
+
+[36mFile [39m[32m~/micromamba/envs/geocat-applications/lib/python3.13/site-packages/pooch/core.py:807[39m, in [36mstream_download[39m[34m(url, fname, known_hash, downloader, pooch, retry_if_failed)[39m
+[32m    803[39m [38;5;28;01mtry[39;00m:
+[32m    804[39m     [38;5;66;03m# Stream the file to a temporary so that we can safely check its[39;00m
+[32m    805[39m     [38;5;66;03m# hash before overwriting the original.[39;00m
+[32m    806[39m     [38;5;28;01mwith[39;00m temporary_file(path=[38;5;28mstr[39m(fname.parent)) [38;5;28;01mas[39;00m tmp:
+[32m--> [39m[32m807[39m         [43mdownloader[49m[43m([49m[43murl[49m[43m,[49m[43m [49m[43mtmp[49m[43m,[49m[43m [49m[43mpooch[49m[43m)[49m
+[32m    808[39m         hash_matches(tmp, known_hash, strict=[38;5;28;01mTrue[39;00m, source=[38;5;28mstr[39m(fname.name))
+[32m    809[39m         shutil.move(tmp, [38;5;28mstr[39m(fname))
+
+[36mFile [39m[32m~/micromamba/envs/geocat-applications/lib/python3.13/site-packages/pooch/downloaders.py:221[39m, in [36mHTTPDownloader.__call__[39m[34m(self, url, output_file, pooch, check_only)[39m
+[32m    219[39m [38;5;28;01mtry[39;00m:
+[32m    220[39m     response = requests.get(url, timeout=timeout, **kwargs)
+[32m--> [39m[32m221[39m     [43mresponse[49m[43m.[49m[43mraise_for_status[49m[43m([49m[43m)[49m
+[32m    222[39m     content = response.iter_content(chunk_size=[38;5;28mself[39m.chunk_size)
+[32m    223[39m     total = [38;5;28mint[39m(response.headers.get([33m"[39m[33mcontent-length[39m[33m"[39m, [32m0[39m))
+
+[36mFile [39m[32m~/micromamba/envs/geocat-applications/lib/python3.13/site-packages/requests/models.py:1024[39m, in [36mResponse.raise_for_status[39m[34m(self)[39m
+[32m   1019[39m     http_error_msg = (
+[32m   1020[39m         [33mf[39m[33m"[39m[38;5;132;01m{[39;00m[38;5;28mself[39m.status_code[38;5;132;01m}[39;00m[33m Server Error: [39m[38;5;132;01m{[39;00mreason[38;5;132;01m}[39;00m[33m for url: [39m[38;5;132;01m{[39;00m[38;5;28mself[39m.url[38;5;132;01m}[39;00m[33m"[39m
+[32m   1021[39m     )
+[32m   1023[39m [38;5;28;01mif[39;00m http_error_msg:
+[32m-> [39m[32m1024[39m     [38;5;28;01mraise[39;00m HTTPError(http_error_msg, response=[38;5;28mself[39m)
+
+[31mHTTPError[39m: 429 Client Error: Too Many Requests for url: https://raw.githubusercontent.com/NCAR/GeoCAT-datafiles/main/applications_files/ncl_outputs/spec_1_output.nc
+
