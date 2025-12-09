@@ -33,8 +33,37 @@ New to Python or GeoCAT Applications? Check out the `Getting Started <GETTING_ST
 Python Applications
 -------------------
 
-.. include:: applications/applications.rst
-    :start-line: 5
+.. grid:: 3
+    :gutter: 2
+
+    .. grid-item::
+
+        .. grid:: 1
+            :gutter: 1
+
+            .. card:: Time
+
+                - `Dates and times <./applications/datetime.ipynb>`__
+
+    .. grid-item::
+
+        .. grid:: 1
+            :gutter: 1
+
+            .. card:: Math
+
+                - `General applied math <./applications/general_applied_math.ipynb>`__
+                - `Spectral analysis <./applications/spectral_analysis.ipynb>`__
+
+    .. grid-item::
+
+        .. grid:: 1
+            :gutter: 1
+
+            .. card:: Geoscience
+
+                - `Climatology <./applications/climatology.ipynb>`_
+                - `Humid heat metrics <./applications/humid_heat_metrics.ipynb>`__
 
 .. TIP::
     If you're looking for NCL to Python examples, please visit :ref:`ncl_applications`.

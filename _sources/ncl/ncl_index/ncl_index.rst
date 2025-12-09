@@ -5,6 +5,7 @@ NCL Index
 
 .. Link to temp file with alphabetized version of csv file (see conf.py)
 .. csv-table::
+    :class: full-width
     :file: ../../tmp/ncl-index-table.csv
     :width: 100%
     :header-rows: 1

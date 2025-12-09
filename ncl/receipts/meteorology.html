@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=61b3970e" />
   
@@ -42,9 +43,18 @@
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ncl/receipts/meteorology';</script>
     <link rel="icon" href="../../_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -226,6 +236,70 @@
 
 
 
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/ncl/receipts/meteorology.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Fncl/receipts/meteorology.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -333,9 +407,31 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-functionality">Python Functionality</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dewtemp-trh">dewtemp_trh</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daylight-fao56">daylight_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-temp-fao56">satvpr_temp_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-tdew-fao56">satvpr_tdew_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-slope-fao56">satvpr_slope_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coriolis-param">coriolis_param</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum">relhum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum-ice">relhum_ice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum-water">relhum_water</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dpres-plevel">dpres_plevel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psychro-fao56">psychro_fao56</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison">Comparison</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison">Comparison</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">dewtemp_trh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">daylight_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">satvpr_temp_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">satvpr_tdew_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">satvpr_slope_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">coriolis_param</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">relhum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">relhum_ice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">relhum_water</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">dpres_plevel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">psychro_fao56</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -359,26 +455,19 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/dewtemp_trh.shtml">dewtemp_trh</a></p></li>
 <li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Crop/daylight_fao56.shtml">daylight_fao56</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Crop/satvpr_temp_fao56.shtml">satvpr_temp_fao56</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Crop/satvpr_tdew_fao56.shtml">satvpr_tdew_fao56</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Crop/satvpr_slope_fao56.shtml">satvpr_slope_fao56</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/coriolis_param.shtml">coriolis_param</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/relhum.shtml">relhum</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/relhum_ice.shtml">relhum_ice</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/relhum_water.shtml">relhum_water</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/dpres_plevel.shtml">dpres_plevel</a></p></li>
+<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Crop/psychro_fao56.shtml">psychro_fao56</a></p></li>
 </ul>
 </section>
 <section id="ncl-code">
 <h2>NCL code<a class="headerlink" href="#ncl-code" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">dewtemp_trh</span>
-<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">dewtemp_trh</span><span class="o">.</span><span class="n">shtml</span>
-
-<span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">dewtemp_trh</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">dewtemp_trh_output</span><span class="o">.</span><span class="n">txt</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temperature (K), Relative Humidity (%), Dew Temperature (C)&quot;</span><span class="p">)</span>
-<span class="n">do</span> <span class="n">tk</span><span class="o">=</span><span class="mi">273</span><span class="p">,</span><span class="mi">374</span>
-	<span class="n">do</span> <span class="n">rh</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span>
-		<span class="n">begin</span>
-		<span class="n">dewtemp</span> <span class="o">=</span> <span class="n">dewtemp_trh</span><span class="p">(</span><span class="n">tk</span><span class="p">,</span><span class="n">rh</span><span class="p">)</span><span class="o">-</span><span class="mf">273.15</span>
-		<span class="nb">print</span> <span class="p">(</span><span class="n">tk</span> <span class="o">+</span><span class="s2">&quot;,&quot;</span><span class="o">+</span> <span class="n">rh</span> <span class="o">+</span><span class="s2">&quot;,&quot;</span><span class="o">+</span> <span class="n">dewtemp</span><span class="p">)</span>
-		<span class="n">end</span>
-	<span class="n">end</span> <span class="n">do</span>
-<span class="n">end</span> <span class="n">do</span>
-</pre></div>
-</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">daylight_fao56</span>
 <span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Crop</span><span class="o">/</span><span class="n">daylight_fao56</span><span class="o">.</span><span class="n">shtml</span>
 
@@ -393,6 +482,155 @@ This notebook is part of the process we have for adding entries to the NCL Index
 		<span class="n">end</span>
 	<span class="n">end</span> <span class="n">do</span>
 <span class="n">end</span> <span class="n">do</span>
+
+<span class="p">;</span> <span class="n">dewtemp_trh</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">dewtemp_trh</span><span class="o">.</span><span class="n">shtml</span>
+
+<span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">dewtemp_trh</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">dewtemp_trh_output</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temperature (K), Relative Humidity (%), Dew Temperature (C)&quot;</span><span class="p">)</span>
+<span class="n">do</span> <span class="n">tk</span><span class="o">=</span><span class="mi">273</span><span class="p">,</span><span class="mi">374</span>
+	<span class="n">do</span> <span class="n">rh</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span>
+		<span class="n">begin</span>
+		<span class="n">dewtemp</span> <span class="o">=</span> <span class="n">dewtemp_trh</span><span class="p">(</span><span class="n">tk</span><span class="p">,</span><span class="n">rh</span><span class="p">)</span><span class="o">-</span><span class="mf">273.15</span>
+		<span class="nb">print</span> <span class="p">(</span><span class="n">tk</span> <span class="o">+</span><span class="s2">&quot;,&quot;</span><span class="o">+</span> <span class="n">rh</span> <span class="o">+</span><span class="s2">&quot;,&quot;</span><span class="o">+</span> <span class="n">dewtemp</span><span class="p">)</span>
+		<span class="n">end</span>
+	<span class="n">end</span> <span class="n">do</span>
+<span class="n">end</span> <span class="n">do</span>
+
+<span class="p">;</span> <span class="n">satvpr_temp_fao56</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Crop</span><span class="o">/</span><span class="n">satvpr_temp_fao56</span><span class="o">.</span><span class="n">shtml</span>
+
+<span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">satvpr_temp_fao56</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">satvpr_temp_fao56_output</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temperature (F), Saturation Vapor Pressure (kPa)&quot;</span><span class="p">)</span>
+<span class="n">do</span> <span class="n">temp</span><span class="o">=</span><span class="mi">33</span><span class="p">,</span><span class="mi">212</span>
+	<span class="n">begin</span>
+		<span class="n">sat_vpr_pressure</span> <span class="o">=</span> <span class="n">satvpr_temp_fao56</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="p">(</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="p">))</span>
+		<span class="nb">print</span> <span class="p">(</span><span class="n">temp</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">sat_vpr_pressure</span><span class="p">)</span>
+	<span class="n">end</span>
+<span class="n">end</span> <span class="n">do</span>
+
+<span class="p">;</span> <span class="n">satvpr_tdew_fao56</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Crop</span><span class="o">/</span><span class="n">satvpr_tdew_fao56</span><span class="o">.</span><span class="n">shtml</span>
+
+<span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">satvpr_tdew_fao56</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">satvpr_tdew_fao56_output</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temperature (F), Actual Saturation Vapor Pressure (kPa)&quot;</span><span class="p">)</span>
+<span class="n">do</span> <span class="n">temp</span><span class="o">=</span><span class="mi">33</span><span class="p">,</span><span class="mi">212</span>
+	<span class="n">begin</span>
+		<span class="n">act_sat_vpr_pressure</span> <span class="o">=</span> <span class="n">satvpr_tdew_fao56</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="p">(</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="p">))</span>
+		<span class="nb">print</span> <span class="p">(</span><span class="n">temp</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">act_sat_vpr_pressure</span><span class="p">)</span>
+	<span class="n">end</span>
+<span class="n">end</span> <span class="n">do</span>
+
+<span class="p">;</span> <span class="n">satvpr_slope_fao56</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Crop</span><span class="o">/</span><span class="n">satvpr_slope_fao56</span><span class="o">.</span><span class="n">shtml</span>
+
+<span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">satvpr_slope_fao56</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">satvpr_slope_fao56_output</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temperature (F), Slope of Saturation Vapor Pressure Curve (kPa)&quot;</span><span class="p">)</span>
+<span class="n">do</span> <span class="n">temp</span><span class="o">=</span><span class="mi">33</span><span class="p">,</span><span class="mi">212</span>
+	<span class="n">begin</span>
+		<span class="n">slope_satvpr</span> <span class="o">=</span> <span class="n">satvpr_slope_fao56</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="p">(</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="p">))</span>
+		<span class="nb">print</span> <span class="p">(</span><span class="n">temp</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">slope_satvpr</span><span class="p">)</span>
+	<span class="n">end</span>
+<span class="n">end</span> <span class="n">do</span>
+
+<span class="p">;</span> <span class="n">coriolis_param</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Contributed</span><span class="o">/</span><span class="n">coriolis_param</span><span class="o">.</span><span class="n">shtml</span>
+
+<span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">coriolis_param</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">coriolis_param_output</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Latitude (Degree), Coriolis Parameter&quot;</span><span class="p">)</span>
+<span class="n">do</span> <span class="n">lat</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">lat</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">coriolis_param</span><span class="p">(</span><span class="n">lat</span><span class="p">))</span>
+<span class="n">end</span> <span class="n">do</span>
+
+<span class="p">;</span> <span class="n">relhum</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">relhum</span><span class="o">.</span><span class="n">shtml</span>
+
+<span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">relhum</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">relhum_output</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temperature (K), Mixing Ratio (KG/KG), Pressure (Pa)&quot;</span><span class="p">)</span>
+<span class="n">do</span> <span class="n">tk</span><span class="o">=</span><span class="mi">273</span><span class="p">,</span><span class="mi">290</span>
+	<span class="n">do</span> <span class="n">mr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.01</span>
+		<span class="n">do</span> <span class="n">ppa</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span><span class="mi">15000</span><span class="p">,</span><span class="mi">500</span>
+			<span class="n">begin</span>
+				<span class="n">rh</span> <span class="o">=</span> <span class="n">relhum</span><span class="p">(</span><span class="n">tk</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">ppa</span><span class="p">)</span>
+				<span class="nb">print</span> <span class="p">(</span><span class="n">tk</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">mr</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">ppa</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">rh</span><span class="p">)</span>
+			<span class="n">end</span>
+		<span class="n">end</span> <span class="n">do</span>
+	<span class="n">end</span> <span class="n">do</span>
+<span class="n">end</span> <span class="n">do</span>
+
+<span class="p">;</span> <span class="n">relhum_ice</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">relhum_ice</span><span class="o">.</span><span class="n">shtml</span>
+
+<span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">relhum_ice</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">relhum_ice_output</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temperature (K), Mixing Ratio (KG/KG), Pressure (Pa)&quot;</span><span class="p">)</span>
+<span class="n">do</span> <span class="n">tk</span><span class="o">=</span><span class="mi">173</span><span class="p">,</span><span class="mi">273</span>
+	<span class="n">do</span> <span class="n">mr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.01</span>
+		<span class="n">do</span> <span class="n">ppa</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span><span class="mi">15000</span><span class="p">,</span><span class="mi">500</span>
+			<span class="n">begin</span>
+				<span class="n">rh</span> <span class="o">=</span> <span class="n">relhum_ice</span><span class="p">(</span><span class="n">tk</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">ppa</span><span class="p">)</span>
+				<span class="nb">print</span> <span class="p">(</span><span class="n">tk</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">mr</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">ppa</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">rh</span><span class="p">)</span>
+			<span class="n">end</span>
+		<span class="n">end</span> <span class="n">do</span>
+	<span class="n">end</span> <span class="n">do</span>
+<span class="n">end</span> <span class="n">do</span>
+
+<span class="p">;</span> <span class="n">relhum_water</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">relhum_water</span><span class="o">.</span><span class="n">shtml</span>
+
+<span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">relhum_water</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">relhum_water_output</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temperature (K), Mixing Ratio (KG/KG), Pressure (Pa)&quot;</span><span class="p">)</span>
+<span class="n">do</span> <span class="n">tk</span><span class="o">=</span><span class="mi">273</span><span class="p">,</span><span class="mi">373</span>
+	<span class="n">do</span> <span class="n">mr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.01</span>
+		<span class="n">do</span> <span class="n">ppa</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span><span class="mi">15000</span><span class="p">,</span><span class="mi">500</span>
+			<span class="n">begin</span>
+				<span class="n">rh</span> <span class="o">=</span> <span class="n">relhum_water</span><span class="p">(</span><span class="n">tk</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">ppa</span><span class="p">)</span>
+				<span class="nb">print</span> <span class="p">(</span><span class="n">tk</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">mr</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">ppa</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">rh</span><span class="p">)</span>
+			<span class="n">end</span>
+		<span class="n">end</span> <span class="n">do</span>
+	<span class="n">end</span> <span class="n">do</span>
+<span class="n">end</span> <span class="n">do</span>
+
+<span class="p">;</span> <span class="n">dpres_plevel</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Built</span><span class="o">-</span><span class="ow">in</span><span class="o">/</span><span class="n">dpres_plevel</span><span class="o">.</span><span class="n">shtml</span>
+
+<span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">dpres_plevel</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">dpres_plevel_output</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Surface Pressure (hpa), Pressure Level (hPa), Delta Pressure (hPa)&quot;</span><span class="p">)</span>
+<span class="n">plev</span> <span class="o">=</span> <span class="p">(</span><span class="o">/</span> <span class="mf">1000.</span><span class="p">,</span><span class="mf">950.</span><span class="p">,</span><span class="mf">900.</span><span class="p">,</span><span class="mf">850.</span><span class="p">,</span><span class="mf">800.</span><span class="p">,</span><span class="mf">750.</span><span class="p">,</span><span class="mf">700.</span><span class="p">,</span><span class="mf">650.</span><span class="p">,</span><span class="mf">600.</span><span class="p">,</span> \
+          <span class="mf">550.</span><span class="p">,</span><span class="mf">500.</span><span class="p">,</span><span class="mf">450.</span><span class="p">,</span><span class="mf">400.</span><span class="p">,</span><span class="mf">350.</span><span class="p">,</span><span class="mf">300.</span><span class="p">,</span><span class="mf">250.</span><span class="p">,</span><span class="mf">200.</span><span class="p">,</span> \
+          <span class="mf">175.</span><span class="p">,</span><span class="mf">150.</span><span class="p">,</span><span class="mf">125.</span><span class="p">,</span><span class="mf">100.</span><span class="p">,</span> <span class="mf">80.</span><span class="p">,</span> <span class="mf">70.</span><span class="p">,</span> <span class="mf">60.</span><span class="p">,</span> <span class="mf">50.</span><span class="p">,</span> \
+          <span class="mf">40.</span><span class="p">,</span> <span class="mf">30.</span><span class="p">,</span> <span class="mf">25.</span><span class="p">,</span> <span class="mf">20.</span> <span class="o">/</span><span class="p">)</span>
+
+<span class="n">do</span> <span class="n">psfc</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="mi">1080</span>
+	<span class="n">begin</span>
+		<span class="n">dp</span> <span class="o">=</span> <span class="n">dpres_plevel</span><span class="p">(</span><span class="n">plev</span><span class="p">,</span><span class="n">psfc</span><span class="p">,</span><span class="nb">min</span><span class="p">(</span><span class="n">plev</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span>
+		<span class="n">do</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">dimsizes</span><span class="p">(</span><span class="n">plev</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+			<span class="nb">print</span> <span class="p">(</span><span class="n">psfc</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">plev</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">dp</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+		<span class="n">end</span> <span class="n">do</span>
+	<span class="n">end</span>
+<span class="n">end</span> <span class="n">do</span>
+
+<span class="p">;</span> <span class="n">psychro_fao56</span>
+<span class="p">;</span> <span class="n">Adapted</span> <span class="kn">from</span><span class="w"> </span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ncl</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">Document</span><span class="o">/</span><span class="n">Functions</span><span class="o">/</span><span class="n">Crop</span><span class="o">/</span><span class="n">psychro_fao56</span><span class="o">.</span><span class="n">shtml</span>
+
+<span class="p">;</span> <span class="n">ncl</span> <span class="o">-</span><span class="n">n</span> <span class="n">psychro_fao56</span><span class="o">.</span><span class="n">ncl</span> <span class="o">&gt;&gt;</span> <span class="n">psychro_fao56_output</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pressure (kPa), Psychrometric Constant (kPa/C)&quot;</span><span class="p">)</span>
+
+<span class="n">do</span> <span class="n">press</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">3000</span>
+	<span class="n">begin</span>
+		<span class="n">pc</span> <span class="o">=</span> <span class="n">psychro_fao56</span><span class="p">(</span><span class="n">press</span><span class="p">,</span> <span class="p">(</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="o">/</span><span class="p">))</span>
+		<span class="nb">print</span><span class="p">(</span><span class="n">press</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">pc</span><span class="p">)</span>
+	<span class="n">end</span>
+<span class="n">end</span> <span class="n">do</span>
 </pre></div>
 </div>
 </section>
@@ -403,10 +641,10 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for dewtemp_trh from geocat-datafiles</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="n">dewtemp_data</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;applications_files/ncl_outputs/dewtemp_trh_output.txt&#39;</span><span class="p">)</span>
+<span class="n">dewtemp_data</span> <span class="o">=</span> <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;applications_files/ncl_outputs/dewtemp_trh_output.txt&#39;</span><span class="p">)</span>
 <span class="n">dewtemp_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">dewtemp_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -454,10 +692,10 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for daylight_fao56 from geocat-datafiles</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="n">daylight_data</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;applications_files/ncl_outputs/daylight_fao56_output.txt&#39;</span><span class="p">)</span>
+<span class="n">daylight_data</span> <span class="o">=</span> <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;applications_files/ncl_outputs/daylight_fao56_output.txt&#39;</span><span class="p">)</span>
 <span class="n">daylight_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">daylight_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -506,9 +744,463 @@ This notebook is part of the process we have for adding entries to the NCL Index
 </div>
 </div>
 </section>
+<section id="satvpr-temp-fao56">
+<h3>satvpr_temp_fao56<a class="headerlink" href="#satvpr-temp-fao56" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for satvpr_temp_fao56 from geocat-datafiles</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">satvpr_temp_fao56_data</span> <span class="o">=</span> <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+    <span class="s1">&#39;applications_files/ncl_outputs/satvpr_temp_fao56_output.txt&#39;</span>
+<span class="p">)</span>
+<span class="n">satvpr_temp_fao56_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">satvpr_temp_fao56_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;applications_files/ncl_outputs/satvpr_temp_fao56_output.txt&#39; from &#39;https://github.com/NCAR/geocat-datafiles/raw/main/applications_files/ncl_outputs/satvpr_temp_fao56_output.txt&#39; to &#39;/home/runner/.cache/geocat&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect NCL `satvpr_temp_fao56` value and associated (temp, satvpr_temp) values</span>
+<span class="n">ncl_satvpr_temp_fao56</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="nb">zip</span><span class="p">(</span><span class="n">satvpr_temp_fao56_data</span><span class="p">[::,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">satvpr_temp_fao56_data</span><span class="p">[::,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Calculate GeoCAT-Comp `saturation_vapor_pressure`</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">saturation_vapor_pressure</span>
+
+<span class="n">geocat_satvpr_temp_fao56</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span> <span class="mi">212</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">geocat_satvpr_temp_fao56</span><span class="p">[</span><span class="n">temp</span><span class="p">]</span> <span class="o">=</span> <span class="n">saturation_vapor_pressure</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="satvpr-tdew-fao56">
+<h3>satvpr_tdew_fao56<a class="headerlink" href="#satvpr-tdew-fao56" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for satvpr_tdew_fao56 from geocat-datafiles</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">satvpr_tdew_fao56_data</span> <span class="o">=</span> <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+    <span class="s1">&#39;applications_files/ncl_outputs/satvpr_tdew_fao56_output.txt&#39;</span>
+<span class="p">)</span>
+<span class="n">satvpr_tdew_fao56_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">satvpr_tdew_fao56_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;applications_files/ncl_outputs/satvpr_tdew_fao56_output.txt&#39; from &#39;https://github.com/NCAR/geocat-datafiles/raw/main/applications_files/ncl_outputs/satvpr_tdew_fao56_output.txt&#39; to &#39;/home/runner/.cache/geocat&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect NCL `satvpr_tdew_fao56` value and associated (temp, act_sat_vapr_pressure) values</span>
+<span class="n">ncl_satvpr_tdew_fao56</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="nb">zip</span><span class="p">(</span><span class="n">satvpr_tdew_fao56_data</span><span class="p">[::,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">satvpr_tdew_fao56_data</span><span class="p">[::,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Calculate GeoCAT-Comp `actual_saturation_vapor_pressure`</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">actual_saturation_vapor_pressure</span>
+
+<span class="n">geocat_satvpr_tdew_fao56</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span> <span class="mi">212</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">geocat_satvpr_tdew_fao56</span><span class="p">[</span><span class="n">temp</span><span class="p">]</span> <span class="o">=</span> <span class="n">actual_saturation_vapor_pressure</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="satvpr-slope-fao56">
+<h3>satvpr_slope_fao56<a class="headerlink" href="#satvpr-slope-fao56" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for satvpr_slope_fao56 from geocat-datafiles</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">satvpr_slope_fao56_data</span> <span class="o">=</span> <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+    <span class="s1">&#39;applications_files/ncl_outputs/satvpr_slope_fao56_output.txt&#39;</span>
+<span class="p">)</span>
+<span class="n">satvpr_slope_fao56_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">satvpr_slope_fao56_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;applications_files/ncl_outputs/satvpr_slope_fao56_output.txt&#39; from &#39;https://github.com/NCAR/geocat-datafiles/raw/main/applications_files/ncl_outputs/satvpr_slope_fao56_output.txt&#39; to &#39;/home/runner/.cache/geocat&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect NCL `satvpr_slope_fao56` value and associated (temp, slope_satvpr) values</span>
+<span class="n">ncl_satvpr_slope_fao56</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="nb">zip</span><span class="p">(</span><span class="n">satvpr_slope_fao56_data</span><span class="p">[::,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">satvpr_slope_fao56_data</span><span class="p">[::,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Calculate GeoCAT-Comp `saturation_vapor_pressure_slope`</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">saturation_vapor_pressure_slope</span>
+
+<span class="n">geocat_satvpr_slope_fao56</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span> <span class="mi">212</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">geocat_satvpr_slope_fao56</span><span class="p">[</span><span class="n">temp</span><span class="p">]</span> <span class="o">=</span> <span class="n">saturation_vapor_pressure_slope</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="coriolis-param">
+<h3>coriolis_param<a class="headerlink" href="#coriolis-param" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for coriolis_param from geocat-datafiles</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">coriolis_param_data</span> <span class="o">=</span> <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+    <span class="s1">&#39;applications_files/ncl_outputs/coriolis_param_output.txt&#39;</span>
+<span class="p">)</span>
+<span class="n">coriolis_param_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">coriolis_param_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;applications_files/ncl_outputs/coriolis_param_output.txt&#39; from &#39;https://github.com/NCAR/geocat-datafiles/raw/main/applications_files/ncl_outputs/coriolis_param_output.txt&#39; to &#39;/home/runner/.cache/geocat&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect NCL `coriolis_param_data` value and associated coriolis parameter values</span>
+<span class="n">ncl_coriolis_param</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">coriolis_param_data</span><span class="p">[::,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">coriolis_param_data</span><span class="p">[::,</span> <span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Calculate MetPy &quot;coriolis_parameter&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">metpy.calc</span><span class="w"> </span><span class="kn">import</span> <span class="n">coriolis_parameter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">metpy.units</span><span class="w"> </span><span class="kn">import</span> <span class="n">units</span>
+
+<span class="n">metpy_coriolis_para</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">lat</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">metpy_coriolis_para</span><span class="p">[</span><span class="n">lat</span><span class="p">]</span> <span class="o">=</span> <span class="n">coriolis_parameter</span><span class="p">(</span><span class="n">lat</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span><span class="o">.</span><span class="n">magnitude</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="relhum">
+<h3>relhum<a class="headerlink" href="#relhum" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for relhum from geocat-datafiles</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">relhum_data</span> <span class="o">=</span> <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;applications_files/ncl_outputs/relhum_output.txt&#39;</span><span class="p">)</span>
+<span class="n">relhum_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">relhum_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;applications_files/ncl_outputs/relhum_output.txt&#39; from &#39;https://github.com/NCAR/geocat-datafiles/raw/main/applications_files/ncl_outputs/relhum_output.txt&#39; to &#39;/home/runner/.cache/geocat&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect NCL `relhum` value and associated (temp, mixing ratio) values</span>
+<span class="n">ncl_relhum</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">temp_mr_press</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="n">relhum_data</span><span class="p">[::,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]))</span>
+<span class="n">relhum_values</span> <span class="o">=</span> <span class="n">relhum_data</span><span class="p">[::,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">ncl_relhum</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">temp_mr_press</span><span class="p">,</span> <span class="n">relhum_values</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect Temperature, Mixing Ratio, Pressure</span>
+<span class="n">temp_mr_press</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">273</span><span class="p">,</span> <span class="mi">374</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">mr</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span> <span class="o">+</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">press</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">15000</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">500</span><span class="p">):</span>
+            <span class="n">temp_mr_press</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">temp</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">press</span><span class="p">))</span>
+
+<span class="c1">### Calculate GeoCAT-Comp `relhum` value and temp/mixing ratio/pressure</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">relhum</span>
+
+<span class="n">geocat_relhum</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">variables</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">temp_mr_press</span><span class="p">):</span>
+    <span class="n">temp</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">press</span> <span class="o">=</span> <span class="n">variables</span>
+    <span class="n">geocat_relhum</span><span class="p">[</span><span class="n">variables</span><span class="p">]</span> <span class="o">=</span> <span class="n">relhum</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">press</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="relhum-ice">
+<h3>relhum_ice<a class="headerlink" href="#relhum-ice" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for relhum_ice from geocat-datafiles</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">relhum_ice_data</span> <span class="o">=</span> <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;applications_files/ncl_outputs/relhum_ice_output.txt&#39;</span><span class="p">)</span>
+<span class="n">relhum_ice_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">relhum_ice_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;applications_files/ncl_outputs/relhum_ice_output.txt&#39; from &#39;https://github.com/NCAR/geocat-datafiles/raw/main/applications_files/ncl_outputs/relhum_ice_output.txt&#39; to &#39;/home/runner/.cache/geocat&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect NCL `relhum_ice` value and associated (temp, mixing ratio) values</span>
+<span class="n">ncl_relhum_ice</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">temp_mr_press</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="n">relhum_ice_data</span><span class="p">[::,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]))</span>
+<span class="n">relhum_ice_values</span> <span class="o">=</span> <span class="n">relhum_ice_data</span><span class="p">[::,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">ncl_relhum_ice</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">temp_mr_press</span><span class="p">,</span> <span class="n">relhum_ice_values</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect Temperature, Mixing Ratio, Pressure</span>
+<span class="n">temp_mr_press</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">173</span><span class="p">,</span> <span class="mi">273</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">mr</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span> <span class="o">+</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">press</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">15000</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">500</span><span class="p">):</span>
+            <span class="n">temp_mr_press</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">temp</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">press</span><span class="p">))</span>
+
+<span class="c1">### Calculate GeoCAT-Comp `relhum_ice` value and temp/mixing ratio/pressure</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">relhum_ice</span>
+
+<span class="n">geocat_relhum_ice</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">variables</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">temp_mr_press</span><span class="p">):</span>
+    <span class="n">temp</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">press</span> <span class="o">=</span> <span class="n">variables</span>
+    <span class="n">geocat_relhum_ice</span><span class="p">[</span><span class="n">variables</span><span class="p">]</span> <span class="o">=</span> <span class="n">relhum_ice</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">press</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="relhum-water">
+<h3>relhum_water<a class="headerlink" href="#relhum-water" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for relhum_water from geocat-datafiles</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">relhum_water_data</span> <span class="o">=</span> <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;applications_files/ncl_outputs/relhum_water_output.txt&#39;</span><span class="p">)</span>
+<span class="n">relhum_water_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">relhum_water_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;applications_files/ncl_outputs/relhum_water_output.txt&#39; from &#39;https://github.com/NCAR/geocat-datafiles/raw/main/applications_files/ncl_outputs/relhum_water_output.txt&#39; to &#39;/home/runner/.cache/geocat&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect NCL `relhum_ice` value and associated (temp, mixing ratio) values</span>
+<span class="n">ncl_relhum_water</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">temp_mr_press</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="n">relhum_water_data</span><span class="p">[::,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]))</span>
+<span class="n">relhum_water_values</span> <span class="o">=</span> <span class="n">relhum_water_data</span><span class="p">[::,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">ncl_relhum_water</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">temp_mr_press</span><span class="p">,</span> <span class="n">relhum_water_values</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect Temperature, Mixing Ratio, Pressure</span>
+<span class="n">temp_mr_press</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">273</span><span class="p">,</span> <span class="mi">373</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">mr</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span> <span class="o">+</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">press</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">15000</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">500</span><span class="p">):</span>
+            <span class="n">temp_mr_press</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">temp</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">press</span><span class="p">))</span>
+
+<span class="c1">### Calculate GeoCAT-Comp `relhum_water` value and temp/mixing ratio/pressure</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">relhum_water</span>
+
+<span class="n">geocat_relhum_water</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">variables</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">temp_mr_press</span><span class="p">):</span>
+    <span class="n">temp</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">press</span> <span class="o">=</span> <span class="n">variables</span>
+    <span class="n">geocat_relhum_water</span><span class="p">[</span><span class="n">variables</span><span class="p">]</span> <span class="o">=</span> <span class="n">relhum_water</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">mr</span><span class="p">,</span> <span class="n">press</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dpres-plevel">
+<h3>dpres_plevel<a class="headerlink" href="#dpres-plevel" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for relhum from geocat-datafiles</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">dpres_plevel_data</span> <span class="o">=</span> <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;applications_files/ncl_outputs/dpres_plevel_output.txt&#39;</span><span class="p">)</span>
+<span class="n">dpres_plevel_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">dpres_plevel_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;applications_files/ncl_outputs/dpres_plevel_output.txt&#39; from &#39;https://github.com/NCAR/geocat-datafiles/raw/main/applications_files/ncl_outputs/dpres_plevel_output.txt&#39; to &#39;/home/runner/.cache/geocat&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect NCL `dpres_plevel` value and associated (pressure_lev, surface_pressure) values</span>
+<span class="n">ncl_dpres_plevel</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">plevel</span><span class="p">,</span> <span class="n">surface_pres</span><span class="p">,</span> <span class="n">dp</span> <span class="ow">in</span> <span class="n">dpres_plevel_data</span><span class="p">:</span>
+    <span class="n">ncl_dpres_plevel</span><span class="p">[(</span><span class="n">plevel</span><span class="p">,</span> <span class="n">surface_pres</span><span class="p">)]</span> <span class="o">=</span> <span class="n">dp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plev</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">1000</span><span class="p">,</span>
+    <span class="mi">950</span><span class="p">,</span>
+    <span class="mi">900</span><span class="p">,</span>
+    <span class="mi">850</span><span class="p">,</span>
+    <span class="mi">800</span><span class="p">,</span>
+    <span class="mi">750</span><span class="p">,</span>
+    <span class="mi">700</span><span class="p">,</span>
+    <span class="mi">650</span><span class="p">,</span>
+    <span class="mi">600</span><span class="p">,</span>
+    <span class="mi">550</span><span class="p">,</span>
+    <span class="mi">500</span><span class="p">,</span>
+    <span class="mi">450</span><span class="p">,</span>
+    <span class="mi">400</span><span class="p">,</span>
+    <span class="mi">350</span><span class="p">,</span>
+    <span class="mi">300</span><span class="p">,</span>
+    <span class="mi">250</span><span class="p">,</span>
+    <span class="mi">200</span><span class="p">,</span>
+    <span class="mi">175</span><span class="p">,</span>
+    <span class="mi">150</span><span class="p">,</span>
+    <span class="mi">125</span><span class="p">,</span>
+    <span class="mi">100</span><span class="p">,</span>
+    <span class="mi">80</span><span class="p">,</span>
+    <span class="mi">70</span><span class="p">,</span>
+    <span class="mi">60</span><span class="p">,</span>
+    <span class="mi">50</span><span class="p">,</span>
+    <span class="mi">40</span><span class="p">,</span>
+    <span class="mi">30</span><span class="p">,</span>
+    <span class="mi">25</span><span class="p">,</span>
+    <span class="mi">20</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1">### Calculate GeoCAT-Comp `dpres_plevel` value</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">delta_pressure</span>
+
+<span class="n">geocat_delta_pressure</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">psfc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">1080</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">dp</span> <span class="o">=</span> <span class="n">delta_pressure</span><span class="p">(</span><span class="n">plev</span><span class="p">,</span> <span class="n">psfc</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">level</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">plev</span><span class="p">):</span>
+        <span class="n">geocat_delta_pressure</span><span class="p">[(</span><span class="n">psfc</span><span class="p">,</span> <span class="n">plev</span><span class="p">[</span><span class="n">i</span><span class="p">])]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="psychro-fao56">
+<h3>psychro_fao56<a class="headerlink" href="#psychro-fao56" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Collect NCL values for psychro_fao56 from geocat-datafiles</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">psychro_fao56_data</span> <span class="o">=</span> <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;applications_files/ncl_outputs/psychro_fao56_output.txt&#39;</span><span class="p">)</span>
+<span class="n">psychro_fao56_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">psychro_fao56_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;applications_files/ncl_outputs/psychro_fao56_output.txt&#39; from &#39;https://github.com/NCAR/geocat-datafiles/raw/main/applications_files/ncl_outputs/psychro_fao56_output.txt&#39; to &#39;/home/runner/.cache/geocat&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Collect NCL `psychro_fao56` value and associated pressure values</span>
+<span class="n">ncl_psychro_fao56</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">psychro_fao56_data</span><span class="p">[::,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">psychro_fao56_data</span><span class="p">[::,</span> <span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Calculate Psychrometric Constant</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">psychrometric_constant</span>
+
+<span class="n">geocat_psychro_fao56</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">pressure</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3000</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">geocat_psychro_fao56</span><span class="p">[</span><span class="n">pressure</span><span class="p">]</span> <span class="o">=</span> <span class="n">psychrometric_constant</span><span class="p">(</span><span class="n">pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="comparison">
 <h2>Comparison<a class="headerlink" href="#comparison" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>dewtemp_trh<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -599,9 +1291,14 @@ This notebook is part of the process we have for adding entries to the NCL Index
 </div>
 </div>
 </div>
+</section>
+<section id="id2">
+<h3>daylight_fao56<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">ncl_daylight</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">ncl_daylight</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span>
         <span class="n">ncl_daylight</span><span class="p">[</span><span class="n">pair</span><span class="p">],</span> <span class="n">geocat_daylight</span><span class="p">[</span><span class="n">pair</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-05</span>
     <span class="p">)</span>  <span class="c1"># within 5 decimal points</span>
@@ -609,6 +1306,154 @@ This notebook is part of the process we have for adding entries to the NCL Index
 </div>
 </div>
 </div>
+</section>
+<section id="id3">
+<h3>satvpr_temp_fao56<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">ncl_satvpr_temp_fao56</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span>
+        <span class="n">ncl_satvpr_temp_fao56</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">geocat_satvpr_temp_fao56</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-05</span>
+    <span class="p">)</span>  <span class="c1"># within 5 decimal points</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h3>satvpr_tdew_fao56<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">ncl_satvpr_tdew_fao56</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span>
+        <span class="n">ncl_satvpr_tdew_fao56</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">geocat_satvpr_tdew_fao56</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-05</span>
+    <span class="p">)</span>  <span class="c1"># within 5 decimal points</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h3>satvpr_slope_fao56<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">ncl_satvpr_slope_fao56</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span>
+        <span class="n">ncl_satvpr_slope_fao56</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">geocat_satvpr_slope_fao56</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-05</span>
+    <span class="p">)</span>  <span class="c1"># within 5 decimal points</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id6">
+<h3>coriolis_param<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">ncl_coriolis_param</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span>
+        <span class="n">ncl_coriolis_param</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">metpy_coriolis_para</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-04</span>
+    <span class="p">)</span>  <span class="c1"># within 4 decimal points</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id7">
+<h3>relhum<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">ncl_relhum</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span>
+        <span class="n">ncl_relhum</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">geocat_relhum</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-05</span>
+    <span class="p">)</span>  <span class="c1"># within 5 decimal points</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id8">
+<h3>relhum_ice<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">ncl_relhum_ice</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span>
+        <span class="n">ncl_relhum_ice</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">geocat_relhum_ice</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-05</span>
+    <span class="p">)</span>  <span class="c1"># within 5 decimal points</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h3>relhum_water<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Differences the result of the vapor pressure constant of water at 0 degrees C in Pa</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">NCL</span></code>: es0 = 6.11</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geocat-comp</span></code>: es0 = 6.1128</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">ncl_relhum_water</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">ncl_relhum_water</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">geocat_relhum_water</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-00</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id10">
+<h3>dpres_plevel<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">ncl_dpres_plevel</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">ncl_dp_value</span> <span class="o">=</span> <span class="n">ncl_dpres_plevel</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+    <span class="n">geocat_dp_value</span> <span class="o">=</span> <span class="n">geocat_delta_pressure</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">ncl_dp_value</span> <span class="o">-</span> <span class="n">geocat_dp_value</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mf">0.5</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">ncl_dp_value</span> <span class="o">&lt;</span> <span class="nb">float</span><span class="p">(</span><span class="mf">9e36</span><span class="p">)</span> <span class="ow">and</span> <span class="n">geocat_dp_value</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># ignore nan</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Pressure Level: </span><span class="si">{</span><span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">, Surface Pressure: </span><span class="si">{</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">:&quot;</span>
+            <span class="p">)</span>  <span class="c1"># delta_pressure(plev,psfc)</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">Difference: </span><span class="si">{</span><span class="n">ncl_dp_value</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">geocat_dp_value</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">ncl_dp_value</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">geocat_dp_value</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id11">
+<h3>psychro_fao56<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">ncl_psychro_fao56</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span>
+        <span class="n">geocat_psychro_fao56</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">ncl_psychro_fao56</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">rel_tol</span><span class="o">=</span><span class="mf">1e-05</span>
+    <span class="p">)</span>  <span class="c1"># within 5 decimal points</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -644,9 +1489,31 @@ This notebook is part of the process we have for adding entries to the NCL Index
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-functionality">Python Functionality</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dewtemp-trh">dewtemp_trh</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daylight-fao56">daylight_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-temp-fao56">satvpr_temp_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-tdew-fao56">satvpr_tdew_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-slope-fao56">satvpr_slope_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coriolis-param">coriolis_param</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum">relhum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum-ice">relhum_ice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum-water">relhum_water</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dpres-plevel">dpres_plevel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psychro-fao56">psychro_fao56</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison">Comparison</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison">Comparison</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">dewtemp_trh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">daylight_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">satvpr_temp_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">satvpr_tdew_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">satvpr_slope_fao56</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">coriolis_param</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">relhum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">relhum_ice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">relhum_water</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">dpres_plevel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">psychro_fao56</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -684,6 +1551,9 @@ By GeoCAT
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <em>This material is based upon work supported by the NSF National Center for Atmospheric Research, a major facility sponsored by the U.S. National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the U.S. National Science Foundation.</em>
+</div>
   </div>
   
 </div>

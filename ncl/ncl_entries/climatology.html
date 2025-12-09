@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=61b3970e" />
   
@@ -42,9 +43,18 @@
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ncl/ncl_entries/climatology';</script>
     <link rel="icon" href="../../_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -228,6 +238,70 @@
 
 
 
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/ncl/ncl_entries/climatology.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Fncl/ncl_entries/climatology.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -331,32 +405,35 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcdayanomtll">calcDayAnomTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcdayanom">calcDayAnom*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcmonanomtll">calcMonAnomTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcmonanom">calcMonAnom*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clmdaytll">clmDayTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clmday">clmDay*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clmmontll">clmMonTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clmmon">clmMon*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#month-to-season">month_to_season</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#month-to-season">month_to_season</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rmmonanncyctll">rmMonAnnCycTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rmmonanncyc">rmMonAnnCyc*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stdmontll">stdMonTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stdmon">stdMon*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-resources">Python Resources</a></li>
@@ -375,37 +452,37 @@ document.write(`
 <h1>Climatology<a class="headerlink" href="#climatology" title="Link to this heading">#</a></h1>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
-<p>The NCL climatology functions listed below can be replicated using <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and/or <code class="docutils literal notranslate"><span class="pre">geocat.comp</span></code></p>
+<p>This section covers the following climatology functions from NCL, which can be replicated in Python using <a class="reference external" href="https://xarray.dev/"><code class="docutils literal notranslate"><span class="pre">xarray</span></code></a> and/or <a class="reference external" href="https://geocat-comp.readthedocs.io/en/stable/"><code class="docutils literal notranslate"><span class="pre">geocat.comp</span></code></a>:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/calcDayAnomTLL.shtml">calcDayAnomTLL</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/calcMonAnomTLL.shtml">calcMonAnomTLL</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/clmDayTLL.shtml">clmDayTLL</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/clmMonTLL.shtml">clmMonTLL</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/month_to_season.shtml">month_to_season</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/rmMonAnnCycTLL.shtml">rmMonAnnCycTLL</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/stdMonTLL.shtml">stdMonTLL</a></p></li>
+<li><p><a class="reference internal" href="#calcdayanom"><span class="std std-ref">calcDayAnom*</span></a></p></li>
+<li><p><a class="reference internal" href="#calcmonanom"><span class="std std-ref">calcMonAnom*</span></a></p></li>
+<li><p><a class="reference internal" href="#clmday"><span class="std std-ref">clmDay*</span></a></p></li>
+<li><p><a class="reference internal" href="#clmmon"><span class="std std-ref">clmMon*</span></a></p></li>
+<li><p><a class="reference internal" href="#month-to-season"><span class="std std-ref">month_to_season</span></a></p></li>
+<li><p><a class="reference internal" href="#rmmonanncyc"><span class="std std-ref">rmMonAnnCyc*</span></a></p></li>
+<li><p><a class="reference internal" href="#stdmon"><span class="std std-ref">stdMon*</span></a></p></li>
 </ul>
 </section>
-<section id="calcdayanomtll">
-<h2>calcDayAnomTLL<a class="headerlink" href="#calcdayanomtll" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">calcDayAnomTLL</span></code> calculates daily anomalies from a daily data climatology</p>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
+<section id="calcdayanom">
+<h3>calcDayAnom*<a class="headerlink" href="#calcdayanom" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/calcDayAnomTLL.shtml"><code class="docutils literal notranslate"><span class="pre">calcDayAnomTLL</span></code></a> calculates daily anomalies from a daily data climatology.</p>
 <section id="grab-and-go">
-<h3>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">gdf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_daily_subset.nc&quot;</span><span class="p">))</span>
-<span class="n">aice</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice_d</span>
-<span class="n">DayTLL</span> <span class="o">=</span> <span class="n">aice</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">aice</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofyear</span><span class="p">)</span>
-<span class="n">clmDayTLL</span> <span class="o">=</span> <span class="n">DayTLL</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_daily_subset.nc&quot;</span><span class="p">))</span>
+
+<span class="n">DayTLL</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice_d</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.dayofyear&quot;</span><span class="p">)</span>
+<span class="n">clmDayTLL</span> <span class="o">=</span> <span class="n">DayTLL</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
 <span class="n">calcDayAnomTLL</span> <span class="o">=</span> <span class="n">DayTLL</span> <span class="o">-</span> <span class="n">clmDayTLL</span>
 
-<span class="n">calcDayAnomTLL</span> <span class="o">=</span> <span class="n">calcDayAnomTLL</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">(</span><span class="n">long_name</span><span class="o">=</span><span class="s2">&quot;sea ice anomaly&quot;</span><span class="p">)</span>
-
-<span class="n">calcDayAnomTLL</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+<span class="n">calcDayAnomTLL</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">(</span><span class="n">long_name</span><span class="o">=</span><span class="s2">&quot;sea ice anomaly&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -416,28 +493,39 @@ document.write(`
 <img alt="../../_images/10d260037fa27cb1655def301635b3d4e36fadc33241a076c8ff6e6aa3a561c6.png" src="../../_images/10d260037fa27cb1655def301635b3d4e36fadc33241a076c8ff6e6aa3a561c6.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">climate_anomaly</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_daily_subset.nc&quot;</span><span class="p">))</span>
+
+<span class="n">calcDayAnomTLL</span> <span class="o">=</span> <span class="n">climate_anomaly</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">aice_d</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
-<section id="calcmonanomtll">
-<h2>calcMonAnomTLL<a class="headerlink" href="#calcmonanomtll" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">calcMonAnomTLL</span></code> calculates monthly anomalies by subtracting the long-term mean from each point</p>
+<section id="calcmonanom">
+<h3>calcMonAnom*<a class="headerlink" href="#calcmonanom" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/calcMonAnomTLL.shtml"><code class="docutils literal notranslate"><span class="pre">calcMonAnomTLL</span></code></a>, <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/calcMonAnomTLLL.shtml"><code class="docutils literal notranslate"><span class="pre">calcMonAnomTLLL</span></code></a>, <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/calcMonAnomLLT.shtml"><code class="docutils literal notranslate"><span class="pre">calcMonAnomLLT</span></code></a>, and <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/calcMonAnomLLLT.shtml"><code class="docutils literal notranslate"><span class="pre">calcMonAnomLLLT</span></code></a> calculate monthly anomalies by subtracting the long-term mean from each point.</p>
 <section id="id1">
-<h3>Grab and Go<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
 
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
-    <span class="n">gdf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
+    <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="n">aice</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice</span>
-<span class="n">MonTLL</span> <span class="o">=</span> <span class="n">aice</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">aice</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
-<span class="n">clmMonTLL</span> <span class="o">=</span> <span class="n">MonTLL</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+
+<span class="n">MonTLL</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.month&quot;</span><span class="p">)</span>
+<span class="n">clmMonTLL</span> <span class="o">=</span> <span class="n">MonTLL</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
 <span class="n">calcMonAnomTLL</span> <span class="o">=</span> <span class="n">MonTLL</span> <span class="o">-</span> <span class="n">clmMonTLL</span>
 
 <span class="n">calcMonAnomTLL</span> <span class="o">=</span> <span class="n">calcMonAnomTLL</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">(</span><span class="n">long_name</span><span class="o">=</span><span class="s2">&quot;sea ice anomaly&quot;</span><span class="p">)</span>
-
 <span class="n">calcMonAnomTLL</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -449,22 +537,35 @@ document.write(`
 <img alt="../../_images/9f4e62631440ac1ce20c5d11259d3e4938f2a1a4c35187e313d738ac421cb67f.png" src="../../_images/9f4e62631440ac1ce20c5d11259d3e4938f2a1a4c35187e313d738ac421cb67f.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">climate_anomaly</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
+    <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">calcMonAnomTLL</span> <span class="o">=</span> <span class="n">climate_anomaly</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">aice</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
-<section id="clmdaytll">
-<h2>clmDayTLL<a class="headerlink" href="#clmdaytll" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">clmDayTLL</span></code> calculates long-term daily means (daily climatology) from daily data</p>
+<section id="clmday">
+<h3>clmDay*<a class="headerlink" href="#clmday" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/clmDayTLL.shtml"><code class="docutils literal notranslate"><span class="pre">clmDayTLL</span></code></a> and <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/clmDayTLLL.shtml"><code class="docutils literal notranslate"><span class="pre">clmDayTLLL</span></code></a> calculate long-term daily means (daily climatology) from daily data.</p>
 <section id="id2">
-<h3>Grab and Go<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
 
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">gdf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_daily_subset.nc&quot;</span><span class="p">))</span>
-<span class="n">aice</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice_d</span>
-<span class="n">DayTLL</span> <span class="o">=</span> <span class="n">aice</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">aice</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofyear</span><span class="p">)</span>
-<span class="n">clmDayTLL</span> <span class="o">=</span> <span class="n">DayTLL</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_daily_subset.nc&quot;</span><span class="p">))</span>
+
+<span class="n">clmDayTLL</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice_d</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.dayofyear&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
 
 <span class="n">clmDayTLL</span><span class="p">[:,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;daily climatology&quot;</span><span class="p">)</span>
@@ -477,24 +578,35 @@ document.write(`
 <img alt="../../_images/f0b20bb1f013394b8b719445bf7f4fc6d39245a1ea564874568cc9b7699312e9.png" src="../../_images/f0b20bb1f013394b8b719445bf7f4fc6d39245a1ea564874568cc9b7699312e9.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">climatology_average</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_daily_subset.nc&quot;</span><span class="p">))</span>
+
+<span class="n">clmDayTLL</span> <span class="o">=</span> <span class="n">climatology_average</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">aice_d</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
-<section id="clmmontll">
-<h2>clmMonTLL<a class="headerlink" href="#clmmontll" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">clmMonTLL</span></code> calculates long-term monthly means (monthly climatology) from monthly data</p>
+<section id="clmmon">
+<h3>clmMon*<a class="headerlink" href="#clmmon" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/clmMonTLL.shtml"><code class="docutils literal notranslate"><span class="pre">clmMonTLL</span></code></a>, <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/clmMonTLLL.shtml"><code class="docutils literal notranslate"><span class="pre">clmMonTLLL</span></code></a>, <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/clmMonLLT.shtml"><code class="docutils literal notranslate"><span class="pre">clmMonLLT</span></code></a>, and <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/clmMonLLLT.shtml"><code class="docutils literal notranslate"><span class="pre">clmMonLLLT</span></code></a> calculate long-term monthly means (monthly climatology) from monthly data.</p>
 <section id="id3">
-<h3>Grab and Go<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
 
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
-    <span class="n">gdf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
+    <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="n">aice</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice</span>
-<span class="n">MonTLL</span> <span class="o">=</span> <span class="n">aice</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">aice</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
-<span class="n">clmMonTLL</span> <span class="o">=</span> <span class="n">MonTLL</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+
+<span class="n">clmMonTLL</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.month&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
 
 <span class="n">clmMonTLL</span><span class="p">[:,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;monthly climatology&quot;</span><span class="p">)</span>
@@ -507,30 +619,42 @@ document.write(`
 <img alt="../../_images/63d1806404a3b35aabc6a97599c08d6c141425b400ccc7574f40599be0457418.png" src="../../_images/63d1806404a3b35aabc6a97599c08d6c141425b400ccc7574f40599be0457418.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">climatology_average</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
+    <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">clmMonTLL</span> <span class="o">=</span> <span class="n">climatology_average</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">aice</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="month-to-season">
-<h2>month_to_season<a class="headerlink" href="#month-to-season" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">month_to_season</span></code> computes a user-specified three-month seasonal mean (DJF, JFM, FMA, MAM, AMJ, MJJ, JJA, JAS, ASO, SON, OND, NDJ)</p>
+<h3>month_to_season<a class="headerlink" href="#month-to-season" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/month_to_season.shtml"><code class="docutils literal notranslate"><span class="pre">month_to_season</span></code></a> computes a user-specified three-month seasonal mean (DJF, JFM, FMA, MAM, AMJ, MJJ, JJA, JAS, ASO, SON, OND, NDJ).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can do something similar with directly with Xarray as shown in <a class="reference external" href="https://docs.xarray.dev/en/stable/examples/monthly-means.html#Calculating-Seasonal-Averages-from-Time-Series-of-Monthly-Means">this example in the Xarray documentation</a>. However, it requires substantially more code and doesn’t have as much flexibility with respect to how the seasons are defined.</p>
+<p>You can do something similar directly with Xarray as shown <a class="reference external" href="https://docs.xarray.dev/en/stable/examples/monthly-means.html#Calculating-Seasonal-Averages-from-Time-Series-of-Monthly-Means">here in the Xarray documentation</a>. However, it requires more code.</p>
 </div>
 <section id="id4">
-<h3>Grab and Go<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">month_to_season</span>
 
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
-    <span class="n">gdf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
+    <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="n">aice</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice</span>
-<span class="n">mon_to_season</span> <span class="o">=</span> <span class="n">month_to_season</span><span class="p">(</span><span class="n">aice</span><span class="p">,</span> <span class="s2">&quot;ASO&quot;</span><span class="p">)</span>
 
-<span class="n">mon_to_season</span> <span class="o">=</span> <span class="n">mon_to_season</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">(</span><span class="n">long_name</span><span class="o">=</span><span class="s2">&quot;sea ice area&quot;</span><span class="p">)</span>
+<span class="n">mon_to_season</span> <span class="o">=</span> <span class="n">month_to_season</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">aice</span><span class="p">,</span> <span class="s2">&quot;ASO&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">(</span><span class="n">long_name</span><span class="o">=</span><span class="s2">&quot;sea ice area&quot;</span><span class="p">)</span>
 
 <span class="n">mon_to_season</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 
@@ -544,22 +668,22 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="rmmonanncyctll">
-<h2>rmMonAnnCycTLL<a class="headerlink" href="#rmmonanncyctll" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">rmMonAnnCycTLL</span></code> removes the annual cycle from monthly data</p>
+<section id="rmmonanncyc">
+<h3>rmMonAnnCyc*<a class="headerlink" href="#rmmonanncyc" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/rmMonAnnCycTLL.shtml"><code class="docutils literal notranslate"><span class="pre">rmMonAnnCycTLL</span></code></a>, <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/rmMonAnnCycLLT.shtml"><code class="docutils literal notranslate"><span class="pre">rmMonAnnCycLLT</span></code></a>, and <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/rmMonAnnCycLLLT.shtml"><code class="docutils literal notranslate"><span class="pre">rmMonAnnCycLLLT</span></code></a> remove the annual cycle from monthly data.</p>
 <section id="id5">
-<h3>Grab and Go<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
 
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
-    <span class="n">gdf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
+    <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="n">aice</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice</span>
-<span class="n">MonTLL</span> <span class="o">=</span> <span class="n">aice</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">aice</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
-<span class="n">clmMonTLL</span> <span class="o">=</span> <span class="n">MonTLL</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+
+<span class="n">MonTLL</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.month&quot;</span><span class="p">)</span>
+<span class="n">clmMonTLL</span> <span class="o">=</span> <span class="n">MonTLL</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
 <span class="n">rmMonAnnCycTLL</span> <span class="o">=</span> <span class="n">MonTLL</span> <span class="o">-</span> <span class="n">clmMonTLL</span>
 
 <span class="n">rmMonAnnCycTLL</span><span class="p">[:,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -574,22 +698,21 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="stdmontll">
-<h2>stdMonTLL<a class="headerlink" href="#stdmontll" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">stdMonTLL</span></code> calculates standard deviations of monthly means</p>
+<section id="stdmon">
+<h3>stdMon*<a class="headerlink" href="#stdmon" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/stdMonTLL.shtml"><code class="docutils literal notranslate"><span class="pre">stdMonTLL</span></code></a>, <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/stdMonTLLL.shtml"><code class="docutils literal notranslate"><span class="pre">stdMonTLLL</span></code></a>, <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/stdMonLLT.shtml"><code class="docutils literal notranslate"><span class="pre">stdMonLLT</span></code></a>, and <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/stdMonLLLT.shtml"><code class="docutils literal notranslate"><span class="pre">stdMonLLLT</span></code></a>  calculate standard deviations of monthly means.</p>
 <section id="id6">
-<h3>Grab and Go<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gdf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geocat.datafiles</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcd</span>
 
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
-    <span class="n">gdf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
+    <span class="n">gcd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;applications_files/inputs/CMIP6_sea_ice_monthly_subset.nc&quot;</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="n">aice</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice</span>
-<span class="n">MonTLL</span> <span class="o">=</span> <span class="n">aice</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">aice</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
-<span class="n">stdMonTLL</span> <span class="o">=</span> <span class="n">MonTLL</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">stdMonTLL</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">aice</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.month&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">stdMonTLL</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
 </pre></div>
@@ -601,14 +724,15 @@ document.write(`
 </div>
 </section>
 </section>
-<hr class="docutils" />
+</section>
 <section id="python-resources">
 <h2>Python Resources<a class="headerlink" href="#python-resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>GeoCAT Applications <a class="reference external" href="https://ncar.github.io/geocat-applications/applications/data_analysis/climatology.html">climatology page</a></p></li>
-<li><p>Climatematch Academy <a class="reference external" href="https://comptools.climatematch.io/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">Xarray Data Analysis and Climatology tutorial</a></p></li>
-<li><p>Project Pythia Foundations <a class="reference external" href="https://foundations.projectpythia.org/core/xarray/computation-masking.html">Computations and Masks with Xarray tutorial</a></p></li>
-<li><p>Xarray User Guide <a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/time-series.html">section on time series data</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/geocat-applications/applications/data_analysis/climatology.html">GeoCAT Applications - Climatology</a></p></li>
+<li><p><a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/time-series.html">Xarray User Guide - Time Series Data</a></p></li>
+<li><p><a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/groupby.html">Xarray User Guide - GroupBy</a></p></li>
+<li><p><a class="reference external" href="https://comptools.climatematch.io/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">Climatematch Academy - Xarray Data Analysis and Climatology</a></p></li>
+<li><p><a class="reference external" href="https://foundations.projectpythia.org/core/xarray/computation-masking">Project Pythia Foundations - Computations and Masks with Xarray</a></p></li>
 </ul>
 </section>
 </section>
@@ -641,32 +765,35 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcdayanomtll">calcDayAnomTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcdayanom">calcDayAnom*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcmonanomtll">calcMonAnomTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcmonanom">calcMonAnom*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clmdaytll">clmDayTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clmday">clmDay*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clmmontll">clmMonTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clmmon">clmMon*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#month-to-season">month_to_season</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#month-to-season">month_to_season</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rmmonanncyctll">rmMonAnnCycTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rmmonanncyc">rmMonAnnCyc*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stdmontll">stdMonTLL</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stdmon">stdMon*</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-resources">Python Resources</a></li>
@@ -707,6 +834,9 @@ By GeoCAT
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <em>This material is based upon work supported by the NSF National Center for Atmospheric Research, a major facility sponsored by the U.S. National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the U.S. National Science Foundation.</em>
+</div>
   </div>
   
 </div>

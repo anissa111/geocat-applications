@@ -45,23 +45,23 @@ expand on an existing page:
 To get started working with `geocat-applications`, you'll need to setup a GitHub
 account and a local copy of `geocat-applications` to work from.
 
-[Project Pythia includes detailed tutorials for working with and understanding GitHub](https://foundations.projectpythia.org/foundations/github/what-is-github.html).
+[Project Pythia includes detailed tutorials for working with and understanding GitHub](https://foundations.projectpythia.org/foundations/github/what-is-github).
 This will be useful to reference if you are unfamiliar with any terminology referenced here like
-[submitting a Pull Request](https://foundations.projectpythia.org/foundations/github/github-pull-request.html),
-[working with git](https://foundations.projectpythia.org/foundations/github/basic-git.html),
-or [maintaining a forked repository](https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html)
+[submitting a Pull Request](https://foundations.projectpythia.org/foundations/github/github-pull-request),
+[working with git](https://foundations.projectpythia.org/foundations/github/basic-git),
+or [maintaining a forked repository](https://foundations.projectpythia.org/foundations/github/github-cloning-forking)
 
-- If you do not have one yet, [new contributors will need a free GitHub account](https://foundations.projectpythia.org/foundations/github/what-is-github.html#register-for-a-free-github-account)
-  - New users should also [configure their GitHub accounts](https://foundations.projectpythia.org/foundations/github/github-setup-advanced.html)
-- [Fork and clone the `NCAR/geocat-applications` repository](https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html#forking-a-repository)
-- We recommend [creating a new branch on your fork reposisitory for the new feature or bug fix](https://foundations.projectpythia.org/foundations/github/git-branches.html#creating-a-new-branch)
+- If you do not have one yet, [new contributors will need a free GitHub account](https://foundations.projectpythia.org/foundations/github/what-is-github/#register-for-a-free-github-account)
+  - New users should also [configure their GitHub accounts](https://foundations.projectpythia.org/foundations/github/github-setup-advanced)
+- [Fork and clone the `NCAR/geocat-applications` repository](https://foundations.projectpythia.org/foundations/github/github-cloning-forking/#forking-a-repository)
+- We recommend [creating a new branch on your fork reposisitory for the new feature or bug fix](https://foundations.projectpythia.org/foundations/github/git-branches/#creating-a-new-branch)
 
 ### Setup the Environment
 
-To run [Jupyter notebooks](https://foundations.projectpythia.org/foundations/jupyter.html)
+To run [Jupyter notebooks](https://foundations.projectpythia.org/foundations/jupyter)
 locally and make changes to `geocat-applications`, you will need to
 create a local development environment. We recommend installing and using
-[`conda`](https://foundations.projectpythia.org/foundations/conda.html). Conda is the command
+[`conda`](https://foundations.projectpythia.org/foundations/conda). Conda is the command
 line interface for Miniconda and is a useful tool to manage environments and dependencies. A conda
 environment is created from the `environment.yml` that contains a list of required dependencies.
 
@@ -120,11 +120,11 @@ NCL-specific content.*
 
 1. If the content is primarily visualization, create a new file in the
    appropriate directory in `applications/` based off of
-   the `templates/viz_template.ipynb`
+   the `templates/viz_template.md`
 
 1. If the content is primarily computational (even if it includes
    visualization), create a new file in the appropriate directory
-   in `applications/` based off of the `templates/computational_template.ipynb`
+   in `applications/` based off of the `templates/computational_template.md`
 
 1. If relevant, link to corresponding NCL content at the bottom of the file
 
@@ -154,7 +154,7 @@ be linked instead of included directly, whether that content is in the form of a
 **Python Entry** on geocat-applications or external resources.
 
 1. Create a new file in `ncl/ncl_entries/` based off of the
-   `templates/ncl_template.ipynb` template.
+   `templates/ncl_template.md` template.
 
 1. Add the file to the `ncl/ncl_entries/ncl_entries.rst` file
 
@@ -177,7 +177,7 @@ necessary or where providing an initial entry to the NCL Index is more important
 than waiting for a full **NCL Entry** to be completed.
 
 1. Create a new file in `ncl/ncl_receipts/` based off of the
-   `templates/receipt_template.ipynb` template.
+   `templates/receipt_template.md` template.
 
 1. Create a raw `.ncl` script within `ncl/ncl_raw/` to store `NCL Code` section
 
@@ -198,7 +198,7 @@ allow you to export citation information in the required
 work. You can copy and paste this text into the `references.bib` file.
 
 From there you can add citations to your specific page using the
-directives shown in the [computational template](https://github.com/NCAR/geocat-applications/blob/main/templates/computational_template.ipynb).
+directives shown in the [computational template](templates/computational_template.md).
 
 For references to software documentation and other web content, we generally
 prefer links instead of or in addition to formal citations. If you're not
@@ -253,7 +253,7 @@ For a NCL to Python entry, the files changes should include:
 ### Open a New Pull Request
 A pull request is a request to merge code from your fork of `geocat-applications`
 on GitHub to the main repository. Project Pythia has extensive
-[pull request guides and documentation](https://foundations.projectpythia.org/foundations/github/github-pull-request.html)
+[pull request guides and documentation](https://foundations.projectpythia.org/foundations/github/github-pull-request)
 if you'd like more information
 
 When opening a pull request, if you want to open a pull request but are not ready for it
@@ -288,5 +288,5 @@ Once your pull request is approved by a core maintainer and passes the relevant 
 main repository!
 
 ### Delete Branch
-Once the pull request is closed and merged you can [delete your working branch](https://foundations.projectpythia.org/foundations/github/git-branches.html#deleting-branches).
+Once the pull request is closed and merged you can [delete your working branch](https://foundations.projectpythia.org/foundations/github/git-branches/#deleting-branches).
 This will help keep your fork of `geocat-applications` clean, but is not required.

@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=61b3970e" />
   
@@ -42,9 +43,18 @@
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ncl/ncl_entries/trigonometry';</script>
     <link rel="icon" href="../../_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -228,6 +238,70 @@
 
 
 
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/ncl/ncl_entries/trigonometry.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Fncl/ncl_entries/trigonometry.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -330,37 +404,51 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-math-and-cmath-module">Using the <code class="docutils literal notranslate"><span class="pre">math</span></code> and <code class="docutils literal notranslate"><span class="pre">cmath</span></code> module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-using-numpy">Recommended: Using <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sin">sin</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-math-and-cmath-modules">Using the <code class="docutils literal notranslate"><span class="pre">math</span></code> and <code class="docutils literal notranslate"><span class="pre">cmath</span></code> modules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-using-numpy">Recommended: Using <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cos">cos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sin">sin</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tan">tan</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cos">cos</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asin">asin</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tan">tan</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acos">acos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asin">asin</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atan">atan</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acos">acos</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atan2">atan2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cosh">cosh</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sinh">sinh</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tanh">tanh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atan">atan</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atan2">atan2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cosh">cosh</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinh">sinh</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tanh">tanh</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Grab and Go</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-from-ncl">Differences from NCL</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-and-return-types">Input and Return Types</a></li>
 </ul>
@@ -381,33 +469,32 @@ document.write(`
 <h1>Trigonometry<a class="headerlink" href="#trigonometry" title="Link to this heading">#</a></h1>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
-<p>The trigonometric functions for sine, cosine, and tangent (and associated inverse functions) are built-in functions in Python as well as part of a common Python package <code class="docutils literal notranslate"><span class="pre">numpy</span></code></p>
+<p>The trigonometric functions for sine, cosine, and tangent (and associated inverse functions) are part of the Python Standard Library’s mathematical functions as well as the common Python package <code class="docutils literal notranslate"><span class="pre">numpy</span></code></p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sin.shtml">sin</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cos.shtml">cos</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/tan.shtml">tan</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/asin.shtml">asin</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/acos.shtml">acos</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/atan.shtml">atan</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/atan2.shtml">atan2</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cosh.shtml">cosh</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sinh.shtml">sinh</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/tanh.shtml">tanh</a></p></li>
+<li><p><a class="reference internal" href="#sin"><span class="std std-ref">sin</span></a></p></li>
+<li><p><a class="reference internal" href="#cos"><span class="std std-ref">cos</span></a></p></li>
+<li><p><a class="reference internal" href="#tan"><span class="std std-ref">tan</span></a></p></li>
+<li><p><a class="reference internal" href="#atan"><span class="std std-ref">asin</span></a></p></li>
+<li><p><a class="reference internal" href="#acos"><span class="std std-ref">acos</span></a></p></li>
+<li><p><a class="reference internal" href="#atan"><span class="std std-ref">atan</span></a></p></li>
+<li><p><a class="reference internal" href="#atan2"><span class="std std-ref">atan2</span></a></p></li>
+<li><p><a class="reference internal" href="#cosh"><span class="std std-ref">cosh</span></a></p></li>
+<li><p><a class="reference internal" href="#sinh"><span class="std std-ref">sinh</span></a></p></li>
+<li><p><a class="reference internal" href="#tanh"><span class="std std-ref">tanh</span></a></p></li>
 </ul>
-</section>
-<section id="using-the-math-and-cmath-module">
-<h2>Using the <code class="docutils literal notranslate"><span class="pre">math</span></code> and <code class="docutils literal notranslate"><span class="pre">cmath</span></code> module<a class="headerlink" href="#using-the-math-and-cmath-module" title="Link to this heading">#</a></h2>
-<p>The <a class="reference external" href="https://docs.python.org/3/library/math.html#trigonometric-functions"><code class="docutils literal notranslate"><span class="pre">math</span></code></a> and <a class="reference external" href="https://docs.python.org/3/library/cmath.html#trigonometric-functions"><code class="docutils literal notranslate"><span class="pre">cmath</span></code></a> modules are part of the Python Standard Library and require no additional downloading to use. Both math modules can be used to calculate the value of trigonometric functions in Python</p>
+<section id="using-the-math-and-cmath-modules">
+<h3>Using the <code class="docutils literal notranslate"><span class="pre">math</span></code> and <code class="docutils literal notranslate"><span class="pre">cmath</span></code> modules<a class="headerlink" href="#using-the-math-and-cmath-modules" title="Link to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://docs.python.org/3/library/math.html#trigonometric-functions"><code class="docutils literal notranslate"><span class="pre">math</span></code></a> and <a class="reference external" href="https://docs.python.org/3/library/cmath.html#trigonometric-functions"><code class="docutils literal notranslate"><span class="pre">cmath</span></code></a> modules are part of the Python Standard Library and require no additional downloading to use. Both math modules can be used to calculate the value of trigonometric functions in Python.</p>
 <p>Both math modules expect an input value in radians:</p>
 <ul class="simple">
 <li><p>Input: single numerical values (float, decimals, integers)</p></li>
 <li><p>Returns: single numerical value in radians as a float</p></li>
 </ul>
-<p>The <code class="docutils literal notranslate"><span class="pre">math</span></code> function only works on real number inputs, while <code class="docutils literal notranslate"><span class="pre">cmath</span></code> contains equivalent functions for for complex and imaginary numbers</p>
-<p>However, if you are working with lists or arrays we suggest using the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> equivalents</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">math</span></code> function only works on real number inputs, while <code class="docutils literal notranslate"><span class="pre">cmath</span></code> contains equivalent functions for for complex and imaginary numbers.</p>
+<p>However, if you are working with lists or arrays we suggest using the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> equivalents.</p>
 </section>
 <section id="recommended-using-numpy">
-<h2>Recommended: Using <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#recommended-using-numpy" title="Link to this heading">#</a></h2>
+<h3>Recommended: Using <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#recommended-using-numpy" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://numpy.org/doc/stable/reference/routines.math.html"><code class="docutils literal notranslate"><span class="pre">numpy</span></code></a> supports both real and complex values of individual numbers (floats, decimals, integers) as well as array-like values (arrays, lists, etc…)</p>
 <p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> expects an input value in radians:</p>
 <ul class="simple">
@@ -415,11 +502,14 @@ document.write(`
 <li><p>Returns: single or array-like numerical values in radians as floats</p></li>
 </ul>
 </section>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
 <section id="sin">
-<h2>sin<a class="headerlink" href="#sin" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">sin</span></code> calculates the sine of numeric values in radians</p>
+<h3>sin<a class="headerlink" href="#sin" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sin.shtml"><code class="docutils literal notranslate"><span class="pre">sin</span></code></a> calculates the sine of numeric values in radians</p>
 <section id="grab-and-go">
-<h3>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -473,10 +563,10 @@ document.write(`
 </section>
 </section>
 <section id="cos">
-<h2>cos<a class="headerlink" href="#cos" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">cos</span></code> calculates the cosine of numeric values in radians</p>
+<h3>cos<a class="headerlink" href="#cos" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cos.shtml"><code class="docutils literal notranslate"><span class="pre">cos</span></code></a> calculates the cosine of numeric values in radians</p>
 <section id="id1">
-<h3>Grab and Go<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -530,10 +620,10 @@ document.write(`
 </section>
 </section>
 <section id="tan">
-<h2>tan<a class="headerlink" href="#tan" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">tan</span></code> calculates the tangent of numeric values in radians</p>
+<h3>tan<a class="headerlink" href="#tan" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/tan.shtml"><code class="docutils literal notranslate"><span class="pre">tan</span></code></a> calculates the tangent of numeric values in radians</p>
 <section id="id2">
-<h3>Grab and Go<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -587,10 +677,10 @@ document.write(`
 </section>
 </section>
 <section id="asin">
-<h2>asin<a class="headerlink" href="#asin" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">asin</span></code> calculates the arcsine of numeric values in radians</p>
+<h3>asin<a class="headerlink" href="#asin" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/asin.shtml"><code class="docutils literal notranslate"><span class="pre">asin</span></code></a> calculates the arcsine of numeric values in radians</p>
 <section id="id3">
-<h3>Grab and Go<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -644,10 +734,10 @@ document.write(`
 </section>
 </section>
 <section id="acos">
-<h2>acos<a class="headerlink" href="#acos" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">acos</span></code> calculates the arccosine of numeric values in radians</p>
+<h3>acos<a class="headerlink" href="#acos" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/acos.shtml"><code class="docutils literal notranslate"><span class="pre">acos</span></code></a> calculates the arccosine of numeric values in radians</p>
 <section id="id4">
-<h3>Grab and Go<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -676,7 +766,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0471975511965979
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0471975511965976
 </pre></div>
 </div>
 </div>
@@ -701,10 +791,10 @@ document.write(`
 </section>
 </section>
 <section id="atan">
-<h2>atan<a class="headerlink" href="#atan" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">atan</span></code> calculates the arctangent of numeric values in radians</p>
+<h3>atan<a class="headerlink" href="#atan" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/atan.shtml"><code class="docutils literal notranslate"><span class="pre">atan</span></code></a> calculates the arctangent of numeric values in radians</p>
 <section id="id5">
-<h3>Grab and Go<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -758,8 +848,8 @@ document.write(`
 </section>
 </section>
 <section id="atan2">
-<h2>atan2<a class="headerlink" href="#atan2" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">atan</span></code> calculates the arctangent of <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">/</span> <span class="pre">x</span></code> in radians</p>
+<h3>atan2<a class="headerlink" href="#atan2" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/atan2.shtml"><code class="docutils literal notranslate"><span class="pre">atan2</span></code></a> calculates the arctangent of <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">/</span> <span class="pre">x</span></code> in radians</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -815,8 +905,10 @@ document.write(`
 </div>
 </section>
 <section id="cosh">
-<h2>cosh<a class="headerlink" href="#cosh" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">cosh</span></code> computes the hyperbolic cosine in radians</p>
+<h3>cosh<a class="headerlink" href="#cosh" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cosh.shtml"><code class="docutils literal notranslate"><span class="pre">cosh</span></code></a> computes the hyperbolic cosine in radians</p>
+<section id="id6">
+<h4>Grab and Go<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -868,9 +960,12 @@ document.write(`
 </div>
 </div>
 </section>
+</section>
 <section id="sinh">
-<h2>sinh<a class="headerlink" href="#sinh" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">sinh</span></code> computes the hyperbolic sine in radians</p>
+<h3>sinh<a class="headerlink" href="#sinh" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sinh.shtml"><code class="docutils literal notranslate"><span class="pre">sinh</span></code></a> computes the hyperbolic sine in radians</p>
+<section id="id7">
+<h4>Grab and Go<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -922,9 +1017,12 @@ document.write(`
 </div>
 </div>
 </section>
+</section>
 <section id="tanh">
-<h2>tanh<a class="headerlink" href="#tanh" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">tanh</span></code> computes the hyperbolic tangent in radians</p>
+<h3>tanh<a class="headerlink" href="#tanh" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/tanh.shtml"><code class="docutils literal notranslate"><span class="pre">tanh</span></code></a> computes the hyperbolic tangent in radians</p>
+<section id="id8">
+<h4>Grab and Go<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -974,6 +1072,8 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+</section>
 </section>
 <section id="differences-from-ncl">
 <h2>Differences from NCL<a class="headerlink" href="#differences-from-ncl" title="Link to this heading">#</a></h2>
@@ -1026,37 +1126,51 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-math-and-cmath-module">Using the <code class="docutils literal notranslate"><span class="pre">math</span></code> and <code class="docutils literal notranslate"><span class="pre">cmath</span></code> module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-using-numpy">Recommended: Using <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sin">sin</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-math-and-cmath-modules">Using the <code class="docutils literal notranslate"><span class="pre">math</span></code> and <code class="docutils literal notranslate"><span class="pre">cmath</span></code> modules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-using-numpy">Recommended: Using <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cos">cos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sin">sin</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tan">tan</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cos">cos</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asin">asin</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tan">tan</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acos">acos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asin">asin</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atan">atan</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acos">acos</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atan2">atan2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cosh">cosh</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sinh">sinh</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tanh">tanh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atan">atan</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atan2">atan2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cosh">cosh</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinh">sinh</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tanh">tanh</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Grab and Go</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-from-ncl">Differences from NCL</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-and-return-types">Input and Return Types</a></li>
 </ul>
@@ -1099,6 +1213,9 @@ By GeoCAT
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <em>This material is based upon work supported by the NSF National Center for Atmospheric Research, a major facility sponsored by the U.S. National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the U.S. National Science Foundation.</em>
+</div>
   </div>
   
 </div>

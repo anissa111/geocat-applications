@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/style.css?v=61b3970e" />
   
@@ -42,9 +43,18 @@
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'GETTING_STARTED';</script>
     <link rel="icon" href="_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -228,6 +238,70 @@
 
 
 
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/GETTING_STARTED.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2FGETTING_STARTED.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -380,7 +454,7 @@ function and are looking for “equivalent” Python code</p>
 <h2>New to Python?<a class="headerlink" href="#new-to-python" title="Link to this heading">#</a></h2>
 <p>If you are new to Python or want to learn more, <a class="reference external" href="https://projectpythia.org/">Project Pythia</a> offers high-quality,
 geoscience-oriented Python tutorials</p>
-<p><a class="reference external" href="https://foundations.projectpythia.org/landing-page.html">Pythia Foundations</a> covers prerequisites that
+<p><a class="reference external" href="https://foundations.projectpythia.org">Pythia Foundations</a> covers prerequisites that
 will be helpful to learn for GeoCAT Applications like:</p>
 <ul class="simple">
 <li><p>Getting Started with Python</p></li>
@@ -391,7 +465,7 @@ will be helpful to learn for GeoCAT Applications like:</p>
 </section>
 <section id="new-to-jupyter-notebooks">
 <h2>New to Jupyter Notebooks?<a class="headerlink" href="#new-to-jupyter-notebooks" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://docs.jupyter.org/en/latest/what_is_jupyter.html#what-is-a-computational-notebook-anyway">Jupyter Notebooks</a>
+<p><a class="reference external" href="https://docs.jupyter.org/en/latest/">Jupyter Notebooks</a>
 provide an interactive interface to write, execute, and visualize code. Traditionally, code is written in a script and
 executed in order from beginning to end each time a script is run. Instead, Jupyter Notebooks allow you to divide code into cells that can be executed individually and in any order. Each cell in a Jupyter Notebook
 can be filled with executable code, markdown, or raw code. Jupyter Notebooks have grown in popularity because they offer a simple
@@ -399,7 +473,7 @@ method to include plain English description alongside code to improve readabilit
 can be run in any order, it is possible to organize a notebook to avoid having to constantly re-run parts of a script that might
 take longer to run than others, like like retrieving data. The outputs of each cell appear below the cell without the
 need for typing <code class="docutils literal notranslate"><span class="pre">print</span></code> or <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code>.</p>
-<p>In addition to Pythia Foundations “<a class="reference external" href="https://foundations.projectpythia.org/foundations/getting-started-jupyter.html">Getting Started with Jupyter</a>”
+<p>In addition to Pythia Foundations “<a class="reference external" href="https://foundations.projectpythia.org/foundations/getting-started-jupyter">Getting Started with Jupyter</a>”
 , you can see the <a class="reference external" href="https://docs.jupyter.org/en/latest/#what-is-a-notebook">Project Jupyter Documentation</a> for more information.
 or <a class="reference external" href="https://jupyter.org/try">try it out yourself</a> online.</p>
 <p>Each tutorial and resource page of GeoCAT Applications is built from Jupyter notebooks, however, on the GeoCAT Applications
@@ -500,6 +574,9 @@ By GeoCAT
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <em>This material is based upon work supported by the NSF National Center for Atmospheric Research, a major facility sponsored by the U.S. National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the U.S. National Science Foundation.</em>
+</div>
   </div>
   
 </div>

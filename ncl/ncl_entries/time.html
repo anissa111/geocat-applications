@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=61b3970e" />
   
@@ -42,9 +43,18 @@
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ncl/ncl_entries/time';</script>
     <link rel="icon" href="../../_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -228,6 +238,70 @@
 
 
 
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/ncl/ncl_entries/time.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Fncl/ncl_entries/time.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -331,26 +405,29 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-of-week">day_of_week</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-datetime-module">Using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-cftime">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-day-of-week">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calendars">Calendars</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#input-type">Input Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-of-week">day_of_week</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-datetime-module">Using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-cftime">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-day-of-week">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#calendars">Calendars</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#input-type">Input Type</a></li>
+</ul>
+</li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#year-0">Year 0</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#days-in-month">days_in_month</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-calendar-module">Using the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> module</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-days-in-month">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Calendars</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-differences">Numerical Differences</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Input type</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#days-in-month">days_in_month</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-calendar-module">Using the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> module</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-days-in-month">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Calendars</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-differences">Numerical Differences</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Input type</a></li>
 </ul>
 </li>
 </ul>
@@ -372,12 +449,18 @@ document.write(`
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
 <p>This section covers NCL functions relating to dates and times:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#day-of-week"><span class="std std-ref">day_of_week</span></a></p></li>
+<li><p><a class="reference internal" href="#days-in-month"><span class="std std-ref">days_in_month</span></a></p></li>
+</ul>
 </section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
 <section id="day-of-week">
-<h2>day_of_week<a class="headerlink" href="#day-of-week" title="Link to this heading">#</a></h2>
+<h3>day_of_week<a class="headerlink" href="#day-of-week" title="Link to this heading">#</a></h3>
 <p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/day_of_week.shtml"><code class="docutils literal notranslate"><span class="pre">day_of_week</span></code></a> calculates the day of the week given month, day, and year.</p>
 <section id="grab-and-go">
-<h3>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cftime</span>
@@ -402,7 +485,7 @@ document.write(`
 </section>
 <hr class="docutils" />
 <section id="using-the-datetime-module">
-<h3>Using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module<a class="headerlink" href="#using-the-datetime-module" title="Link to this heading">#</a></h3>
+<h4>Using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module<a class="headerlink" href="#using-the-datetime-module" title="Link to this heading">#</a></h4>
 <p>The <a class="reference external" href="https://docs.python.org/3/library/datetime.html"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a> module is part of the Python Standard Library and could be sufficient to calculate the day of the week.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -427,7 +510,7 @@ document.write(`
 <p>The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module also only uses the proleptic Gregorian calendar. If you need to work with other calendars, we suggest using <code class="docutils literal notranslate"><span class="pre">cftime</span></code>.</p>
 </section>
 <section id="using-cftime">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code><a class="headerlink" href="#using-cftime" title="Link to this heading">#</a></h3>
+<h4>Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code><a class="headerlink" href="#using-cftime" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="https://unidata.github.io/cftime/index.html"><code class="docutils literal notranslate"><span class="pre">cftime</span></code></a> offers a solution to these potential issues by supporting year 0 and all of the <a class="reference external" href="https://cfconventions.org/cf-conventions/cf-conventions#calendar">CF Convention calendars</a>. Here is how you can use <code class="docutils literal notranslate"><span class="pre">cftime</span></code> to calculate the day of the week.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -471,14 +554,15 @@ Julian calendar: 			2024-6-4 is a Monday
 <p>Using the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior"><code class="docutils literal notranslate"><span class="pre">strftime()</span></code></a> method allows you to format the output of <code class="docutils literal notranslate"><span class="pre">cftime.datetime</span></code>. If you desire an output equivalent to that of NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code>, we suggest using <code class="docutils literal notranslate"><span class="pre">.strftime('%w')</span></code>.</p>
 </section>
 <section id="differences-between-cftime-and-ncl-s-day-of-week">
-<h3>Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code><a class="headerlink" href="#differences-between-cftime-and-ncl-s-day-of-week" title="Link to this heading">#</a></h3>
+<h4>Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code><a class="headerlink" href="#differences-between-cftime-and-ncl-s-day-of-week" title="Link to this heading">#</a></h4>
 <section id="calendars">
-<h4>Calendars<a class="headerlink" href="#calendars" title="Link to this heading">#</a></h4>
+<h5>Calendars<a class="headerlink" href="#calendars" title="Link to this heading">#</a></h5>
 <p>NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code> only supports the proleptic Gregorian calendar, while the <code class="docutils literal notranslate"><span class="pre">cftime</span></code> module supports all CF conventions calendars, including the <code class="docutils literal notranslate"><span class="pre">proleptic_gregorian</span></code> calendar.</p>
 </section>
 <section id="input-type">
-<h4>Input Type<a class="headerlink" href="#input-type" title="Link to this heading">#</a></h4>
+<h5>Input Type<a class="headerlink" href="#input-type" title="Link to this heading">#</a></h5>
 <p>Notably, using <code class="docutils literal notranslate"><span class="pre">cftime</span></code> to calculate the day of the week works by getting a <code class="docutils literal notranslate"><span class="pre">strftime()</span></code> value from a <code class="docutils literal notranslate"><span class="pre">cftime.datetime</span></code> object, which means that the calculations for the day of the week have to be collected through each date individually, while NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code> can take in multidimensional integer arrays, given that the <code class="docutils literal notranslate"><span class="pre">year</span></code> and <code class="docutils literal notranslate"><span class="pre">month</span></code> arrays have the same dimensions.</p>
+</section>
 </section>
 <section id="year-0">
 <h4>Year 0<a class="headerlink" href="#year-0" title="Link to this heading">#</a></h4>
@@ -489,12 +573,11 @@ Julian calendar: 			2024-6-4 is a Monday
 </ul>
 </section>
 </section>
-</section>
 <section id="days-in-month">
-<h2>days_in_month<a class="headerlink" href="#days-in-month" title="Link to this heading">#</a></h2>
+<h3>days_in_month<a class="headerlink" href="#days-in-month" title="Link to this heading">#</a></h3>
 <p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/days_in_month.shtml"><code class="docutils literal notranslate"><span class="pre">days_in_month</span></code></a> calculates the number of days in a month given a month and year.</p>
 <section id="id1">
-<h3>Grab and Go<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cftime</span>
@@ -517,7 +600,7 @@ Julian calendar: 			2024-6-4 is a Monday
 </div>
 </section>
 <section id="using-the-calendar-module">
-<h3>Using the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> module<a class="headerlink" href="#using-the-calendar-module" title="Link to this heading">#</a></h3>
+<h4>Using the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> module<a class="headerlink" href="#using-the-calendar-module" title="Link to this heading">#</a></h4>
 <p>The <a class="reference external" href="https://docs.python.org/3/library/calendar.html"><code class="docutils literal notranslate"><span class="pre">calendar</span></code></a> module is part of the Python Standard Library and could be sufficient to calculate the number of days in a month.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -539,7 +622,7 @@ Julian calendar: 			2024-6-4 is a Monday
 <p>However, the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> only uses a proleptic Gregorian calendar. If you need to work with other calendars, the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> module will not be sufficient.</p>
 </section>
 <section id="id2">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h4>Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code><a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="https://unidata.github.io/cftime/index.html"><code class="docutils literal notranslate"><span class="pre">cftime</span></code></a> supports all of the <a class="reference external" href="https://cfconventions.org/cf-conventions/cf-conventions#calendar">CF Convention calendars</a>. Here’s how you can use <code class="docutils literal notranslate"><span class="pre">cftime</span></code> to calculate the number of days in a month.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -574,9 +657,9 @@ Julian calendar: 				 month 2 in 1500 has 29 days
 </div>
 </section>
 <section id="differences-between-cftime-and-ncl-s-days-in-month">
-<h3>Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code><a class="headerlink" href="#differences-between-cftime-and-ncl-s-days-in-month" title="Link to this heading">#</a></h3>
+<h4>Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code><a class="headerlink" href="#differences-between-cftime-and-ncl-s-days-in-month" title="Link to this heading">#</a></h4>
 <section id="id3">
-<h4>Calendars<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<h5>Calendars<a class="headerlink" href="#id3" title="Link to this heading">#</a></h5>
 <p>The calendars available in <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code>, while both based on the CF Conventions calendars, are slightly different.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cftime</span></code> does support using <code class="docutils literal notranslate"><span class="pre">&quot;none&quot;</span></code> as a calendar type, but not for this particular function.</p></li>
@@ -584,12 +667,13 @@ Julian calendar: 				 month 2 in 1500 has 29 days
 </ul>
 </section>
 <section id="numerical-differences">
-<h4>Numerical Differences<a class="headerlink" href="#numerical-differences" title="Link to this heading">#</a></h4>
+<h5>Numerical Differences<a class="headerlink" href="#numerical-differences" title="Link to this heading">#</a></h5>
 <p>Additionally, the <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;gregorian&quot;</span></code> calendars seem to disagree for some historical dates.</p>
 </section>
 <section id="id4">
-<h4>Input type<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<h5>Input type<a class="headerlink" href="#id4" title="Link to this heading">#</a></h5>
 <p>Notably, using <code class="docutils literal notranslate"><span class="pre">cftime</span></code> to calculate the number of days in a month works by getting a <code class="docutils literal notranslate"><span class="pre">daysinmonth</span></code> value from a <code class="docutils literal notranslate"><span class="pre">cftime.datetime</span></code> object, which means that the calculations for days in a month have to be collected through each date individually, while NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code> can take in multidimensional integer arrays, given that the <code class="docutils literal notranslate"><span class="pre">year</span></code> and <code class="docutils literal notranslate"><span class="pre">month</span></code> arrays have the same dimensions.</p>
+</section>
 </section>
 </section>
 </section>
@@ -632,26 +716,29 @@ Julian calendar: 				 month 2 in 1500 has 29 days
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-of-week">day_of_week</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-datetime-module">Using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-cftime">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-day-of-week">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calendars">Calendars</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#input-type">Input Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-of-week">day_of_week</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-datetime-module">Using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-cftime">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-day-of-week">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">day_of_week</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#calendars">Calendars</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#input-type">Input Type</a></li>
+</ul>
+</li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#year-0">Year 0</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#days-in-month">days_in_month</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-calendar-module">Using the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> module</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-days-in-month">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Calendars</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-differences">Numerical Differences</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Input type</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#days-in-month">days_in_month</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-calendar-module">Using the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> module</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Using <code class="docutils literal notranslate"><span class="pre">cftime</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-between-cftime-and-ncl-s-days-in-month">Differences between <code class="docutils literal notranslate"><span class="pre">cftime</span></code> and NCL’s <code class="docutils literal notranslate"><span class="pre">days_in_month</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Calendars</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-differences">Numerical Differences</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Input type</a></li>
 </ul>
 </li>
 </ul>
@@ -694,6 +781,9 @@ By GeoCAT
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <em>This material is based upon work supported by the NSF National Center for Atmospheric Research, a major facility sponsored by the U.S. National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the U.S. National Science Foundation.</em>
+</div>
   </div>
   
 </div>

@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/style.css?v=61b3970e" />
   
@@ -42,9 +43,18 @@
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'applications/datetime';</script>
     <link rel="icon" href="../_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -228,6 +238,70 @@
 
 
 
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/applications/datetime.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Fapplications/datetime.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -384,7 +458,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date.today() -&gt; 	 2025-12-09
-datetime.datetime.now() -&gt; 	 2025-12-09 00:01:57.003674
+datetime.datetime.now() -&gt; 	 2025-12-09 21:55:19.729929
 </pre></div>
 </div>
 </div>
@@ -415,10 +489,10 @@ datetime.datetime.now() -&gt; 	 2025-12-09 00:01:57.003674
 2025
 
 now.strftime(&#39;%A, %B %d %Y %I:%M:%S %p&#39;)
-Tuesday, December 09 2025 12:01:57 AM
+Tuesday, December 09 2025 09:55:19 PM
 
 now.strftime(&#39;%c&#39;)
-Tue Dec  9 00:01:57 2025
+Tue Dec  9 21:55:19 2025
 </pre></div>
 </div>
 </div>
@@ -487,7 +561,7 @@ Tue Dec  9 00:01:57 2025
 <h2>Curated Resources<a class="headerlink" href="#curated-resources" title="Link to this heading">#</a></h2>
 <p>To learn more about working with dates and times in Python, we suggest:</p>
 <ul class="simple">
-<li><p>the Project Pythia Foundations chapter titled <a class="reference external" href="https://foundations.projectpythia.org/core/datetime/datetime.html">Times and Dates in Python</a></p></li>
+<li><p>the Project Pythia Foundations chapter titled <a class="reference external" href="https://foundations.projectpythia.org/core/datetime/datetime">Times and Dates in Python</a></p></li>
 <li><p>this Xarray <a class="reference external" href="https://docs.xarray.dev/en/latest/user-guide/time-series.html">documentation page on timeseries data</a></p></li>
 <li><p>the <a class="reference external" href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/09_timeseries.html">“How to handle time series data with ease”</a> tutorial if you’re working with <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p></li>
 </ul>
@@ -570,6 +644,9 @@ By GeoCAT
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <em>This material is based upon work supported by the NSF National Center for Atmospheric Research, a major facility sponsored by the U.S. National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the U.S. National Science Foundation.</em>
+</div>
   </div>
   
 </div>

@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/style.css?v=61b3970e" />
   
@@ -42,9 +43,18 @@
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'CONTRIBUTING';</script>
     <link rel="icon" href="_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -222,6 +232,70 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/CONTRIBUTING.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2FCONTRIBUTING.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -414,27 +488,27 @@ expand on an existing page:</p>
 <h3>Setup Github and Repo<a class="headerlink" href="#setup-github-and-repo" title="Link to this heading">#</a></h3>
 <p>To get started working with <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code>, you’ll need to setup a GitHub
 account and a local copy of <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> to work from.</p>
-<p><a class="reference external" href="https://foundations.projectpythia.org/foundations/github/what-is-github.html">Project Pythia includes detailed tutorials for working with and understanding GitHub</a>.
+<p><a class="reference external" href="https://foundations.projectpythia.org/foundations/github/what-is-github">Project Pythia includes detailed tutorials for working with and understanding GitHub</a>.
 This will be useful to reference if you are unfamiliar with any terminology referenced here like
-<a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-pull-request.html">submitting a Pull Request</a>,
-<a class="reference external" href="https://foundations.projectpythia.org/foundations/github/basic-git.html">working with git</a>,
-or <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html">maintaining a forked repository</a></p>
+<a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-pull-request">submitting a Pull Request</a>,
+<a class="reference external" href="https://foundations.projectpythia.org/foundations/github/basic-git">working with git</a>,
+or <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-cloning-forking">maintaining a forked repository</a></p>
 <ul class="simple">
-<li><p>If you do not have one yet, <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/what-is-github.html#register-for-a-free-github-account">new contributors will need a free GitHub account</a></p>
+<li><p>If you do not have one yet, <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/what-is-github/#register-for-a-free-github-account">new contributors will need a free GitHub account</a></p>
 <ul>
-<li><p>New users should also <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-setup-advanced.html">configure their GitHub accounts</a></p></li>
+<li><p>New users should also <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-setup-advanced">configure their GitHub accounts</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html#forking-a-repository">Fork and clone the <code class="docutils literal notranslate"><span class="pre">NCAR/geocat-applications</span></code> repository</a></p></li>
-<li><p>We recommend <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/git-branches.html#creating-a-new-branch">creating a new branch on your fork reposisitory for the new feature or bug fix</a></p></li>
+<li><p><a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-cloning-forking/#forking-a-repository">Fork and clone the <code class="docutils literal notranslate"><span class="pre">NCAR/geocat-applications</span></code> repository</a></p></li>
+<li><p>We recommend <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/git-branches/#creating-a-new-branch">creating a new branch on your fork reposisitory for the new feature or bug fix</a></p></li>
 </ul>
 </section>
 <section id="setup-the-environment">
 <h3>Setup the Environment<a class="headerlink" href="#setup-the-environment" title="Link to this heading">#</a></h3>
-<p>To run <a class="reference external" href="https://foundations.projectpythia.org/foundations/jupyter.html">Jupyter notebooks</a>
+<p>To run <a class="reference external" href="https://foundations.projectpythia.org/foundations/jupyter">Jupyter notebooks</a>
 locally and make changes to <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code>, you will need to
 create a local development environment. We recommend installing and using
-<a class="reference external" href="https://foundations.projectpythia.org/foundations/conda.html"><code class="docutils literal notranslate"><span class="pre">conda</span></code></a>. Conda is the command
+<a class="reference external" href="https://foundations.projectpythia.org/foundations/conda"><code class="docutils literal notranslate"><span class="pre">conda</span></code></a>. Conda is the command
 line interface for Miniconda and is a useful tool to manage environments and dependencies. A conda
 environment is created from the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> that contains a list of required dependencies.</p>
 <p>You can use the following commands to create a new conda environment:</p>
@@ -494,10 +568,10 @@ NCL-specific content.</em></p>
 <ol class="arabic simple">
 <li><p>If the content is primarily visualization, create a new file in the
 appropriate directory in <code class="docutils literal notranslate"><span class="pre">applications/</span></code> based off of
-the <code class="docutils literal notranslate"><span class="pre">templates/viz_template.ipynb</span></code></p></li>
+the <code class="docutils literal notranslate"><span class="pre">templates/viz_template.md</span></code></p></li>
 <li><p>If the content is primarily computational (even if it includes
 visualization), create a new file in the appropriate directory
-in <code class="docutils literal notranslate"><span class="pre">applications/</span></code> based off of the <code class="docutils literal notranslate"><span class="pre">templates/computational_template.ipynb</span></code></p></li>
+in <code class="docutils literal notranslate"><span class="pre">applications/</span></code> based off of the <code class="docutils literal notranslate"><span class="pre">templates/computational_template.md</span></code></p></li>
 <li><p>If relevant, link to corresponding NCL content at the bottom of the file</p></li>
 <li><p>Add the new file to the <code class="docutils literal notranslate"><span class="pre">.rst</span></code> file in the same directory in <code class="docutils literal notranslate"><span class="pre">applications/</span></code>
 as your new file to add it to the webpage’s table of contents</p></li>
@@ -522,7 +596,7 @@ be linked instead of included directly, whether that content is in the form of a
 <strong>Python Entry</strong> on geocat-applications or external resources.</p>
 <ol class="arabic simple">
 <li><p>Create a new file in <code class="docutils literal notranslate"><span class="pre">ncl/ncl_entries/</span></code> based off of the
-<code class="docutils literal notranslate"><span class="pre">templates/ncl_template.ipynb</span></code> template.</p></li>
+<code class="docutils literal notranslate"><span class="pre">templates/ncl_template.md</span></code> template.</p></li>
 <li><p>Add the file to the <code class="docutils literal notranslate"><span class="pre">ncl/ncl_entries/ncl_entries.rst</span></code> file</p></li>
 <li><p>See below for adding the covered functions to the NCL Index</p></li>
 <li><p>Make sure to clear and run all outputs before asking for a review</p></li>
@@ -542,7 +616,7 @@ necessary or where providing an initial entry to the NCL Index is more important
 than waiting for a full <strong>NCL Entry</strong> to be completed.</p>
 <ol class="arabic simple">
 <li><p>Create a new file in <code class="docutils literal notranslate"><span class="pre">ncl/ncl_receipts/</span></code> based off of the
-<code class="docutils literal notranslate"><span class="pre">templates/receipt_template.ipynb</span></code> template.</p></li>
+<code class="docutils literal notranslate"><span class="pre">templates/receipt_template.md</span></code> template.</p></li>
 <li><p>Create a raw <code class="docutils literal notranslate"><span class="pre">.ncl</span></code> script within <code class="docutils literal notranslate"><span class="pre">ncl/ncl_raw/</span></code> to store <code class="docutils literal notranslate"><span class="pre">NCL</span> <span class="pre">Code</span></code> section</p></li>
 <li><p>Remove placeholder and descriptive text below <code class="docutils literal notranslate"><span class="pre">NCL</span> <span class="pre">Code</span></code>,
 <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Functionality</span></code>, <code class="docutils literal notranslate"><span class="pre">Comparison</span></code></p></li>
@@ -560,7 +634,7 @@ allow you to export citation information in the required
 <a class="reference external" href="https://www.ctan.org/pkg/bibtex">BibTex</a> format to save you a bit of
 work. You can copy and paste this text into the <code class="docutils literal notranslate"><span class="pre">references.bib</span></code> file.</p>
 <p>From there you can add citations to your specific page using the
-directives shown in the <a class="reference external" href="https://github.com/NCAR/geocat-applications/blob/main/templates/computational_template.ipynb">computational template</a>.</p>
+directives shown in the <span class="xref myst">computational template</span>.</p>
 <p>For references to software documentation and other web content, we generally
 prefer links instead of or in addition to formal citations. If you’re not
 sure which approach to take, consider where you would like to guide the reader
@@ -618,7 +692,7 @@ example: if new notebook is part of <code class="docutils literal notranslate"><
 <h3>Open a New Pull Request<a class="headerlink" href="#open-a-new-pull-request" title="Link to this heading">#</a></h3>
 <p>A pull request is a request to merge code from your fork of <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code>
 on GitHub to the main repository. Project Pythia has extensive
-<a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-pull-request.html">pull request guides and documentation</a>
+<a class="reference external" href="https://foundations.projectpythia.org/foundations/github/github-pull-request">pull request guides and documentation</a>
 if you’d like more information</p>
 <p>When opening a pull request, if you want to open a pull request but are not ready for it
 to be reviewed, you can open the pull request as a draft. This is also a good way to get
@@ -648,7 +722,7 @@ main repository!</p>
 </section>
 <section id="delete-branch">
 <h3>Delete Branch<a class="headerlink" href="#delete-branch" title="Link to this heading">#</a></h3>
-<p>Once the pull request is closed and merged you can <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/git-branches.html#deleting-branches">delete your working branch</a>.
+<p>Once the pull request is closed and merged you can <a class="reference external" href="https://foundations.projectpythia.org/foundations/github/git-branches/#deleting-branches">delete your working branch</a>.
 This will help keep your fork of <code class="docutils literal notranslate"><span class="pre">geocat-applications</span></code> clean, but is not required.</p>
 </section>
 </section>
@@ -754,6 +828,9 @@ By GeoCAT
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <em>This material is based upon work supported by the NSF National Center for Atmospheric Research, a major facility sponsored by the U.S. National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the U.S. National Science Foundation.</em>
+</div>
   </div>
   
 </div>

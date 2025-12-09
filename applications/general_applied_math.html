@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/style.css?v=61b3970e" />
   
@@ -42,9 +43,18 @@
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'applications/general_applied_math';</script>
     <link rel="icon" href="../_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -228,6 +238,70 @@
 
 
 
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/applications/general_applied_math.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Fapplications/general_applied_math.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -399,10 +473,11 @@ document.write(`
 <section id="math-vs-numpy">
 <h2><code class="docutils literal notranslate"><span class="pre">math</span></code> vs. <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#math-vs-numpy" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">math</span></code> is a built-in part of the standard Python library. This is a useful module for common and simple computations when working with single input values. To work with arrays or large datasets, <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is a good alternative to the <code class="docutils literal notranslate"><span class="pre">math</span></code> module. <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is a powerful external Python package for working with arrays and mathematical functions. <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is package developed to work with scientific computing and math functions and is tailored to run much faster with large datasets and arrays.</p>
-<div class="admonition alert alert-info">
-    <p class="admonition-title" style="font-weight:bold">Important Note</p>
-    The <code>math</code> library cannot be used with complex numbers. Instead, equivalent functions can be found within the <a href="https://docs.python.org/3/library/cmath.html">standard Python <code>cmath</code> library</a>
-</div></section>
+<div class="admonition-important-note admonition">
+<p class="admonition-title">Important Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">math</span></code> library cannot be used with complex numbers. Instead, equivalent functions can be found within the <a href="https://docs.python.org/3/library/cmath.html">standard Python <code class="docutils literal notranslate"><span class="pre">cmath</span></code>library</a></p>
+</div>
+</section>
 <section id="mathematical-constants">
 <h2>Mathematical Constants<a class="headerlink" href="#mathematical-constants" title="Link to this heading">#</a></h2>
 <p>Fixed mathematical constants are built into the standard Python libraries as well as external packages like <code class="docutils literal notranslate"><span class="pre">numpy</span></code></p>
@@ -542,7 +617,7 @@ Multiple Value Input (array/list)
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:14: SyntaxWarning: invalid escape sequence &#39;\M&#39;
 &lt;&gt;:14: SyntaxWarning: invalid escape sequence &#39;\M&#39;
-/tmp/ipykernel_3616/1093943048.py:14: SyntaxWarning: invalid escape sequence &#39;\M&#39;
+/tmp/ipykernel_3795/1093943048.py:14: SyntaxWarning: invalid escape sequence &#39;\M&#39;
   print(&quot;\Multiple Value Input (array/list)&quot;)
 </pre></div>
 </div>
@@ -579,7 +654,7 @@ Multiple Value Input (array/list)
 	asin (math)  = 0.5235987755982989
 	asin (numpy) = 0.5235987755982989
 	acos (math)  = 1.0471975511965979
-	acos (numpy) = 1.0471975511965979
+	acos (numpy) = 1.0471975511965976
 	atan (math)  = 0.4636476090008061
 	atan (numpy) = 0.4636476090008061
 
@@ -669,7 +744,7 @@ Multiple Value Input (array/list)
 	acosh (math)  = 1.810991348900196
 	acosh (numpy) = 1.810991348900196
 	atanh (math)  = 0.5493061443340548
-	atanh (numpy) = 0.5493061443340548
+	atanh (numpy) = 0.5493061443340549
 
 Multiple Value Input (array/list)
 	asinh (numpy) = [1.19476322 1.32589777 1.86181256]
@@ -1227,6 +1302,9 @@ By GeoCAT
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <em>This material is based upon work supported by the NSF National Center for Atmospheric Research, a major facility sponsored by the U.S. National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the U.S. National Science Foundation.</em>
+</div>
   </div>
   
 </div>

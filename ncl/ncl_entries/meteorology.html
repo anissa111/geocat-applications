@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=61b3970e" />
   
@@ -42,9 +43,20 @@
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area", "displayMath": [["$$", "$$"], ["\\[", "\\]"]]}, "HTML-CSS": {"linebreaks": {"automatic": true, "width": "container"}, "fonts": {"availableFonts": ["TeX"], "preferredFont": "TeX", "webFont": "TeX"}}, "CommonHTML": {"linebreaks": {"automatic": true, "width": "container"}}, "SVG": {"linebreaks": {"automatic": true, "width": "container"}}})</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ncl/ncl_entries/meteorology';</script>
     <link rel="icon" href="../../_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -228,6 +240,70 @@
 
 
 
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/ncl/ncl_entries/meteorology.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Fncl/ncl_entries/meteorology.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -331,12 +407,48 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dewtemp-trh">dewtemp_trh</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dewtemp-trh">dewtemp_trh</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#daylight-fao56">daylight_fao56</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daylight-fao56">daylight_fao56</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-temp-fao56">satvpr_temp_fao56</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-tdew-fao56">satvpr_tdew_fao56</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-slope-fao56">satvpr_slope_fao56</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coriolis-param">coriolis_param</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum">relhum</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum-ice">relhum_ice</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum-water">relhum_water</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dpres-plevel">dpres_plevel</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psychro-fao56">psychro_fao56</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Grab and Go</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-resources">Python Resources</a></li>
@@ -359,18 +471,34 @@ document.write(`
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
 <p>This section covers meteorology functions from NCL:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/dewtemp_trh.shtml">dewtemp_trh</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Crop/daylight_fao56.shtml">daylight_fao56</a></p></li>
+<li><p><a class="reference internal" href="#dewtemp-trh"><span class="std std-ref">dewtemp_trh</span></a></p></li>
+<li><p><a class="reference internal" href="#daylight-fao56"><span class="std std-ref">daylight_fao56</span></a></p></li>
+<li><p><a class="reference internal" href="#satvpr-temp-fao56"><span class="std std-ref">satvpr_temp_fao56</span></a></p></li>
+<li><p><a class="reference internal" href="#satvpr-tdew-fao56"><span class="std std-ref">satvpr_tdew_fao56</span></a></p></li>
+<li><p><a class="reference internal" href="#satvpr-slope-fao56"><span class="std std-ref">satvpr_slope_fao56</span></a></p></li>
+<li><p><a class="reference internal" href="#coriolis-param"><span class="std std-ref">coriolis_param</span></a></p></li>
+<li><p><a class="reference internal" href="#relhum"><span class="std std-ref">relhum</span></a></p></li>
+<li><p><a class="reference internal" href="#relhum-ice"><span class="std std-ref">relhum_ice</span></a></p></li>
+<li><p><a class="reference internal" href="#relhum-water"><span class="std std-ref">relhum_water</span></a></p></li>
+<li><p><a class="reference internal" href="#dpres-plevel"><span class="std std-ref">dpres_plevel</span></a></p></li>
+<li><p><a class="reference internal" href="#psychro-fao56"><span class="std std-ref">psychro_fao56</span></a></p></li>
 </ul>
 </section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
 <section id="dewtemp-trh">
-<h2>dewtemp_trh<a class="headerlink" href="#dewtemp-trh" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">dewtemp_trh</span></code> calculates the dew point temperature given temperature and relative humidity using the equations from John Dutton’s <em>“Ceaseless Wind”</em> (pg. 273-274)<a class="footnote-reference brackets" href="#footcite-dutton-1986" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> and returns a temperature in Kelvin</p>
-<div class="admonition alert alert-info">
-    <p class="admonition-title" style="font-weight:bold">Important Note</p>
-    To convert from Kelvin to Celsius <code>-273.15</code> and to convert from Celsius to Kelvin <code>+273.15</code>
-</div><section id="grab-and-go">
-<h3>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h3>
+<h3>dewtemp_trh<a class="headerlink" href="#dewtemp-trh" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/dewtemp_trh.shtml"><code class="docutils literal notranslate"><span class="pre">dewtemp_trh</span></code></a> calculates the dew point temperature given temperature and relative humidity using the equations from John Dutton’s <em>“Ceaseless Wind”</em> (pg. 273-274)<a class="footnote-reference brackets" href="#footcite-dutton-1986" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> and returns a temperature in Kelvin.</p>
+<p>Where, for the gas constant of water vapor (<span class="math notranslate nohighlight">\(R_{v}\)</span>)of 461.5 <span class="math notranslate nohighlight">\(\frac{J}{K*kg}\)</span> (<span class="math notranslate nohighlight">\(\frac{461.5}{1000 * 4.186} \frac{cal}{g*k}\)</span>), the empirical value of the latent heat (pg. 273, Problem 8.3.1) is:</p>
+<p><span class="math notranslate nohighlight">\(L_{lv} = 597.3 - 0.57(T - 273)\)</span></p>
+<p>So, when <span class="math notranslate nohighlight">\(h\)</span> is the relative humidity, the dew point temperature (pg. 273, Equation 6, solved for as <span class="math notranslate nohighlight">\(T_D\)</span>) is:</p>
+<p><span class="math notranslate nohighlight">\(T_D = \frac{T * L_{lv}}{L_{lv} - R_{v}Tlog(h)}\)</span></p>
+<div class="admonition-important-note admonition">
+<p class="admonition-title">Important Note</p>
+<p>To convert from Kelvin to Celsius <code class="docutils literal notranslate"><span class="pre">-273.15</span></code> and to convert from Celsius to Kelvin <code class="docutils literal notranslate"><span class="pre">+273.15</span></code></p>
+</div>
+<section id="grab-and-go">
+<h4>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: Single Value</span>
@@ -410,10 +538,14 @@ document.write(`
 </section>
 </section>
 <section id="daylight-fao56">
-<h2>daylight_fao56<a class="headerlink" href="#daylight-fao56" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">daylight_fao56</span></code> calculates the maximum number of daylight hours as described in the Food and Agriculture Organization (FAO) Irrigation and Drainage Paper 56 <a class="reference external" href="https://www.fao.org/4/X0490E/x0490e07.htm#chapter%203%20%20%20meteorological%20data">(Chapter 3, Equation 34)</a> <a class="footnote-reference brackets" href="#footcite-allan-fao-1998" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
-<section id="id3">
-<h3>Grab and Go<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h3>daylight_fao56<a class="headerlink" href="#daylight-fao56" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Crop/daylight_fao56.shtml"><code class="docutils literal notranslate"><span class="pre">daylight_fao56</span></code></a> calculates the maximum number of daylight hours as described in the Food and Agriculture Organization (FAO) Irrigation and Drainage Paper 56 <a class="reference external" href="https://www.fao.org/4/X0490E/x0490e07.htm#chapter%203%20%20%20meteorological%20data">(Chapter 3, Equation 34)</a> <a class="footnote-reference brackets" href="#footcite-allan-fao-1998" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+<p>Where the maximum number of daylight hours, <span class="math notranslate nohighlight">\(N\)</span>, is:</p>
+<p><span class="math notranslate nohighlight">\(N = \frac{24}{{\pi}} {\omega}_{s}\)</span></p>
+<p>And <span class="math notranslate nohighlight">\({\omega}_{s}\)</span> is the sunset hour angle in radians <a class="reference external" href="https://www.fao.org/4/X0490E/x0490e07.htm#chapter%203%20%20%20meteorological%20data">(Chapter 3, Equation 25)</a> <a class="footnote-reference brackets" href="#footcite-allan-fao-1998" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> which is calculated from the latitude of the observer on Earth (<span class="math notranslate nohighlight">\(\varphi\)</span>) and the sun’s declination (<span class="math notranslate nohighlight">\(\delta\)</span>):</p>
+<p><span class="math notranslate nohighlight">\({\omega}_{s} = arccos[-tan({\varphi})tan({\delta})]\)</span></p>
+<section id="id4">
+<h4>Grab and Go<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: Single Value</span>
@@ -446,7 +578,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[11.921149],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[11.92115 ],
        [14.843202],
        [11.920901],
        [ 9.156431]], dtype=float32)
@@ -456,6 +588,515 @@ document.write(`
 </div>
 </section>
 </section>
+<section id="satvpr-temp-fao56">
+<h3>satvpr_temp_fao56<a class="headerlink" href="#satvpr-temp-fao56" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Crop/satvpr_temp_fao56.shtml"><code class="docutils literal notranslate"><span class="pre">satvpr_temp_fao56</span></code></a> calculates saturation vapor pressure using temperature as described in the Food and Agriculture Organization (FAO) Irrigation and Drainage Paper 56 <a class="reference external" href="https://www.fao.org/4/x0490e/x0490e07.htm">(Chapter 3, Equation 11)</a> <a class="footnote-reference brackets" href="#footcite-allan-fao-1998" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+<p>Where the saturation vapor pressure, <span class="math notranslate nohighlight">\(e^°\)</span> (kPa), at air temperature <span class="math notranslate nohighlight">\(T\)</span> (°C) is calculated as:</p>
+<p><span class="math notranslate nohighlight">\(e^°(T) = 0.6108 {\exp}[\frac{17.27T}{T + 237.3}]\)</span></p>
+<section id="id6">
+<h4>Grab and Go<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: Single Value</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">saturation_vapor_pressure</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># Fahrenheit</span>
+
+<span class="n">saturation_vapor_pressure</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(1.22796262)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: List/Array</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">saturation_vapor_pressure</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">212</span><span class="p">]</span>  <span class="c1"># Fahrenheit</span>
+
+<span class="n">saturation_vapor_pressure</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  0.63594167,   1.22796262,   6.54556639, 102.21571649])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="satvpr-tdew-fao56">
+<h3>satvpr_tdew_fao56<a class="headerlink" href="#satvpr-tdew-fao56" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Crop/satvpr_tdew_fao56.shtml"><code class="docutils literal notranslate"><span class="pre">satvpr_tdew_fao56</span></code></a> calculates the actual saturation vapor pressure using dewpoint temperature as described in the Food and Agriculture Organization (FAO) Irrigation and Drainage Paper 56 <a class="reference external" href="https://www.fao.org/4/x0490e/x0490e07.htm">(Chapter 3, Equation 14)</a> <a class="footnote-reference brackets" href="#footcite-allan-fao-1998" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+<p>Where the actual vapor pressure, <span class="math notranslate nohighlight">\(e_{a}\)</span> (kPa), is saturation vapor pressure at a specific dewpoint temperature, <span class="math notranslate nohighlight">\(T_{dew}\)</span> (°C), which is calculated as:</p>
+<p><span class="math notranslate nohighlight">\(e_{a} = e^°(T_{dew}) = 0.6108 {\exp}[\frac{17.27 T_{dew}}{T_{dew} + 237.3}]\)</span></p>
+<section id="id8">
+<h4>Grab and Go<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: Single Value</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">actual_saturation_vapor_pressure</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="mi">35</span>  <span class="c1"># Fahrenheit</span>
+
+<span class="n">actual_saturation_vapor_pressure</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(0.68898447)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: List/Array</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">actual_saturation_vapor_pressure</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>  <span class="c1"># Fahrenheit</span>
+
+<span class="n">actual_saturation_vapor_pressure</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.68898447,  1.76730647,  3.49620825, 80.00607017])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="satvpr-slope-fao56">
+<h3>satvpr_slope_fao56<a class="headerlink" href="#satvpr-slope-fao56" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Crop/satvpr_slope_fao56.shtml"><code class="docutils literal notranslate"><span class="pre">satvpr_slope_fao56</span></code></a> calculates the slope of the saturation vapor pressure curve as described in the Food and Agriculture Organization (FAO) Irrigation and Drainage Paper 56 <a class="reference external" href="https://www.fao.org/4/x0490e/x0490e07.htm">(Chapter 3, Equation 13)</a> <a class="footnote-reference brackets" href="#footcite-allan-fao-1998" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+<p>Where the slope of saturation vapor pressure curve, <span class="math notranslate nohighlight">\({\Delta}\)</span> (kPa), at air temperature <span class="math notranslate nohighlight">\(T\)</span> (°C) is calculated as:</p>
+<p><span class="math notranslate nohighlight">\({\Delta} = \frac{4098 (0.6108 {\exp}[\frac{17.27T}{T + 237.3}])}{(T + 237.3)^2}\)</span></p>
+<section id="id10">
+<h4>Grab and Go<a class="headerlink" href="#id10" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: Single Value</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">saturation_vapor_pressure_slope</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="mi">60</span>  <span class="c1"># Fahrenheit</span>
+
+<span class="n">saturation_vapor_pressure_slope</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(0.11322096)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: List/Array</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">saturation_vapor_pressure_slope</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>  <span class="c1"># Fahrenheit</span>
+
+<span class="n">saturation_vapor_pressure_slope</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.04941909, 0.11322096, 0.20552235, 2.99770999])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="coriolis-param">
+<h3>coriolis_param<a class="headerlink" href="#coriolis-param" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/coriolis_param.shtml"><code class="docutils literal notranslate"><span class="pre">coriolis_param</span></code></a> calculates the Coriolis parameter at a given latitude</p>
+<p>The Coriolis parameter (also known as the Coriolis frequency or the Coriolis coefficient) is calculated as twice the rotation rate (<span class="math notranslate nohighlight">\({\Omega}\)</span>) of the Earth times the sine of the latitude (<span class="math notranslate nohighlight">\({\varphi}\)</span>)<a class="footnote-reference brackets" href="#footcite-hobbs-wallace-1997" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<p><span class="math notranslate nohighlight">\(f = 2{\Omega}sin({\varphi})\)</span></p>
+<p>The rotation rate depends on the length of the rotation period of the Earth (T) which is defined as one sidereal day (23 hours and 56 minutes):</p>
+<p><span class="math notranslate nohighlight">\({\Omega} = \frac{2 * {\pi}}{T}  = 7.292\text{e-5} \frac{rad}{s}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: Single Value</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">metpy.calc</span><span class="w"> </span><span class="kn">import</span> <span class="n">coriolis_parameter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">metpy.units</span><span class="w"> </span><span class="kn">import</span> <span class="n">units</span>
+
+<span class="n">latitude</span> <span class="o">=</span> <span class="mi">40</span>  <span class="c1"># degrees</span>
+
+<span class="n">coriolis_parameter</span><span class="p">(</span><span class="n">latitude</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span><span class="o">.</span><span class="n">magnitude</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(9.374562340818716e-05)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: List/Array</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">metpy.calc</span><span class="w"> </span><span class="kn">import</span> <span class="n">coriolis_parameter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">metpy.units</span><span class="w"> </span><span class="kn">import</span> <span class="n">units</span>
+
+<span class="n">latitude</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">65</span><span class="p">]</span>  <span class="c1"># degrees</span>
+
+<span class="n">coriolis_parameter</span><span class="p">(</span><span class="n">latitude</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span><span class="o">.</span><span class="n">magnitude</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-4.98810043e-05,  9.37456234e-05,  1.32178012e-04])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="relhum">
+<h3>relhum<a class="headerlink" href="#relhum" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/relhum.shtml"><code class="docutils literal notranslate"><span class="pre">relhum</span></code></a> calculates relative humidity given temperature, mixing ratio, and pressure.
+The percent of relative humidity (<span class="math notranslate nohighlight">\({\Psi}\)</span>) is based on the original <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/relhum.shtml">NCL <code class="docutils literal notranslate"><span class="pre">relhum</span></code> code</a>:</p>
+<p><span class="math notranslate nohighlight">\({\Psi} = w (\frac{p - 0.378 * e_s}{0.622 * e_s}) * 100\)</span></p>
+<p>Where <span class="math notranslate nohighlight">\(w\)</span> is the mass mixing ratio of water vapor and dry air, <span class="math notranslate nohighlight">\(p\)</span> is pressure, and <span class="math notranslate nohighlight">\(e_s\)</span> is the saturation vapor pressure for a given temperature.</p>
+<p>The constant <code class="docutils literal notranslate"><span class="pre">0.622</span></code> represents the ratio of the molar mass of water vapor (<span class="math notranslate nohighlight">\(M_w\)</span>) in g/mol and the molar mass of dry air (<span class="math notranslate nohighlight">\(M_d\)</span>) in g/mol:</p>
+<p><span class="math notranslate nohighlight">\(\frac{M_w}{M_d} = \frac{18.02}{28.9634} = 0.622\)</span></p>
+<section id="id12">
+<h4>Grab and Go<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: Single Value</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">relhum</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="mf">303.15</span>  <span class="c1"># Kelvin</span>
+<span class="n">mixing_ratio</span> <span class="o">=</span> <span class="mf">0.018</span>
+<span class="n">pressure</span> <span class="o">=</span> <span class="mi">101325</span>  <span class="c1"># Pa</span>
+
+<span class="n">relhum</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">mixing_ratio</span><span class="p">,</span> <span class="n">pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(68.05239617370448)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: List/Array</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">relhum</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="mf">375.15</span><span class="p">,</span> <span class="mf">303.15</span><span class="p">,</span> <span class="mf">315.15</span><span class="p">]</span>  <span class="c1"># Kelvin</span>
+<span class="n">mixing_ratio</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.018</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">]</span>
+<span class="n">pressure</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100325</span><span class="p">,</span> <span class="mi">101325</span><span class="p">,</span> <span class="mi">101400</span><span class="p">]</span>  <span class="c1"># Pa</span>
+
+<span class="n">relhum</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">mixing_ratio</span><span class="p">,</span> <span class="n">pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([43.78181802, 68.05239617,  1.92796564])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="relhum-ice">
+<h3>relhum_ice<a class="headerlink" href="#relhum-ice" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/relhum_ice.shtml"><code class="docutils literal notranslate"><span class="pre">relhum_ice</span></code></a> calculates relative humidity with respect to ice, given temperature, mixing ratio, and pressure.</p>
+<p>First,the approximation of vapor pressure is calculated from the Magnus Form.<a class="footnote-reference brackets" href="#footcite-magnus-form" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
+<p><span class="math notranslate nohighlight">\({P_v} = c \exp^{\frac{a * T}{b + T}}\)</span></p>
+<p>Where <span class="math notranslate nohighlight">\(c\)</span> is vapor pressure of water at 0 degrees Celsius (Pa), and <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are saturation vapor pressure coefficient approximations over ice, as defined by the AEDki model.<a class="footnote-reference brackets" href="#footcite-notes-magnus-form" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p>
+<p><span class="math notranslate nohighlight">\(a = 22.571\)</span>, <span class="math notranslate nohighlight">\(b = 273.71\)</span>, <span class="math notranslate nohighlight">\(c = 6.1128\)</span></p>
+<p>Then, the specific humidity (<span class="math notranslate nohighlight">\(q_{st}\)</span>) is calculated with <span class="math notranslate nohighlight">\(p\)</span> as pressure:</p>
+<p><span class="math notranslate nohighlight">\(q_{st} = \frac{0.622 * P_v}{(p * 0.1) - 0.378 * P_v}\)</span></p>
+<p>The constant <code class="docutils literal notranslate"><span class="pre">0.622</span></code> represents the ratio of the molar mass of vapor (<span class="math notranslate nohighlight">\(M_w\)</span>) and dry air (<span class="math notranslate nohighlight">\(M_d\)</span>) in g/mol:</p>
+<p><span class="math notranslate nohighlight">\(\frac{M_w}{M_d} = \frac{18.02}{28.9634} = 0.622\)</span></p>
+<p>And the <code class="docutils literal notranslate"><span class="pre">0.378</span></code> represents a correction constant where:</p>
+<p><span class="math notranslate nohighlight">\(1 - \frac{M_w}{M_d} = 1 - 0.622 = 0.378\)</span></p>
+<p>The percent of relative humidity (<span class="math notranslate nohighlight">\({\Psi}\)</span>) is calculated with <span class="math notranslate nohighlight">\(w\)</span> as the mixing ratio:</p>
+<p><span class="math notranslate nohighlight">\({\Psi} = 100 * \frac{w}{q_{st}}\)</span></p>
+<section id="id15">
+<h4>Grab and Go<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: Single Value</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">relhum_ice</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="mf">268.15</span>  <span class="c1"># Kelvin</span>
+<span class="n">mixing_ratio</span> <span class="o">=</span> <span class="mf">0.0037</span>
+<span class="n">pressure</span> <span class="o">=</span> <span class="mi">100000</span>  <span class="c1"># Pa</span>
+
+<span class="n">relhum_ice</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">mixing_ratio</span><span class="p">,</span> <span class="n">pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(147.88012516016957)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: List/Array</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">relhum_ice</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="mf">268.15</span><span class="p">,</span> <span class="mf">258.15</span><span class="p">,</span> <span class="mf">250.15</span><span class="p">]</span>  <span class="c1"># Kelvin</span>
+<span class="n">mixing_ratio</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0037</span><span class="p">,</span> <span class="mf">0.018</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">]</span>
+<span class="n">pressure</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100000</span><span class="p">,</span> <span class="mi">100325</span><span class="p">,</span> <span class="mi">101325</span><span class="p">]</span>  <span class="c1"># Pa</span>
+
+<span class="n">relhum_ice</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">mixing_ratio</span><span class="p">,</span> <span class="n">pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 147.88012516, 1756.81983351,  211.26793555])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="relhum-water">
+<h3>relhum_water<a class="headerlink" href="#relhum-water" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/relhum_water.shtml"><code class="docutils literal notranslate"><span class="pre">relhum_water</span></code></a> calculates relative humidity with respect to water, given temperature, mixing ratio, and pressure.</p>
+<p>First,the approximation of vapor pressure is calculated from the Magnus Tetens form.<a class="footnote-reference brackets" href="#footcite-murray-1967" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p>
+<p><span class="math notranslate nohighlight">\({P_v} = c \exp^{\frac{a (T- 273.16)}{T - b}}\)</span></p>
+<p>Where <span class="math notranslate nohighlight">\(c\)</span> is vapor pressure of water at 0 degrees Celsius (Pa) as defined by the AEDki model<a class="footnote-reference brackets" href="#footcite-notes-magnus-form" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>, and <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are saturation vapor pressure coefficient approximations, as defined by the Magnus Tetens model (Equation 6)<a class="footnote-reference brackets" href="#footcite-murray-1967" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p>
+<p><span class="math notranslate nohighlight">\(a = 17.269\)</span>, <span class="math notranslate nohighlight">\(b = 35.86\)</span>, <span class="math notranslate nohighlight">\(c = 6.1128\)</span></p>
+<p>Then, the specific humidity (<span class="math notranslate nohighlight">\(q_{st}\)</span>) is calculated with <span class="math notranslate nohighlight">\(p\)</span> as pressure:</p>
+<p><span class="math notranslate nohighlight">\(q_{st} = \frac{0.622 * P_v}{(p * 0.1) - 0.378 * P_v}\)</span></p>
+<p>The constant <code class="docutils literal notranslate"><span class="pre">0.622</span></code> represents the ratio of the molar mass of vapor (<span class="math notranslate nohighlight">\(M_w\)</span>) and dry air (<span class="math notranslate nohighlight">\(M_d\)</span>) in g/mol:</p>
+<p><span class="math notranslate nohighlight">\(\frac{M_w}{M_d} = \frac{18.02}{28.9634} = 0.622\)</span></p>
+<p>And the <code class="docutils literal notranslate"><span class="pre">0.378</span></code> represents a correction constant where:</p>
+<p><span class="math notranslate nohighlight">\(1 - \frac{M_w}{M_d} = 1 - 0.622 = 0.378\)</span></p>
+<p>The percent of relative humidity (<span class="math notranslate nohighlight">\({\Psi}\)</span>) is calculated with <span class="math notranslate nohighlight">\(w\)</span> as the mixing ratio:</p>
+<p><span class="math notranslate nohighlight">\({\Psi} = 100 * \frac{w}{q_{st}}\)</span></p>
+<section id="id19">
+<h4>Grab and Go<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: Single Value</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">relhum_water</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="mf">315.15</span>  <span class="c1"># Kelvin</span>
+<span class="n">mixing_ratio</span> <span class="o">=</span> <span class="mf">0.0037</span>
+<span class="n">pressure</span> <span class="o">=</span> <span class="mi">100000</span>  <span class="c1"># Pa</span>
+
+<span class="n">relhum_water</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">mixing_ratio</span><span class="p">,</span> <span class="n">pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(7.025120800518423)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: List/Array</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">relhum_ice</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="mf">298.15</span><span class="p">,</span> <span class="mf">315.15</span><span class="p">,</span> <span class="mf">330.15</span><span class="p">]</span>  <span class="c1"># Kelvin</span>
+<span class="n">mixing_ratio</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0018</span><span class="p">,</span> <span class="mf">0.0037</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">]</span>
+<span class="n">pressure</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100325</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">101325</span><span class="p">]</span>  <span class="c1"># Pa</span>
+
+<span class="n">relhum_water</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">mixing_ratio</span><span class="p">,</span> <span class="n">pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([9.04879928, 7.0251208 , 0.87910297])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="dpres-plevel">
+<h3>dpres_plevel<a class="headerlink" href="#dpres-plevel" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/dpres_plevel.shtml"><code class="docutils literal notranslate"><span class="pre">dpres_plevel</span></code></a> calculates the change in pressure (delta pressure) for each layer in a specified constant pressure level coordinate system while accounting for specified surface and top pressures.</p>
+<div class="admonition-important-note admonition">
+<p class="admonition-title">Important Note</p>
+<p>Some layers may be assigned missing values if they are fully below the ground (below surface_pressure) or fully above the specified pressure top in NCL. In geocat-comp the surface pressure is accounted for as in NCL, but the pressure top is assumed to be the minimum specified pressure level and is not currently user configurable.</p>
+</div>
+<p>For example:</p>
+<center>
+<img src="../../_static/images/meteorology_delta_pressure_example.jpg" width="400" height="600">
+</center>
+<section id="id20">
+<h4>Grab and Go<a class="headerlink" href="#id20" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: Single Value</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">delta_pressure</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+
+<span class="n">pressure_levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="mi">1000</span><span class="p">,</span>
+        <span class="mi">950</span><span class="p">,</span>
+        <span class="mi">900</span><span class="p">,</span>
+        <span class="mi">850</span><span class="p">,</span>
+        <span class="mi">800</span><span class="p">,</span>
+        <span class="mi">750</span><span class="p">,</span>
+        <span class="mi">700</span><span class="p">,</span>
+        <span class="mi">650</span><span class="p">,</span>
+        <span class="mi">600</span><span class="p">,</span>
+        <span class="mi">550</span><span class="p">,</span>
+        <span class="mi">500</span><span class="p">,</span>
+        <span class="mi">450</span><span class="p">,</span>
+        <span class="mi">400</span><span class="p">,</span>
+        <span class="mi">350</span><span class="p">,</span>
+        <span class="mi">300</span><span class="p">,</span>
+        <span class="mi">250</span><span class="p">,</span>
+        <span class="mi">200</span><span class="p">,</span>
+        <span class="mi">175</span><span class="p">,</span>
+        <span class="mi">150</span><span class="p">,</span>
+        <span class="mi">125</span><span class="p">,</span>
+        <span class="mi">100</span><span class="p">,</span>
+        <span class="mi">80</span><span class="p">,</span>
+        <span class="mi">70</span><span class="p">,</span>
+        <span class="mi">60</span><span class="p">,</span>
+        <span class="mi">50</span><span class="p">,</span>
+        <span class="mi">40</span><span class="p">,</span>
+        <span class="mi">30</span><span class="p">,</span>
+        <span class="mi">25</span><span class="p">,</span>
+        <span class="mi">20</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+<span class="n">surface_pressure</span> <span class="o">=</span> <span class="mi">1050</span>
+
+<span class="n">delta_pressure</span><span class="p">(</span><span class="n">pressure_levels</span><span class="p">,</span> <span class="n">surface_pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([75. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. ,
+       50. , 50. , 50. , 50. , 50. , 37.5, 25. , 25. , 25. , 22.5, 15. ,
+       10. , 10. , 10. , 10. ,  7.5,  5. ,  2.5])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: List/Array</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">delta_pressure</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">pressure_levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="mi">1000</span><span class="p">,</span>
+        <span class="mi">950</span><span class="p">,</span>
+        <span class="mi">900</span><span class="p">,</span>
+        <span class="mi">850</span><span class="p">,</span>
+        <span class="mi">800</span><span class="p">,</span>
+        <span class="mi">750</span><span class="p">,</span>
+        <span class="mi">700</span><span class="p">,</span>
+        <span class="mi">650</span><span class="p">,</span>
+        <span class="mi">600</span><span class="p">,</span>
+        <span class="mi">550</span><span class="p">,</span>
+        <span class="mi">500</span><span class="p">,</span>
+        <span class="mi">450</span><span class="p">,</span>
+        <span class="mi">400</span><span class="p">,</span>
+        <span class="mi">350</span><span class="p">,</span>
+        <span class="mi">300</span><span class="p">,</span>
+        <span class="mi">250</span><span class="p">,</span>
+        <span class="mi">200</span><span class="p">,</span>
+        <span class="mi">175</span><span class="p">,</span>
+        <span class="mi">150</span><span class="p">,</span>
+        <span class="mi">125</span><span class="p">,</span>
+        <span class="mi">100</span><span class="p">,</span>
+        <span class="mi">80</span><span class="p">,</span>
+        <span class="mi">70</span><span class="p">,</span>
+        <span class="mi">60</span><span class="p">,</span>
+        <span class="mi">50</span><span class="p">,</span>
+        <span class="mi">40</span><span class="p">,</span>
+        <span class="mi">30</span><span class="p">,</span>
+        <span class="mi">25</span><span class="p">,</span>
+        <span class="mi">20</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+<span class="n">surface_pressure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1025</span><span class="p">,</span> <span class="mi">1050</span><span class="p">])</span>
+
+<span class="n">delta_pressure</span><span class="p">(</span><span class="n">pressure_levels</span><span class="p">,</span> <span class="n">surface_pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[25. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. ,
+        50. , 50. , 50. , 50. , 50. , 37.5, 25. , 25. , 25. , 22.5, 15. ,
+        10. , 10. , 10. , 10. ,  7.5,  5. ,  2.5],
+       [50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. ,
+        50. , 50. , 50. , 50. , 50. , 37.5, 25. , 25. , 25. , 22.5, 15. ,
+        10. , 10. , 10. , 10. ,  7.5,  5. ,  2.5],
+       [75. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. , 50. ,
+        50. , 50. , 50. , 50. , 50. , 37.5, 25. , 25. , 25. , 22.5, 15. ,
+        10. , 10. , 10. , 10. ,  7.5,  5. ,  2.5]])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="psychro-fao56">
+<h3>psychro_fao56<a class="headerlink" href="#psychro-fao56" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Crop/psychro_fao56.shtml"><code class="docutils literal notranslate"><span class="pre">psychro_fao56</span></code></a> computes the psychrometric constant (kPa/C) as described in the Food and Agriculture Organization (FAO) Irrigation and Drainage Paper 56 (<a class="reference external" href="https://www.fao.org/4/x0490e/x0490e07.htm#psychrometric%20constant%20(g)">Chapter 3, Equation 8</a> or <a class="reference external" href="https://www.fao.org/4/x0490e/x0490e0k.htm#annex%203.%20background%20on%20physical%20parameters%20used%20in%20evapotranspiration%20computatio">Equation 3-10 in Annex 3</a>)<a class="footnote-reference brackets" href="#footcite-allan-fao-1998" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+<p><span class="math notranslate nohighlight">\({\gamma} = \frac{c_{p}P}{{\epsilon}{\lambda}}\)</span></p>
+<p><span class="math notranslate nohighlight">\({\gamma} = \frac{1.013 \text{e-3} * P}{0.622 * 2.45}\)</span></p>
+<p><span class="math notranslate nohighlight">\({\gamma} = 0.6647 \text{e-3} * P\)</span></p>
+<p>Where, <span class="math notranslate nohighlight">\({\gamma}\)</span> is the psychrometric constant (in kPa/C), <span class="math notranslate nohighlight">\(P\)</span> is the atmospheric pressure (kPa), <span class="math notranslate nohighlight">\({\lambda}\)</span> is the latent heat vaporization (2.45 MJ/kgC), and <span class="math notranslate nohighlight">\({\epsilon}\)</span> is the ratio of the molecular weight of water and dry air (0.622)</p>
+<section id="id22">
+<h4>Grab and Go<a class="headerlink" href="#id22" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: Single Value</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">psychrometric_constant</span>
+
+<span class="n">pressure</span> <span class="o">=</span> <span class="mi">80</span>  <span class="c1"># kPa/C</span>
+<span class="n">psychrometric_constant</span><span class="p">(</span><span class="n">pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0531792)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input: List/Array</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geocat.comp</span><span class="w"> </span><span class="kn">import</span> <span class="n">psychrometric_constant</span>
+
+<span class="n">pressure</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]</span>
+<span class="n">psychrometric_constant</span><span class="p">(</span><span class="n">pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.0066474, 0.033237 , 0.0531792, 0.66474  ])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
 <hr class="docutils" />
 <section id="python-resources">
 <h2>Python Resources<a class="headerlink" href="#python-resources" title="Link to this heading">#</a></h2>
@@ -463,17 +1104,27 @@ document.write(`
 <li><p><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/user_api/generated/geocat.comp.meteorology.dewtemp.html">GeoCAT-comp <code class="docutils literal notranslate"><span class="pre">dewtemp</span></code> documentation</a></p></li>
 <li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.constants.convert_temperature.html">Convert between different temperature scales in SciPy</a></p></li>
 <li><p><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/user_api/generated/geocat.comp.meteorology.max_daylight.html">GeoCAT-comp <code class="docutils literal notranslate"><span class="pre">max_daylight</span></code> Documentation</a></p></li>
+<li><p><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/user_api/generated/geocat.comp.meteorology.saturation_vapor_pressure.html">GeoCAT-comp <code class="docutils literal notranslate"><span class="pre">saturation_vapor_pressure</span></code> Documentation</a></p></li>
+<li><p><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/user_api/generated/geocat.comp.meteorology.actual_saturation_vapor_pressure.html">GeoCAT-comp <code class="docutils literal notranslate"><span class="pre">actual_saturation_vapor_pressure</span></code> Documentation</a></p></li>
+<li><p><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/user_api/generated/geocat.comp.meteorology.saturation_vapor_pressure_slope.html">GeoCAT-comp <code class="docutils literal notranslate"><span class="pre">saturation_vapor_pressure_slope</span></code> Documentation</a></p></li>
+<li><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.coriolis_parameter.html">MetPy <code class="docutils literal notranslate"><span class="pre">coriolis_parameter</span></code> Documentation</a></p></li>
+<li><p><a class="reference external" href="https://geocat-comp.readthedocs.io/en/v2023.06.0/user_api/generated/geocat.comp.meteorology.relhum.html">GeoCAT-comp <code class="docutils literal notranslate"><span class="pre">relhum</span></code> Documentation</a></p></li>
+<li><p><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/user_api/generated/geocat.comp.meteorology.relhum_ice.html">GeoCAT-comp <code class="docutils literal notranslate"><span class="pre">relhum_ice</span></code> Documentation</a></p></li>
+<li><p><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/user_api/generated/geocat.comp.meteorology.relhum_water.html">GeoCAT-comp <code class="docutils literal notranslate"><span class="pre">relhum_water</span></code> Documentation</a></p></li>
+<li><p><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/user_api/generated/geocat.comp.meteorology.delta_pressure.html">GeoCAT-comp <code class="docutils literal notranslate"><span class="pre">delta_pressure</span></code> Documentation</a></p></li>
+<li><p><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/user_api/generated/geocat.comp.meteorology.psychrometric_constant.html">GeoCAT-comp <code class="docutils literal notranslate"><span class="pre">psychrometric_constant</span></code> Documentation</a></p></li>
 </ul>
 </section>
 <section id="additional-reading">
 <h2>Additional Reading<a class="headerlink" href="#additional-reading" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.weather.gov/arx/why_dewpoint_vs_humidity">NOAA: Dew Point vs. Humidity</a></p></li>
+<li><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/api/generated/metpy.calc.relative_humidity_from_mixing_ratio.html#relative-humidity-from-mixing-ratio">MetPy <code class="docutils literal notranslate"><span class="pre">relative_humidity_from_mixing_ratio</span></code> Documentation</a> with alternative equation</p></li>
 </ul>
 </section>
 <section id="references">
 <h2>References:<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id4">
+<div class="docutils container" id="id23">
 </div>
 </section>
 </section>
@@ -484,8 +1135,27 @@ document.write(`
 <p>John A. Dutton. <em>The Ceaseless Wind: An Introduction to the Theory of Atmospheric Motion</em>. Dover Publications, 1986.</p>
 </aside>
 <aside class="footnote brackets" id="footcite-allan-fao-1998" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id3">2</a>,<a role="doc-backlink" href="#id5">3</a>,<a role="doc-backlink" href="#id7">4</a>,<a role="doc-backlink" href="#id9">5</a>,<a role="doc-backlink" href="#id21">6</a>)</span>
 <p>Richard Allan, L. Pereira, and Martin Smith. <em>Crop evapotranspiration - Guidelines for computing crop water requirements - FAO Irrigation and drainage paper 56</em>. Volume 56. FAO, 01 1998.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-hobbs-wallace-1997" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">3</a><span class="fn-bracket">]</span></span>
+<p>Peter V. Hobbs and John Michael Wallace. <em>Atmospheric Science: An Introductory Survey</em>. Academic Press, 1977.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-magnus-form" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">4</a><span class="fn-bracket">]</span></span>
+<p>Oleg A Alduchov and Robert E. Eskridge. Improved magnus form approximation of saturation vapor pressure. 1997. <a class="reference external" href="https://doi.org/10.2172/548871">doi:10.2172/548871</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-notes-magnus-form" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id14">1</a>,<a role="doc-backlink" href="#id17">2</a>)</span>
+<p>Oleg A Alduchov and Robert E. Eskridge. Notes and correspondence: improved magnus form approximation of saturation vapor pressure. 1996. <a class="reference external" href="https://doi.org/10.1175/1520-0450(1996)035%3C0601:IMFAOS%3E2.0.CO;2">doi:10.1175/1520-0450(1996)035%3C0601:IMFAOS%3E2.0.CO;2</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-murray-1967" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id16">1</a>,<a role="doc-backlink" href="#id18">2</a>)</span>
+<p>F. W. Murray. On the computation of saturation vapor pressure. 1967. <a class="reference external" href="https://doi.org/10.1175/1520-0450(1967)006%3C0203:OTCOSV%3E2.0.CO;2">doi:10.1175/1520-0450(1967)006%3C0203:OTCOSV%3E2.0.CO;2</a>.</p>
 </aside>
 </aside>
 
@@ -517,12 +1187,48 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dewtemp-trh">dewtemp_trh</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dewtemp-trh">dewtemp_trh</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#daylight-fao56">daylight_fao56</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daylight-fao56">daylight_fao56</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-temp-fao56">satvpr_temp_fao56</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-tdew-fao56">satvpr_tdew_fao56</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satvpr-slope-fao56">satvpr_slope_fao56</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coriolis-param">coriolis_param</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum">relhum</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum-ice">relhum_ice</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relhum-water">relhum_water</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dpres-plevel">dpres_plevel</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psychro-fao56">psychro_fao56</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Grab and Go</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-resources">Python Resources</a></li>
@@ -565,6 +1271,9 @@ By GeoCAT
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <em>This material is based upon work supported by the NSF National Center for Atmospheric Research, a major facility sponsored by the U.S. National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the U.S. National Science Foundation.</em>
+</div>
   </div>
   
 </div>

@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=61b3970e" />
   
@@ -42,9 +43,18 @@
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EQMBXF1D2V"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-EQMBXF1D2V');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ncl/ncl_entries/general_applied_math';</script>
     <link rel="icon" href="../../_static/GeoCAT_square.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -228,6 +238,70 @@
 
 
 
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/edit/main/docs/ncl/ncl_entries/general_applied_math.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NCAR/geocat-applications/issues/new?title=Issue%20on%20page%20%2Fncl/ncl_entries/general_applied_math.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -331,86 +405,92 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abs-fabs">abs/fabs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abs">*abs</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avg">avg</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avg">avg</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ceil">ceil</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ceil">ceil</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cumsum">cumsum</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cumsum">cumsum</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decimalplaces-round">decimalPlaces/round</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-from-ncl">Differences from NCL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decimalplaces-and-round">decimalPlaces and round</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-from-ncl">Differences from NCL</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exp">exp</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exp">exp</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#floor">floor</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#floor">floor</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-d2r">get_d2r</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-d2r">get_d2r</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-pi">get_pi</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-pi">get_pi</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-r2d">get_r2d</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-r2d">get_r2d</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log">log</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log">log</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log10">log10</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log10">log10</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#max">max</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#max">max</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#min">min</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min">min</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mod">mod</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mod">mod</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#product">product</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product">product</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qsort">qsort</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qsort">qsort</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-matlab">sign_matlab</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sqrt">sqrt</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-matlab">sign_matlab</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sqsort">sqsort</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sqrt">sqrt</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sum">sum</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sqsort">sqsort</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sum">sum</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Grab and Go</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-resources">Python Resources</a></li>
@@ -429,39 +509,42 @@ document.write(`
 <h1>General Applied Math<a class="headerlink" href="#general-applied-math" title="Link to this heading">#</a></h1>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
-<p>This section covers general applied math functions from NCL:</p>
+<p>This section covers the following general applied math functions from NCL:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/abs.shtml">abs</a>/<a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/fabs.shtml">fabs</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/avg.shtml">avg</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/ceil.shtml">ceil</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cumsum.shtml">cumsum</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/decimalPlaces.shtml">decimalPlaces</a>/<a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/round.shtml">round</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/exp.shtml">exp</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/floor.shtml">floor</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/get_d2r.shtml">get_d2r</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/get_r2d.shtml">get_r2d</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/get_pi.shtml">get_pi</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/log.shtml">log</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/log10.shtml">log10</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/max.shtml">max</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/min.shtml">min</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/mod.shtml">mod</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/mod.shtml">product</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/qsort.shtml">qsort</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/sign_matlab.shtml">sign_matlab</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sqrt.shtml">sqrt</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sqsort.shtml">sqsort</a></p></li>
-<li><p><a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/sum.shtml">sum</a></p></li>
+<li><p><a class="reference internal" href="#abs"><span class="std std-ref">*abs</span></a></p></li>
+<li><p><a class="reference internal" href="#avg"><span class="std std-ref">avg</span></a></p></li>
+<li><p><a class="reference internal" href="#ceil"><span class="std std-ref">ceil</span></a></p></li>
+<li><p><a class="reference internal" href="#cumsum"><span class="std std-ref">cumsum</span></a></p></li>
+<li><p><a class="reference internal" href="#decimalplaces-and-round"><span class="std std-ref">decimalPlaces</span></a></p></li>
+<li><p><a class="reference internal" href="#decimalplaces-and-round"><span class="std std-ref">round</span></a></p></li>
+<li><p><a class="reference internal" href="#exp"><span class="std std-ref">exp</span></a></p></li>
+<li><p><a class="reference internal" href="#floor"><span class="std std-ref">floor</span></a></p></li>
+<li><p><a class="reference internal" href="#get-d2r"><span class="std std-ref">get_d2r</span></a></p></li>
+<li><p><a class="reference internal" href="#get-r2d"><span class="std std-ref">get_r2d</span></a></p></li>
+<li><p><a class="reference internal" href="#get-pi"><span class="std std-ref">get_pi</span></a></p></li>
+<li><p><a class="reference internal" href="#log"><span class="std std-ref">log</span></a></p></li>
+<li><p><a class="reference internal" href="#log10"><span class="std std-ref">log10</span></a></p></li>
+<li><p><a class="reference internal" href="#max"><span class="std std-ref">max</span></a></p></li>
+<li><p><a class="reference internal" href="#min"><span class="std std-ref">min</span></a></p></li>
+<li><p><a class="reference internal" href="#mod"><span class="std std-ref">mod</span></a></p></li>
+<li><p><a class="reference internal" href="#product"><span class="std std-ref">product</span></a></p></li>
+<li><p><a class="reference internal" href="#qsort"><span class="std std-ref">qsort</span></a></p></li>
+<li><p><a class="reference internal" href="#sign-matlab"><span class="std std-ref">sign_matlab</span></a></p></li>
+<li><p><a class="reference internal" href="#sqrt"><span class="std std-ref">sqrt</span></a></p></li>
+<li><p><a class="reference internal" href="#sqsort"><span class="std std-ref">sqsort</span></a></p></li>
+<li><p><a class="reference internal" href="#sum"><span class="std std-ref">sum</span></a></p></li>
 </ul>
 </section>
-<section id="abs-fabs">
-<h2>abs/fabs<a class="headerlink" href="#abs-fabs" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">abs</span></code> and <code class="docutils literal notranslate"><span class="pre">fabs</span></code> functions returns the absolute value of numeric data</p>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
+<section id="abs">
+<h3>*abs<a class="headerlink" href="#abs" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/abs.shtml"><code class="docutils literal notranslate"><span class="pre">abs</span></code></a> and <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/fabs.shtml"><code class="docutils literal notranslate"><span class="pre">fabs</span></code></a> functions return the absolute value of numeric data</p>
 <section id="grab-and-go">
-<h3>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#grab-and-go" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-In Python</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-in Python</span>
 <span class="n">input_value</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.14</span>
 
 <span class="n">abs_output</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">input_value</span><span class="p">)</span>
@@ -477,7 +560,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.14</span><span class="p">,</span> <span class="o">-</span><span class="mi">123</span><span class="p">]</span>
@@ -496,13 +579,13 @@ document.write(`
 </section>
 </section>
 <section id="avg">
-<h2>avg<a class="headerlink" href="#avg" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">avg</span></code> function calculate the average of numeric values</p>
+<h3>avg<a class="headerlink" href="#avg" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/avg.shtml"><code class="docutils literal notranslate"><span class="pre">avg</span></code></a> function calculate the average of numeric values</p>
 <section id="id1">
-<h3>Grab and Go<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_value</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -520,7 +603,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
@@ -538,7 +621,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
@@ -557,10 +640,10 @@ document.write(`
 </section>
 </section>
 <section id="ceil">
-<h2>ceil<a class="headerlink" href="#ceil" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">ceil</span></code> function returns the smallest integer value greater than or equal to each input value</p>
+<h3>ceil<a class="headerlink" href="#ceil" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/ceil.shtml"><code class="docutils literal notranslate"><span class="pre">ceil</span></code></a> function returns the smallest integer value greater than or equal to each input value</p>
 <section id="id2">
-<h3>Grab and Go<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
@@ -581,7 +664,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">]</span>
@@ -599,13 +682,13 @@ document.write(`
 </section>
 </section>
 <section id="cumsum">
-<h2>cumsum<a class="headerlink" href="#cumsum" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">cumsum</span></code> function calculates the cumulative sum</p>
+<h3>cumsum<a class="headerlink" href="#cumsum" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/cumsum.shtml"><code class="docutils literal notranslate"><span class="pre">cumsum</span></code></a> function calculates the cumulative sum</p>
 <section id="id3">
-<h3>Grab and Go<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -623,14 +706,14 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="decimalplaces-round">
-<h2>decimalPlaces/round<a class="headerlink" href="#decimalplaces-round" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">decimalPlaces</span></code> function truncates or rounds to the number of decimal places specified, while NCL’s <code class="docutils literal notranslate"><span class="pre">round</span></code> function rounds a float or double variable to the nearest whole number</p>
+<section id="decimalplaces-and-round">
+<h3>decimalPlaces and round<a class="headerlink" href="#decimalplaces-and-round" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/decimalPlaces.shtml"><code class="docutils literal notranslate"><span class="pre">decimalPlaces</span></code></a> function truncates or rounds to the number of decimal places specified, while NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/round.shtml"><code class="docutils literal notranslate"><span class="pre">round</span></code></a> function rounds a float or double variable to the nearest whole number</p>
 <section id="id4">
-<h3>Grab and Go<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-In Python</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-in Python</span>
 <span class="n">input_value</span> <span class="o">=</span> <span class="mf">3.1415926</span>
 
 <span class="n">round_output</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">input_value</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -646,7 +729,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">10.353535</span><span class="p">,</span> <span class="mf">3.1415926</span><span class="p">,</span> <span class="mf">123.4567</span><span class="p">]</span>
@@ -664,8 +747,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-in Python</span>
 
 <span class="n">input_value</span> <span class="o">=</span> <span class="mf">3.1415926</span>
 
@@ -684,7 +766,7 @@ document.write(`
 </div>
 </section>
 <section id="differences-from-ncl">
-<h3>Differences from NCL<a class="headerlink" href="#differences-from-ncl" title="Link to this heading">#</a></h3>
+<h4>Differences from NCL<a class="headerlink" href="#differences-from-ncl" title="Link to this heading">#</a></h4>
 <p>NCL distinguishes between rounding a decimal value and truncating it as part of the <code class="docutils literal notranslate"><span class="pre">decimalPlaces</span></code> function</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">decimalPlaces</span><span class="p">(</span><span class="mf">3.145</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># True = rounds</span>
 <span class="o">&gt;&gt;</span> <span class="mf">3.15</span>
@@ -700,9 +782,9 @@ document.write(`
 <span class="o">&gt;&gt;</span> <span class="mf">3.15</span>
 </pre></div>
 </div>
-<div class="admonition alert alert-info">
-    <p class="admonition-title" style="font-weight:bold">Important Note</p>
-    Python makes use of Banker's Rounding where a value is rounded to the nearest even integer, rather than automatically rounding up or rounding down
+<div class="admonition-important-note admonition">
+<p class="admonition-title">Important Note</p>
+<p>Python makes use of Banker’s Rounding where a value is rounded to the nearest even integer, rather than automatically rounding up or rounding down</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="mf">3.5</span><span class="p">)</span>
 <span class="o">&gt;&gt;</span> <span class="mi">4</span>
@@ -726,10 +808,10 @@ document.write(`
 </section>
 </section>
 <section id="exp">
-<h2>exp<a class="headerlink" href="#exp" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">exp</span></code> function returns the value of e (the base of natural logarithms) raised to the power of the input</p>
+<h3>exp<a class="headerlink" href="#exp" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/exp.shtml"><code class="docutils literal notranslate"><span class="pre">exp</span></code></a> function returns the value of e (the base of natural logarithms) raised to the power of the input</p>
 <section id="id5">
-<h3>Grab and Go<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
@@ -750,7 +832,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]</span>
@@ -769,10 +851,10 @@ document.write(`
 </section>
 </section>
 <section id="floor">
-<h2>floor<a class="headerlink" href="#floor" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">floor</span></code> function returns the largest integer value less than or equal to each input value</p>
+<h3>floor<a class="headerlink" href="#floor" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/floor.shtml"><code class="docutils literal notranslate"><span class="pre">floor</span></code></a> function returns the largest integer value less than or equal to each input value</p>
 <section id="id6">
-<h3>Grab and Go<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
@@ -793,7 +875,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">]</span>
@@ -811,10 +893,10 @@ document.write(`
 </section>
 </section>
 <section id="get-d2r">
-<h2>get_d2r<a class="headerlink" href="#get-d2r" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">get_d2r</span></code> function returns a constant to convert degrees to radians</p>
+<h3>get_d2r<a class="headerlink" href="#get-d2r" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/get_d2r.shtml"><code class="docutils literal notranslate"><span class="pre">get_d2r</span></code></a> function returns a constant to convert degrees to radians</p>
 <section id="id7">
-<h3>Grab and Go<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
@@ -833,7 +915,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">d2r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span>
@@ -847,12 +929,13 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="admonition alert alert-info">
-    <p class="admonition-title" style="font-weight:bold">Important Note</p>
-    <code>numpy</code> includes the <code>numpy.deg2rad()</code> function to convert from degrees to radians
-</div><div class="cell docutils container">
+<div class="admonition-important-note admonition">
+<p class="admonition-title">Important Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> includes the <code class="docutils literal notranslate"><span class="pre">numpy.deg2rad()</span></code> function to convert from degrees to radians</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_degrees</span> <span class="o">=</span> <span class="mi">30</span>  <span class="c1"># degrees</span>
@@ -869,10 +952,10 @@ document.write(`
 </section>
 </section>
 <section id="get-pi">
-<h2>get_pi<a class="headerlink" href="#get-pi" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">get_pi</span></code> function returns the value of pi</p>
+<h3>get_pi<a class="headerlink" href="#get-pi" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/get_pi.shtml"><code class="docutils literal notranslate"><span class="pre">get_pi</span></code></a> function returns the value of pi</p>
 <section id="id8">
-<h3>Grab and Go<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
@@ -891,7 +974,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
@@ -908,10 +991,10 @@ document.write(`
 </section>
 </section>
 <section id="get-r2d">
-<h2>get_r2d<a class="headerlink" href="#get-r2d" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">get_r2d</span></code> function returns a constant that converts radians to degrees</p>
+<h3>get_r2d<a class="headerlink" href="#get-r2d" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/get_r2d.shtml"><code class="docutils literal notranslate"><span class="pre">get_r2d</span></code></a> function returns a constant that converts radians to degrees</p>
 <section id="id9">
-<h3>Grab and Go<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
@@ -930,7 +1013,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">r2d</span> <span class="o">=</span> <span class="mi">180</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
@@ -944,12 +1027,13 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="admonition alert alert-info">
-    <p class="admonition-title" style="font-weight:bold">Important Note</p>
-    <code>numpy</code> includes the <code>numpy.rad2deg()</code> function to convert from radians to degrees
-</div><div class="cell docutils container">
+<div class="admonition-important-note admonition">
+<p class="admonition-title">Important Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> includes the <code class="docutils literal notranslate"><span class="pre">numpy.rad2deg()</span></code> function to convert from degrees to radians</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_radians</span> <span class="o">=</span> <span class="mf">0.52</span>  <span class="c1"># radians</span>
@@ -966,10 +1050,10 @@ document.write(`
 </section>
 </section>
 <section id="log">
-<h2>log<a class="headerlink" href="#log" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">log</span></code> function calculates the natural log</p>
+<h3>log<a class="headerlink" href="#log" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/log.shtml"><code class="docutils literal notranslate"><span class="pre">log</span></code></a> function calculates the natural log</p>
 <section id="id10">
-<h3>Grab and Go<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id10" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
@@ -990,7 +1074,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">3.6</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">]</span>
@@ -1009,10 +1093,10 @@ document.write(`
 </section>
 </section>
 <section id="log10">
-<h2>log10<a class="headerlink" href="#log10" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">log10</span></code> function calculate the log base 10</p>
+<h3>log10<a class="headerlink" href="#log10" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/log10.shtml"><code class="docutils literal notranslate"><span class="pre">log10</span></code></a> function calculate the log base 10</p>
 <section id="id11">
-<h3>Grab and Go<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
@@ -1033,7 +1117,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.3</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">]</span>
@@ -1052,14 +1136,13 @@ document.write(`
 </section>
 </section>
 <section id="max">
-<h2>max<a class="headerlink" href="#max" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">max</span></code> function returns the maximum value in an array</p>
+<h3>max<a class="headerlink" href="#max" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/max.shtml"><code class="docutils literal notranslate"><span class="pre">max</span></code></a> function returns the maximum value in an array</p>
 <section id="id12">
-<h3>Grab and Go<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-in Python</span>
 
 <span class="n">input_value</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.1</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mf">7.6</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">,</span> <span class="mf">9.8</span><span class="p">]</span>
 
@@ -1076,7 +1159,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.1</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mf">7.6</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">,</span> <span class="mf">9.8</span><span class="p">]</span>
@@ -1094,14 +1177,13 @@ document.write(`
 </section>
 </section>
 <section id="min">
-<h2>min<a class="headerlink" href="#min" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">min</span></code> function returns the minimum value in an array</p>
+<h3>min<a class="headerlink" href="#min" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/min.shtml"><code class="docutils literal notranslate"><span class="pre">min</span></code></a> function returns the minimum value in an array</p>
 <section id="id13">
-<h3>Grab and Go<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-in Python</span>
 
 <span class="n">input_value</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.1</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mf">7.6</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">,</span> <span class="mf">9.8</span><span class="p">]</span>
 
@@ -1118,7 +1200,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.1</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mf">7.6</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">,</span> <span class="mf">9.8</span><span class="p">]</span>
@@ -1136,13 +1218,13 @@ document.write(`
 </section>
 </section>
 <section id="mod">
-<h2>mod<a class="headerlink" href="#mod" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">mod</span></code> function calculate the remainder of a division</p>
+<h3>mod<a class="headerlink" href="#mod" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/mod.shtml"><code class="docutils literal notranslate"><span class="pre">mod</span></code></a> function calculate the remainder of a division</p>
 <section id="id14">
-<h3>Grab and Go<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-In Python</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-in Python</span>
 <span class="n">mod_value</span> <span class="o">=</span> <span class="mi">17</span> <span class="o">%</span> <span class="mi">3</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">mod_value</span><span class="p">)</span>
@@ -1157,7 +1239,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">mod_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">([</span><span class="mi">17</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -1174,10 +1256,10 @@ document.write(`
 </section>
 </section>
 <section id="product">
-<h2>product<a class="headerlink" href="#product" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">product</span></code> function calculate the product of input values</p>
+<h3>product<a class="headerlink" href="#product" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/product.shtml"><code class="docutils literal notranslate"><span class="pre">product</span></code></a> function calculate the product of input values</p>
 <section id="id15">
-<h3>Grab and Go<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
@@ -1197,7 +1279,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
@@ -1215,13 +1297,13 @@ document.write(`
 </section>
 </section>
 <section id="qsort">
-<h2>qsort<a class="headerlink" href="#qsort" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">qsort</span></code> function sorts a numeric array</p>
+<h3>qsort<a class="headerlink" href="#qsort" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Built-in/qsort.shtml"><code class="docutils literal notranslate"><span class="pre">qsort</span></code></a> function sorts a numeric array</p>
 <section id="id16">
-<h3>Grab and Go<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<h4>Grab and Go<a class="headerlink" href="#id16" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-In Python</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-in Python</span>
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="n">sorted_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">input_values</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sorted_list</span><span class="p">)</span>
@@ -1236,7 +1318,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
@@ -1254,8 +1336,8 @@ document.write(`
 </section>
 </section>
 <section id="sign-matlab">
-<h2>sign_matlab<a class="headerlink" href="#sign-matlab" title="Link to this heading">#</a></h2>
-<p>NCL’s <code class="docutils literal notranslate"><span class="pre">sign_matlab</span></code> mimics the behavior of the Matlab <a class="reference external" href="https://www.mathworks.com/help/matlab/ref/sign.html">sign</a> function</p>
+<h3>sign_matlab<a class="headerlink" href="#sign-matlab" title="Link to this heading">#</a></h3>
+<p>NCL’s <a class="reference external" href="https://www.ncl.ucar.edu/Document/Functions/Contributed/sign_matlab.shtml"><code class="docutils literal notranslate"><span class="pre">sign_matlab</span></code></a> mimics the behavior of the Matlab <a class="reference external" href="https://www.mathworks.com/help/matlab/ref/double.sign.html">sign</a> function</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>  <span class="k">if</span> <span class="n">the</span> <span class="n">corresponding</span> <span class="n">element</span> <span class="n">of</span> <span class="n">X</span> <span class="ow">is</span> <span class="n">greater</span> <span class="n">than</span> <span class="n">zero</span>
 
 <span class="mi">0</span>  <span class="k">if</span> <span class="n">the</span> <span class="n">corresponding</span> <span class="n">element</span> <span class="n">of</span> <span class="n">X</span> <span class="n">equals</span> <span class="n">zero</span>
@@ -1263,9 +1345,11 @@ document.write(`
 <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">the</span> <span class="n">corresponding</span> <span class="n">element</span> <span class="n">of</span> <span class="n">X</span> <span class="ow">is</span> <span class="n">less</span> <span class="n">than</span> <span class="n">zero</span>
 </pre></div>
 </div>
+<section id="id17">
+<h4>Grab and Go<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_value</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
@@ -1282,7 +1366,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -1298,11 +1382,12 @@ document.write(`
 </div>
 </div>
 </section>
+</section>
 <section id="sqrt">
-<h2>sqrt<a class="headerlink" href="#sqrt" title="Link to this heading">#</a></h2>
+<h3>sqrt<a class="headerlink" href="#sqrt" title="Link to this heading">#</a></h3>
 <p>NCL’s <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> function calculate the square root</p>
-<section id="id17">
-<h3>Grab and Go<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<section id="id18">
+<h4>Grab and Go<a class="headerlink" href="#id18" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Math</span>
@@ -1323,7 +1408,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.14</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">28</span><span class="p">]</span>
@@ -1342,13 +1427,13 @@ document.write(`
 </section>
 </section>
 <section id="sqsort">
-<h2>sqsort<a class="headerlink" href="#sqsort" title="Link to this heading">#</a></h2>
+<h3>sqsort<a class="headerlink" href="#sqsort" title="Link to this heading">#</a></h3>
 <p>NCL’s <code class="docutils literal notranslate"><span class="pre">sqsort</span></code> function sorts a string array</p>
-<section id="id18">
-<h3>Grab and Go<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<section id="id19">
+<h4>Grab and Go<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;mango&quot;</span><span class="p">,</span> <span class="s2">&quot;egg&quot;</span><span class="p">,</span> <span class="s2">&quot;taco&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">]</span>
@@ -1365,7 +1450,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-In Python</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-in Python</span>
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;mango&quot;</span><span class="p">,</span> <span class="s2">&quot;egg&quot;</span><span class="p">,</span> <span class="s2">&quot;taco&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">]</span>
 <span class="n">sorted_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">input_values</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sorted_list</span><span class="p">)</span>
@@ -1381,17 +1466,19 @@ document.write(`
 </section>
 </section>
 <section id="sum">
-<h2>sum<a class="headerlink" href="#sum" title="Link to this heading">#</a></h2>
+<h3>sum<a class="headerlink" href="#sum" title="Link to this heading">#</a></h3>
 <p>NCL’s <code class="docutils literal notranslate"><span class="pre">sum</span></code> function calculate the sum of input values</p>
-<section id="id19">
-<h3>Grab and Go<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<section id="id20">
+<h4>Grab and Go<a class="headerlink" href="#id20" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-In Python</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Built-in Python</span>
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 
 <span class="n">sum_math_output</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">input_values</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sum_math_output</span><span class="p">)</span>
+
+<span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1399,11 +1486,14 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14
 </pre></div>
 </div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NumPy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">input_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
@@ -1420,15 +1510,16 @@ document.write(`
 </div>
 </section>
 </section>
+</section>
 <hr class="docutils" />
 <section id="python-resources">
 <h2>Python Resources<a class="headerlink" href="#python-resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.python.org/3/library/math.html">Built-in Python math</a> functions documentation</p></li>
-<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/routines.math.html">Numpy math</a> function documentation</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/math.html">Python math</a> functions documentation</p></li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/routines.math.html">NumPy math</a> function documentation</p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/library/cmath.html">Python <code class="docutils literal notranslate"><span class="pre">cmath</span></code> when working with complex mathematics</a></p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/tutorial/floatingpoint.html#floating-point-arithmetic-issues-and-limitations">Python Floating-Point Arithmetic: Issues and Limitations</a></p></li>
-<li><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#built-in-types">Python Built-In Types</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#built-in-types">Python Built-in Types</a></p></li>
 </ul>
 </section>
 </section>
@@ -1461,86 +1552,92 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abs-fabs">abs/fabs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abs">*abs</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grab-and-go">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avg">avg</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avg">avg</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ceil">ceil</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ceil">ceil</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cumsum">cumsum</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cumsum">cumsum</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decimalplaces-round">decimalPlaces/round</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-from-ncl">Differences from NCL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decimalplaces-and-round">decimalPlaces and round</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grab and Go</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-from-ncl">Differences from NCL</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exp">exp</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exp">exp</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#floor">floor</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#floor">floor</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-d2r">get_d2r</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-d2r">get_d2r</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-pi">get_pi</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-pi">get_pi</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-r2d">get_r2d</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-r2d">get_r2d</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log">log</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log">log</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log10">log10</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log10">log10</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#max">max</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#max">max</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#min">min</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min">min</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mod">mod</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mod">mod</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#product">product</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product">product</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qsort">qsort</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qsort">qsort</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-matlab">sign_matlab</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sqrt">sqrt</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-matlab">sign_matlab</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sqsort">sqsort</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sqrt">sqrt</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Grab and Go</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sum">sum</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Grab and Go</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sqsort">sqsort</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Grab and Go</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sum">sum</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Grab and Go</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-resources">Python Resources</a></li>
@@ -1581,6 +1678,9 @@ By GeoCAT
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <em>This material is based upon work supported by the NSF National Center for Atmospheric Research, a major facility sponsored by the U.S. National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the U.S. National Science Foundation.</em>
+</div>
   </div>
   
 </div>
